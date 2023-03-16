@@ -1,0 +1,79 @@
+CFGExplainer result: [malware = Benign |  graph = 90acb25a41acb86b82fce701d2ab39b7073cbd3b03906683579eb690bf312d68| #nodes = 9]
+
+node :1
+node 3 info:
+ start: 4775229
+ prev: [4775234, 4775226]
+ instructions: 
+  4775229, ['lock', 'xadd dword ptr [rdi + 0x10], eax']
+  4775234, ['jmp', '0x48dd4d']
+ next: [4775229, 4775245]
+
+node :2
+node 0 info:
+ start: 4775216
+ prev: []
+ instructions: 
+  4775216, ['cmp', 'qword ptr [rip + 0x32af68], 0']
+  4775224, ['je', '0x48dd44']
+ next: [4775236, 4775226]
+
+node :3
+node 8 info:
+ start: 4775226
+ prev: [4775224]
+ instructions: 
+  4775226, ['or', 'eax, 0xffffffff']
+ next: [4775229]
+
+node :4
+node 7 info:
+ start: 4775236
+ prev: [4775224]
+ instructions: 
+  4775236, ['mov', 'eax, dword ptr [rdi + 0x10]']
+  4775239, ['lea', 'edx, [rax - 1]']
+  4775242, ['mov', 'dword ptr [rdi + 0x10], edx']
+ next: [4775245]
+
+node :5
+node 1 info:
+ start: 4775249
+ prev: [4775247]
+ instructions: 
+  4775249, ['jmp', '0x489ea0']
+ next: [4759200]
+
+node :6
+node 4 info:
+ start: 4775245
+ prev: [4775234, 4775242]
+ instructions: 
+  4775245, ['test', 'eax, eax']
+  4775247, ['jg', '0x48dd56']
+ next: [4775249, 4775254]
+
+node :7
+node 2 info:
+ start: 4775254
+ prev: [4775247]
+ instructions: 
+  4775254, ['ret', '']
+ next: []
+
+node :8
+node 6 info:
+ start: 8389816
+ prev: [4759200]
+ instructions: 
+  8389816, ['nop', '']
+ next: []
+
+node :9
+node 5 info:
+ start: 4759200
+ prev: [4775249]
+ instructions: 
+  4759200, ['jmp', 'qword ptr [rip + 0x3306ca]']
+ next: [8389816]
+

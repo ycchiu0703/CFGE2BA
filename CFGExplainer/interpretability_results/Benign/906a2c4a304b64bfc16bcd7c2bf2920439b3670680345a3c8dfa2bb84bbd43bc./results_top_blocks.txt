@@ -1,0 +1,1195 @@
+CFGExplainer result: [malware = Benign |  graph = 906a2c4a304b64bfc16bcd7c2bf2920439b3670680345a3c8dfa2bb84bbd43b| #nodes = 123]
+
+node :1
+node 25 info:
+ start: 4198416
+ prev: [4198436, 4198412]
+ instructions: 
+  4198416, ['mov', 'rdx, r15']
+  4198419, ['mov', 'rsi, r14']
+  4198422, ['mov', 'edi, r13d']
+  4198425, ['call', 'qword ptr [r12 + rbx*8]']
+ next: [4197744, 4198429, 4197776]
+
+node :2
+node 120 info:
+ start: 4198410
+ prev: [4198408]
+ instructions: 
+  4198410, ['xor', 'ebx, ebx']
+  4198412, ['nop', 'dword ptr [rax]']
+ next: [4198416]
+
+node :3
+node 22 info:
+ start: 4198429
+ prev: [4197718, 4198425, 4197770]
+ instructions: 
+  4198429, ['add', 'rbx, 1']
+  4198433, ['cmp', 'rbx, rbp']
+  4198436, ['jb', '0x401010']
+ next: [4198438, 4198416]
+
+node :4
+node 16 info:
+ start: 4197680
+ prev: [4197813, 4197808]
+ instructions: 
+  4197680, ['mov', 'eax, 0x6020a0']
+  4197685, ['push', 'rbp']
+  4197686, ['sub', 'rax, 0x6020a0']
+  4197692, ['sar', 'rax, 3']
+  4197696, ['mov', 'rbp, rsp']
+  4197699, ['mov', 'rdx, rax']
+  4197702, ['shr', 'rdx, 0x3f']
+  4197706, ['add', 'rax, rdx']
+  4197709, ['mov', 'rsi, rax']
+  4197712, ['sar', 'rsi, 1']
+  4197715, ['jne', '0x400d57']
+ next: [4197717, 4197719]
+
+node :5
+node 19 info:
+ start: 4197717
+ prev: [4197715, 4197727]
+ instructions: 
+  4197717, ['pop', 'rbp']
+  4197718, ['ret', '']
+ next: [4198429]
+
+node :6
+node 30 info:
+ start: 4197770
+ prev: [4197751, 4197763]
+ instructions: 
+  4197770, ['ret', '']
+ next: [4198429]
+
+node :7
+node 3 info:
+ start: 4198336
+ prev: [7340152]
+ instructions: 
+  4198336, ['mov', 'qword ptr [rsp - 0x28], rbp']
+  4198341, ['mov', 'qword ptr [rsp - 0x20], r12']
+  4198346, ['lea', 'rbp, [rip + 0x200e07]']
+  4198353, ['lea', 'r12, [rip + 0x200df8]']
+  4198360, ['mov', 'qword ptr [rsp - 0x18], r13']
+  4198365, ['mov', 'qword ptr [rsp - 0x10], r14']
+  4198370, ['mov', 'qword ptr [rsp - 8], r15']
+  4198375, ['mov', 'qword ptr [rsp - 0x30], rbx']
+  4198380, ['sub', 'rsp, 0x38']
+  4198384, ['sub', 'rbp, r12']
+  4198387, ['mov', 'r13d, edi']
+  4198390, ['mov', 'r14, rsi']
+  4198393, ['sar', 'rbp, 3']
+  4198397, ['mov', 'r15, rdx']
+  4198400, ['call', '0x400aa8']
+ next: [4197032, 4198405]
+
+node :8
+node 0 info:
+ start: 4197560
+ prev: []
+ instructions: 
+  4197560, ['xor', 'ebp, ebp']
+  4197562, ['mov', 'r9, rdx']
+  4197565, ['pop', 'rsi']
+  4197566, ['mov', 'rdx, rsp']
+  4197569, ['and', 'rsp, 0xfffffffffffffff0']
+  4197573, ['push', 'rax']
+  4197574, ['push', 'rsp']
+  4197575, ['mov', 'r8, 0x400fb0']
+  4197582, ['mov', 'rcx, 0x400fc0']
+  4197589, ['mov', 'rdi, 0x400bf0']
+  4197596, ['call', '0x400b80']
+ next: [4197248]
+
+node :9
+node 20 info:
+ start: 4197719
+ prev: [4197715]
+ instructions: 
+  4197719, ['mov', 'edx, 0']
+  4197724, ['test', 'rdx, rdx']
+  4197727, ['je', '0x400d55']
+ next: [4197717, 4197729]
+
+node :10
+node 27 info:
+ start: 4197744
+ prev: [4198425]
+ instructions: 
+  4197744, ['cmp', 'byte ptr [rip + 0x201359], 0']
+  4197751, ['jne', '0x400d8a']
+ next: [4197753, 4197770]
+
+node :11
+node 121 info:
+ start: 4197762
+ prev: [4197757, 4197654]
+ instructions: 
+  4197762, ['pop', 'rbp']
+  4197763, ['mov', 'byte ptr [rip + 0x201346], 1']
+ next: [4197770]
+
+node :12
+node 2 info:
+ start: 7340152
+ prev: [4197248]
+ instructions: 
+  7340152, ['nop', '']
+ next: [4198336, 8392800]
+
+node :13
+node 9 info:
+ start: 4198405
+ prev: [4198400, 4197045]
+ instructions: 
+  4198405, ['test', 'rbp, rbp']
+  4198408, ['je', '0x401026']
+ next: [4198438, 4198410]
+
+node :14
+node 8 info:
+ start: 4197041
+ prev: [4197036, 4197626]
+ instructions: 
+  4197041, ['add', 'rsp, 8']
+  4197045, ['ret', '']
+ next: [4198405]
+
+node :15
+node 4 info:
+ start: 4197032
+ prev: [4198400]
+ instructions: 
+  4197032, ['sub', 'rsp, 8']
+  4197036, ['call', '0x400ce4']
+ next: [4197604, 4197041]
+
+node :16
+node 6 info:
+ start: 4197622
+ prev: [4197618, 4197620]
+ instructions: 
+  4197622, ['add', 'rsp, 8']
+  4197626, ['ret', '']
+ next: [4197041]
+
+node :17
+node 13 info:
+ start: 4197813
+ prev: [4197784, 4197794]
+ instructions: 
+  4197813, ['jmp', '0x400d30']
+ next: [4197680]
+
+node :18
+node 105 info:
+ start: 4197807
+ prev: [4197805]
+ instructions: 
+  4197807, ['pop', 'rbp']
+  4197808, ['jmp', '0x400d30']
+ next: [4197680]
+
+node :19
+node 49 info:
+ start: 4197463
+ prev: [4197461]
+ instructions: 
+  4197463, ['cmp', 'eax, 0x56']
+  4197466, ['je', '0x400c7a']
+ next: [4197498, 4197468]
+
+node :20
+node 1 info:
+ start: 4197248
+ prev: [4197596]
+ instructions: 
+  4197248, ['jmp', 'qword ptr [rip + 0x2014d2]']
+ next: [7340152]
+
+node :21
+node 52 info:
+ start: 4197468
+ prev: [4197466]
+ instructions: 
+  4197468, ['cmp', 'eax, 0x68']
+  4197471, ['nop', '']
+  4197472, ['je', '0x400c6e']
+ next: [4197486, 4197474]
+
+node :22
+node 11 info:
+ start: 4197776
+ prev: [4198425]
+ instructions: 
+  4197776, ['cmp', 'qword ptr [rip + 0x201048], 0']
+  4197784, ['je', '0x400db5']
+ next: [4197813, 4197786]
+
+node :23
+node 47 info:
+ start: 4197458
+ prev: [4197453, 7340136]
+ instructions: 
+  4197458, ['cmp', 'eax, -1']
+  4197461, ['je', '0x400caf']
+ next: [4197551, 4197463]
+
+node :24
+node 10 info:
+ start: 4198438
+ prev: [4198408, 4198436]
+ instructions: 
+  4198438, ['mov', 'rbx, qword ptr [rsp + 8]']
+  4198443, ['mov', 'rbp, qword ptr [rsp + 0x10]']
+  4198448, ['mov', 'r12, qword ptr [rsp + 0x18]']
+  4198453, ['mov', 'r13, qword ptr [rsp + 0x20]']
+  4198458, ['mov', 'r14, qword ptr [rsp + 0x28]']
+  4198463, ['mov', 'r15, qword ptr [rsp + 0x30]']
+  4198468, ['add', 'rsp, 0x38']
+  4198472, ['ret', '']
+ next: [8392800]
+
+node :25
+node 59 info:
+ start: 4197824
+ prev: [4197493]
+ instructions: 
+  4197824, ['push', 'rbp']
+  4197825, ['mov', 'edx, 5']
+  4197830, ['mov', 'esi, 0x401084']
+  4197835, ['push', 'rbx']
+  4197836, ['mov', 'rbx, rdi']
+  4197839, ['xor', 'edi, edi']
+  4197841, ['sub', 'rsp, 8']
+  4197845, ['call', '0x400b50']
+ next: [4197200, 4197850]
+
+node :26
+node 60 info:
+ start: 4197824
+ prev: [4197481]
+ instructions: 
+  4197824, ['push', 'rbp']
+  4197825, ['mov', 'edx, 5']
+  4197830, ['mov', 'esi, 0x401084']
+  4197835, ['push', 'rbx']
+  4197836, ['mov', 'rbx, rdi']
+  4197839, ['xor', 'edi, edi']
+  4197841, ['sub', 'rsp, 8']
+  4197845, ['call', '0x400b50']
+ next: [4197200, 4197850]
+
+node :27
+node 56 info:
+ start: 4197474
+ prev: [4197472]
+ instructions: 
+  4197474, ['mov', 'rdi, qword ptr [rip + 0x20145f]']
+  4197481, ['call', '0x400dc0']
+ next: [4197824, 4197486]
+
+node :28
+node 81 info:
+ start: 4197923
+ prev: [4197918, 7340128]
+ instructions: 
+  4197923, ['mov', 'rsi, rbx']
+  4197926, ['mov', 'rdi, rax']
+  4197929, ['call', '0x400b70']
+ next: [4197232, 4197934]
+
+node :29
+node 83 info:
+ start: 7340144
+ prev: [4197232]
+ instructions: 
+  7340144, ['nop', '']
+ next: [4197934]
+
+node :30
+node 14 info:
+ start: 4197786
+ prev: [4197784]
+ instructions: 
+  4197786, ['mov', 'eax, 0']
+  4197791, ['test', 'rax, rax']
+  4197794, ['je', '0x400db5']
+ next: [4197813, 4197796]
+
+node :31
+node 55 info:
+ start: 4197486
+ prev: [4197472, 4197481]
+ instructions: 
+  4197486, ['mov', 'rdi, qword ptr [rip + 0x20143b]']
+  4197493, ['call', '0x400dc0']
+ next: [4197824, 4197498]
+
+node :32
+node 15 info:
+ start: 4197360
+ prev: [8392800]
+ instructions: 
+  4197360, ['push', 'rbp']
+  4197361, ['mov', 'rbp, rsi']
+  4197364, ['mov', 'esi, 0x4010c1']
+  4197369, ['push', 'rbx']
+  4197370, ['mov', 'ebx, edi']
+  4197372, ['mov', 'edi, 6']
+  4197377, ['sub', 'rsp, 8']
+  4197381, ['mov', 'rax, qword ptr [rip + 0x201494]']
+  4197388, ['mov', 'qword ptr [rip + 0x2014ad], rax']
+  4197395, ['call', '0x400b90']
+ next: [4197264, 4197400]
+
+node :33
+node 66 info:
+ start: 7340128
+ prev: [4197200]
+ instructions: 
+  7340128, ['nop', '']
+ next: [4197850]
+
+node :34
+node 87 info:
+ start: 4197951
+ prev: [4197946, 7340128]
+ instructions: 
+  4197951, ['mov', 'rsi, rbx']
+  4197954, ['mov', 'rdi, rax']
+  4197957, ['call', '0x400b70']
+ next: [4197232, 4197962]
+
+node :35
+node 109 info:
+ start: 4197906
+ prev: [4197901]
+ instructions: 
+  4197906, ['mov', 'edx, 5']
+  4197911, ['xor', 'edi, edi']
+  4197913, ['mov', 'esi, 0x40109c']
+  4197918, ['call', '0x400b50']
+ next: [4197200, 4197923]
+
+node :36
+node 12 info:
+ start: 8392800
+ prev: [7340152, 4198472]
+ instructions: 
+  8392800, ['nop', '']
+ next: [4197360, 8392808]
+
+node :37
+node 63 info:
+ start: 4197200
+ prev: [4197845, 4197845]
+ instructions: 
+  4197200, ['jmp', 'qword ptr [rip + 0x2014ea]']
+ next: [7340128]
+
+node :38
+node 84 info:
+ start: 4197934
+ prev: [4197929, 7340144]
+ instructions: 
+  4197934, ['mov', 'edx, 5']
+  4197939, ['xor', 'edi, edi']
+  4197941, ['mov', 'esi, 0x401118']
+  4197946, ['call', '0x400b50']
+ next: [4197200, 4197951]
+
+node :39
+node 86 info:
+ start: 7340128
+ prev: [4197200]
+ instructions: 
+  7340128, ['nop', '']
+ next: [4197951]
+
+node :40
+node 78 info:
+ start: 4197906
+ prev: [4197901, 7340200]
+ instructions: 
+  4197906, ['mov', 'edx, 5']
+  4197911, ['xor', 'edi, edi']
+  4197913, ['mov', 'esi, 0x40109c']
+  4197918, ['call', '0x400b50']
+ next: [4197200, 4197923]
+
+node :41
+node 80 info:
+ start: 7340128
+ prev: [4197200]
+ instructions: 
+  7340128, ['nop', '']
+ next: [4197923]
+
+node :42
+node 21 info:
+ start: 7340160
+ prev: [4197264]
+ instructions: 
+  7340160, ['nop', '']
+ next: [4197400]
+
+node :43
+node 70 info:
+ start: 4197232
+ prev: [4197856, 4197856]
+ instructions: 
+  4197232, ['jmp', 'qword ptr [rip + 0x2014da]']
+ next: [7340144]
+
+node :44
+node 89 info:
+ start: 7340144
+ prev: [4197232]
+ instructions: 
+  7340144, ['nop', '']
+ next: [4197962]
+
+node :45
+node 107 info:
+ start: 4197861
+ prev: [4197856]
+ instructions: 
+  4197861, ['mov', 'rbp, qword ptr [rip + 0x2012b4]']
+  4197868, ['xor', 'edi, edi']
+  4197870, ['mov', 'edx, 5']
+  4197875, ['mov', 'esi, 0x40108d']
+  4197880, ['call', '0x400b50']
+ next: [4197200, 4197885]
+
+node :46
+node 111 info:
+ start: 4197934
+ prev: [4197929]
+ instructions: 
+  4197934, ['mov', 'edx, 5']
+  4197939, ['xor', 'edi, edi']
+  4197941, ['mov', 'esi, 0x401118']
+  4197946, ['call', '0x400b50']
+ next: [4197200, 4197951]
+
+node :47
+node 18 info:
+ start: 4197264
+ prev: [4197395]
+ instructions: 
+  4197264, ['jmp', 'qword ptr [rip + 0x2014ca]']
+ next: [7340160]
+
+node :48
+node 69 info:
+ start: 4197850
+ prev: [4197845, 7340128]
+ instructions: 
+  4197850, ['mov', 'rsi, rbx']
+  4197853, ['mov', 'rdi, rax']
+  4197856, ['call', '0x400b70']
+ next: [4197232, 4197861]
+
+node :49
+node 88 info:
+ start: 4197232
+ prev: [4197957, 4197957]
+ instructions: 
+  4197232, ['jmp', 'qword ptr [rip + 0x2014da]']
+ next: [7340144]
+
+node :50
+node 110 info:
+ start: 4197923
+ prev: [4197918]
+ instructions: 
+  4197923, ['mov', 'rsi, rbx']
+  4197926, ['mov', 'rdi, rax']
+  4197929, ['call', '0x400b70']
+ next: [4197232, 4197934]
+
+node :51
+node 106 info:
+ start: 4197850
+ prev: [4197845]
+ instructions: 
+  4197850, ['mov', 'rsi, rbx']
+  4197853, ['mov', 'rdi, rax']
+  4197856, ['call', '0x400b70']
+ next: [4197232, 4197861]
+
+node :52
+node 72 info:
+ start: 4197861
+ prev: [4197856, 7340144]
+ instructions: 
+  4197861, ['mov', 'rbp, qword ptr [rip + 0x2012b4]']
+  4197868, ['xor', 'edi, edi']
+  4197870, ['mov', 'edx, 5']
+  4197875, ['mov', 'esi, 0x40108d']
+  4197880, ['call', '0x400b50']
+ next: [4197200, 4197885]
+
+node :53
+node 74 info:
+ start: 7340128
+ prev: [4197200]
+ instructions: 
+  7340128, ['nop', '']
+ next: [4197885]
+
+node :54
+node 108 info:
+ start: 4197885
+ prev: [4197880]
+ instructions: 
+  4197885, ['mov', 'rcx, rbp']
+  4197888, ['mov', 'rdx, rax']
+  4197891, ['mov', 'esi, 1']
+  4197896, ['mov', 'rdi, rbx']
+  4197899, ['xor', 'eax, eax']
+  4197901, ['call', '0x400be0']
+ next: [4197344, 4197906]
+
+node :55
+node 112 info:
+ start: 4197951
+ prev: [4197946]
+ instructions: 
+  4197951, ['mov', 'rsi, rbx']
+  4197954, ['mov', 'rdi, rax']
+  4197957, ['call', '0x400b70']
+ next: [4197232, 4197962]
+
+node :56
+node 75 info:
+ start: 4197885
+ prev: [4197880, 7340128]
+ instructions: 
+  4197885, ['mov', 'rcx, rbp']
+  4197888, ['mov', 'rdx, rax']
+  4197891, ['mov', 'esi, 1']
+  4197896, ['mov', 'rdi, rbx']
+  4197899, ['xor', 'eax, eax']
+  4197901, ['call', '0x400be0']
+ next: [4197344, 4197906]
+
+node :57
+node 77 info:
+ start: 7340200
+ prev: [4197344]
+ instructions: 
+  7340200, ['nop', '']
+ next: [4197906]
+
+node :58
+node 71 info:
+ start: 7340144
+ prev: [4197232]
+ instructions: 
+  7340144, ['nop', '']
+ next: [4197861]
+
+node :59
+node 31 info:
+ start: 4197415
+ prev: [4197410, 7340112]
+ instructions: 
+  4197415, ['mov', 'edi, 0x4010de']
+  4197420, ['call', '0x400b10']
+ next: [4197136, 4197425]
+
+node :60
+node 91 info:
+ start: 4197200
+ prev: [4197974, 4197974]
+ instructions: 
+  4197200, ['jmp', 'qword ptr [rip + 0x2014ea]']
+ next: [7340128]
+
+node :61
+node 93 info:
+ start: 4197979
+ prev: [4197974, 7340128]
+ instructions: 
+  4197979, ['mov', 'rsi, rbx']
+  4197982, ['mov', 'rdi, rax']
+  4197985, ['call', '0x400b70']
+ next: [4197232, 4197990]
+
+node :62
+node 24 info:
+ start: 4197400
+ prev: [4197395, 7340160]
+ instructions: 
+  4197400, ['mov', 'esi, 0x4010cc']
+  4197405, ['mov', 'edi, 0x4010de']
+  4197410, ['call', '0x400b30']
+ next: [4197168, 4197415]
+
+node :63
+node 90 info:
+ start: 4197962
+ prev: [4197957, 7340144]
+ instructions: 
+  4197962, ['mov', 'edx, 5']
+  4197967, ['xor', 'edi, edi']
+  4197969, ['mov', 'esi, 0x401148']
+  4197974, ['call', '0x400b50']
+ next: [4197200, 4197979]
+
+node :64
+node 28 info:
+ start: 7340112
+ prev: [4197168]
+ instructions: 
+  7340112, ['nop', '']
+ next: [4197415]
+
+node :65
+node 26 info:
+ start: 4197168
+ prev: [4197410]
+ instructions: 
+  4197168, ['jmp', 'qword ptr [rip + 0x2014fa]']
+ next: [7340112]
+
+node :66
+node 92 info:
+ start: 7340128
+ prev: [4197200]
+ instructions: 
+  7340128, ['nop', '']
+ next: [4197979]
+
+node :67
+node 113 info:
+ start: 4197962
+ prev: [4197957]
+ instructions: 
+  4197962, ['mov', 'edx, 5']
+  4197967, ['xor', 'edi, edi']
+  4197969, ['mov', 'esi, 0x401148']
+  4197974, ['call', '0x400b50']
+ next: [4197200, 4197979]
+
+node :68
+node 82 info:
+ start: 4197232
+ prev: [4197929, 4197929]
+ instructions: 
+  4197232, ['jmp', 'qword ptr [rip + 0x2014da]']
+ next: [7340144]
+
+node :69
+node 76 info:
+ start: 4197344
+ prev: [4197901, 4197901]
+ instructions: 
+  4197344, ['jmp', 'qword ptr [rip + 0x2014a2]']
+ next: [7340200]
+
+node :70
+node 44 info:
+ start: 4197435
+ prev: [4197430, 7340184]
+ instructions: 
+  4197435, ['xor', 'r8d, r8d']
+  4197438, ['mov', 'ecx, 0x401180']
+  4197443, ['mov', 'edx, 0x4010e8']
+  4197448, ['mov', 'rsi, rbp']
+  4197451, ['mov', 'edi, ebx']
+  4197453, ['call', '0x400b60']
+ next: [4197216, 4197458]
+
+node :71
+node 46 info:
+ start: 7340136
+ prev: [4197216]
+ instructions: 
+  7340136, ['nop', '']
+ next: [4197458]
+
+node :72
+node 36 info:
+ start: 7340096
+ prev: [4197136]
+ instructions: 
+  7340096, ['nop', '']
+ next: [4197425]
+
+node :73
+node 95 info:
+ start: 7340144
+ prev: [4197232]
+ instructions: 
+  7340144, ['nop', '']
+ next: [4197990]
+
+node :74
+node 33 info:
+ start: 4197136
+ prev: [4197420]
+ instructions: 
+  4197136, ['jmp', 'qword ptr [rip + 0x20150a]']
+ next: [7340096]
+
+node :75
+node 94 info:
+ start: 4197232
+ prev: [4197985, 4197985]
+ instructions: 
+  4197232, ['jmp', 'qword ptr [rip + 0x2014da]']
+ next: [7340144]
+
+node :76
+node 17 info:
+ start: 4197796
+ prev: [4197794]
+ instructions: 
+  4197796, ['push', 'rbp']
+  4197797, ['mov', 'edi, 0x601de0']
+  4197802, ['mov', 'rbp, rsp']
+  4197805, ['call', 'rax']
+ next: [4197807]
+
+node :77
+node 85 info:
+ start: 4197200
+ prev: [4197946, 4197946]
+ instructions: 
+  4197200, ['jmp', 'qword ptr [rip + 0x2014ea]']
+ next: [7340128]
+
+node :78
+node 79 info:
+ start: 4197200
+ prev: [4197918, 4197918]
+ instructions: 
+  4197200, ['jmp', 'qword ptr [rip + 0x2014ea]']
+ next: [7340128]
+
+node :79
+node 73 info:
+ start: 4197200
+ prev: [4197880, 4197880]
+ instructions: 
+  4197200, ['jmp', 'qword ptr [rip + 0x2014ea]']
+ next: [7340128]
+
+node :80
+node 114 info:
+ start: 4197979
+ prev: [4197974]
+ instructions: 
+  4197979, ['mov', 'rsi, rbx']
+  4197982, ['mov', 'rdi, rax']
+  4197985, ['call', '0x400b70']
+ next: [4197232, 4197990]
+
+node :81
+node 43 info:
+ start: 7340184
+ prev: [4197312]
+ instructions: 
+  7340184, ['nop', '']
+ next: [4197435]
+
+node :82
+node 38 info:
+ start: 4197425
+ prev: [4197420, 7340096]
+ instructions: 
+  4197425, ['mov', 'edi, 0x400f40']
+  4197430, ['call', '0x401050']
+ next: [4198480, 4197435]
+
+node :83
+node 39 info:
+ start: 4198480
+ prev: [4197430]
+ instructions: 
+  4198480, ['mov', 'rax, qword ptr [rip + 0x200f89]']
+  4198487, ['test', 'rax, rax']
+  4198490, ['je', '0x401066']
+ next: [4198502, 4198492]
+
+node :84
+node 51 info:
+ start: 4197498
+ prev: [4197466, 4197493]
+ instructions: 
+  4197498, ['mov', 'rbx, qword ptr [rip + 0x20141f]']
+  4197505, ['mov', 'edx, 5']
+  4197510, ['mov', 'esi, 0x4010eb']
+  4197515, ['xor', 'edi, edi']
+  4197517, ['call', '0x400b50']
+ next: [4197200, 4197522]
+
+node :85
+node 99 info:
+ start: 4198007
+ prev: [4198002, 7340128]
+ instructions: 
+  4198007, ['mov', 'rdi, rbx']
+  4198010, ['mov', 'rdx, rax']
+  4198013, ['mov', 'ecx, 0x4010c2']
+  4198018, ['xor', 'eax, eax']
+  4198020, ['mov', 'esi, 1']
+  4198025, ['call', '0x400be0']
+ next: [4197344, 4198030]
+
+node :86
+node 115 info:
+ start: 4197990
+ prev: [4197985]
+ instructions: 
+  4197990, ['xor', 'edi, edi']
+  4197992, ['mov', 'edx, 5']
+  4197997, ['mov', 'esi, 0x4010a7']
+  4198002, ['call', '0x400b50']
+ next: [4197200, 4198007]
+
+node :87
+node 96 info:
+ start: 4197990
+ prev: [4197985, 7340144]
+ instructions: 
+  4197990, ['xor', 'edi, edi']
+  4197992, ['mov', 'edx, 5']
+  4197997, ['mov', 'esi, 0x4010a7']
+  4198002, ['call', '0x400b50']
+ next: [4197200, 4198007]
+
+node :88
+node 42 info:
+ start: 4198495
+ prev: [4198504, 4198492]
+ instructions: 
+  4198495, ['xor', 'esi, esi']
+  4198497, ['jmp', '0x400bc0']
+ next: [4197312]
+
+node :89
+node 41 info:
+ start: 4197312
+ prev: [4198497]
+ instructions: 
+  4197312, ['jmp', 'qword ptr [rip + 0x2014b2]']
+ next: [7340184]
+
+node :90
+node 40 info:
+ start: 4198502
+ prev: [4198490]
+ instructions: 
+  4198502, ['xor', 'edx, edx']
+  4198504, ['jmp', '0x40105f']
+ next: [4198495]
+
+node :91
+node 122 info:
+ start: 4198492
+ prev: [4198490]
+ instructions: 
+  4198492, ['mov', 'rdx, qword ptr [rax]']
+ next: [4198495]
+
+node :92
+node 97 info:
+ start: 4197200
+ prev: [4198002, 4198002]
+ instructions: 
+  4197200, ['jmp', 'qword ptr [rip + 0x2014ea]']
+ next: [7340128]
+
+node :93
+node 98 info:
+ start: 7340128
+ prev: [4197200]
+ instructions: 
+  7340128, ['nop', '']
+ next: [4198007]
+
+node :94
+node 29 info:
+ start: 4197753
+ prev: [4197751]
+ instructions: 
+  4197753, ['push', 'rbp']
+  4197754, ['mov', 'rbp, rsp']
+  4197757, ['call', '0x400d00']
+ next: [4197632, 4197762]
+
+node :95
+node 45 info:
+ start: 4197216
+ prev: [4197453]
+ instructions: 
+  4197216, ['jmp', 'qword ptr [rip + 0x2014e2]']
+ next: [7340136]
+
+node :96
+node 58 info:
+ start: 7340128
+ prev: [4197200]
+ instructions: 
+  7340128, ['nop', '']
+ next: [4197522]
+
+node :97
+node 101 info:
+ start: 7340200
+ prev: [4197344]
+ instructions: 
+  7340200, ['nop', '']
+ next: [4198030]
+
+node :98
+node 54 info:
+ start: 4197200
+ prev: [4197517]
+ instructions: 
+  4197200, ['jmp', 'qword ptr [rip + 0x2014ea]']
+ next: [7340128]
+
+node :99
+node 100 info:
+ start: 4197344
+ prev: [4198025, 4198025]
+ instructions: 
+  4197344, ['jmp', 'qword ptr [rip + 0x2014a2]']
+ next: [7340200]
+
+node :100
+node 116 info:
+ start: 4198007
+ prev: [4198002]
+ instructions: 
+  4198007, ['mov', 'rdi, rbx']
+  4198010, ['mov', 'rdx, rax']
+  4198013, ['mov', 'ecx, 0x4010c2']
+  4198018, ['xor', 'eax, eax']
+  4198020, ['mov', 'esi, 1']
+  4198025, ['call', '0x400be0']
+ next: [4197344, 4198030]
+
+node :101
+node 5 info:
+ start: 4197604
+ prev: [4197036]
+ instructions: 
+  4197604, ['sub', 'rsp, 8']
+  4197608, ['mov', 'rax, qword ptr [rip + 0x2012e9]']
+  4197615, ['test', 'rax, rax']
+  4197618, ['je', '0x400cf6']
+ next: [4197622, 4197620]
+
+node :102
+node 35 info:
+ start: 4197655
+ prev: [4197651]
+ instructions: 
+  4197655, ['mov', 'eax, 0']
+  4197660, ['test', 'rax, rax']
+  4197663, ['je', '0x400d15']
+ next: [4197653, 4197665]
+
+node :103
+node 57 info:
+ start: 4197556
+ prev: [4197551, 7340120]
+ instructions: 
+  4197556, ['jmp', '0x400ca9']
+ next: [4197545]
+
+node :104
+node 64 info:
+ start: 8392808
+ prev: [8392800, 4197550]
+ instructions: 
+  8392808, ['nop', '']
+ next: [8392808]
+
+node :105
+node 65 info:
+ start: 4197280
+ prev: [4197540]
+ instructions: 
+  4197280, ['jmp', 'qword ptr [rip + 0x2014c2]']
+ next: [7340168]
+
+node :106
+node 103 info:
+ start: 4197328
+ prev: [4198043, 4198043]
+ instructions: 
+  4197328, ['jmp', 'qword ptr [rip + 0x2014aa]']
+ next: [7340192]
+
+node :107
+node 32 info:
+ start: 4197632
+ prev: [4197757]
+ instructions: 
+  4197632, ['mov', 'eax, 0x6020a7']
+  4197637, ['push', 'rbp']
+  4197638, ['sub', 'rax, 0x6020a0']
+  4197644, ['cmp', 'rax, 0xe']
+  4197648, ['mov', 'rbp, rsp']
+  4197651, ['ja', '0x400d17']
+ next: [4197653, 4197655]
+
+node :108
+node 48 info:
+ start: 4197551
+ prev: [4197461]
+ instructions: 
+  4197551, ['call', '0x400b40']
+ next: [4197184, 4197556]
+
+node :109
+node 53 info:
+ start: 7340120
+ prev: [4197184]
+ instructions: 
+  7340120, ['nop', '']
+ next: [4197556]
+
+node :110
+node 62 info:
+ start: 4197522
+ prev: [4197517, 7340128]
+ instructions: 
+  4197522, ['mov', 'ecx, 0x4010f7']
+  4197527, ['mov', 'rsi, rax']
+  4197530, ['mov', 'rdx, rbx']
+  4197533, ['mov', 'edi, 1']
+  4197538, ['xor', 'eax, eax']
+  4197540, ['call', '0x400ba0']
+ next: [4197280, 4197545]
+
+node :111
+node 102 info:
+ start: 4198030
+ prev: [4198025, 7340200]
+ instructions: 
+  4198030, ['xor', 'edi, edi']
+  4198032, ['cmp', 'rbx, qword ptr [rip + 0x201231]']
+  4198039, ['sete', 'dil']
+  4198043, ['call', '0x400bd0']
+ next: [4197328]
+
+node :112
+node 104 info:
+ start: 7340192
+ prev: [4197328, 7340192]
+ instructions: 
+  7340192, ['nop', '']
+ next: [7340192]
+
+node :113
+node 117 info:
+ start: 4198030
+ prev: [4198025]
+ instructions: 
+  4198030, ['xor', 'edi, edi']
+  4198032, ['cmp', 'rbx, qword ptr [rip + 0x201231]']
+  4198039, ['sete', 'dil']
+  4198043, ['call', '0x400bd0']
+ next: [4197328]
+
+node :114
+node 34 info:
+ start: 4197653
+ prev: [4197651, 4197663]
+ instructions: 
+  4197653, ['pop', 'rbp']
+  4197654, ['ret', '']
+ next: [4197762]
+
+node :115
+node 50 info:
+ start: 4197184
+ prev: [4197551]
+ instructions: 
+  4197184, ['jmp', 'qword ptr [rip + 0x2014f2]']
+ next: [7340120]
+
+node :116
+node 61 info:
+ start: 4197545
+ prev: [4197556, 4197540]
+ instructions: 
+  4197545, ['pop', 'rdx']
+  4197546, ['pop', 'rbx']
+  4197547, ['xor', 'eax, eax']
+  4197549, ['pop', 'rbp']
+  4197550, ['ret', '']
+ next: [8392808]
+
+node :117
+node 7 info:
+ start: 4197620
+ prev: [4197618]
+ instructions: 
+  4197620, ['call', 'rax']
+ next: [4197622]
+
+node :118
+node 23 info:
+ start: 4197729
+ prev: [4197727]
+ instructions: 
+  4197729, ['pop', 'rbp']
+  4197730, ['mov', 'edi, 0x6020a0']
+  4197735, ['jmp', 'rdx']
+ next: []
+
+node :119
+node 37 info:
+ start: 4197665
+ prev: [4197663]
+ instructions: 
+  4197665, ['pop', 'rbp']
+  4197666, ['mov', 'edi, 0x6020a0']
+  4197671, ['jmp', 'rax']
+ next: []
+
+node :120
+node 118 info:
+ start: 4197601
+ prev: [8392808]
+ instructions: 
+  4197601, ['nop', '']
+ next: []
+
+node :121
+node 119 info:
+ start: 4197545
+ prev: [7340168]
+ instructions: 
+  4197545, ['nop', '']
+ next: []
+
+node :122
+node 67 info:
+ start: 8392808
+ prev: [8392808]
+ instructions: 
+  8392808, ['nop', '']
+ next: [4197601]
+
+node :123
+node 68 info:
+ start: 7340168
+ prev: [4197280]
+ instructions: 
+  7340168, ['nop', '']
+ next: [4197545]
+

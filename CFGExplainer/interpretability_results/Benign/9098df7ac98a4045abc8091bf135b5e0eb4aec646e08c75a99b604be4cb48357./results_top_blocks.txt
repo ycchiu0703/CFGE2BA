@@ -1,0 +1,39 @@
+CFGExplainer result: [malware = Benign |  graph = 9098df7ac98a4045abc8091bf135b5e0eb4aec646e08c75a99b604be4cb48357| #nodes = 4]
+
+node :1
+node 2 info:
+ start: 4201597
+ prev: [4201601, 4201594]
+ instructions: 
+  4201597, ['lock', 'xadd dword ptr [rdi], eax']
+  4201601, ['ret', '']
+ next: [4201597]
+
+node :2
+node 3 info:
+ start: 4201594
+ prev: [4201592]
+ instructions: 
+  4201594, ['or', 'eax, 0xffffffff']
+ next: [4201597]
+
+node :3
+node 0 info:
+ start: 4201584
+ prev: []
+ instructions: 
+  4201584, ['cmp', 'qword ptr [rip + 0x2028f0], 0']
+  4201592, ['je', '0x401c82']
+ next: [4201602, 4201594]
+
+node :4
+node 1 info:
+ start: 4201602
+ prev: [4201592]
+ instructions: 
+  4201602, ['mov', 'eax, dword ptr [rdi]']
+  4201604, ['lea', 'edx, [rax - 1]']
+  4201607, ['mov', 'dword ptr [rdi], edx']
+  4201609, ['ret', '']
+ next: []
+
