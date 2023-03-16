@@ -1,8 +1,6 @@
 # ignore dataset
-./ACFGs/
-./Graph/
-./CFGExplainer/data
-./CFGExplainer/logs
+/ACFGs
+/Graph
 
 
 # ignore gpickle files
