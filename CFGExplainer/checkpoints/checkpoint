@@ -1,2 +1,2 @@
-model_checkpoint_path: "classifier_poison_Connlabcfg_poison_sample2"
-all_model_checkpoint_paths: "classifier_poison_Connlabcfg_poison_sample2"
+model_checkpoint_path: "GCNClassifier_connlabcfg"
+all_model_checkpoint_paths: "GCNClassifier_connlabcfg"

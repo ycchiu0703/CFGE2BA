@@ -7,6 +7,7 @@ from util.graphprocessor import YANCFG
 
 import networkx as nx
 import tensorflow as tf
+import mlflow
 
 # for writing results
 from tensorboardX import SummaryWriter
@@ -44,6 +45,8 @@ def train_GCNClassifier():
     
     optimizer = tf.keras.optimizers.Adam(learning_rate=args.lr)
     
+    best_acc = 0.0
+
     # running the training epochs
     for epoch in tqdm(range(args.epochs), disable=args.disable_tqdm):
 
@@ -51,7 +54,11 @@ def train_GCNClassifier():
         outputs, labels, losses = [], [], []
         train_batch = train.shuffle(args.batch_size).batch(args.batch_size)
         for batch_id, ts_batch in enumerate(train_batch):
+            
+            ## clear_session
+            tf.keras.backend.clear_session()
             # print('ep: ', epoch, ' batch: ', batch_id)
+            
             with tf.device('/gpu:0'):   ## with tf.device('/gpu:0'):
                 batch_adjs, batch_feats, batch_labels, batch_ids, batch_masks = ts_batch
                 with tf.GradientTape() as tape:
@@ -85,10 +92,18 @@ def train_GCNClassifier():
             writer.add_scalar('loss/test_loss', results['loss'].numpy(), epoch + 1)
             writer.add_scalar('accuracy/test_acc', results['accuracy'].numpy(), epoch + 1)
 
+        ## mlflow 
+        mlflow.log_metric("train_acc", train_acc.numpy(), step = epoch)
+        mlflow.log_metric("train_loss", train_loss.numpy(), step = epoch)
+        mlflow.log_metric("test_acc", results['accuracy'].numpy(), step = epoch)
+        mlflow.log_metric("test_loss", results['loss'].numpy(), step = epoch)
+
         if (epoch % args.save_thresh == 0) or (epoch == args.epochs - 1):
-            if args.save_model:
-                model.save_weights(args.save_path + args.dataset)
-        
+            if args.save_model and best_acc <= results['accuracy'].numpy():
+                best_acc = results['accuracy'].numpy()
+                mlflow.log_metric('Save_model_Train_acc', train_acc, step = epoch)
+                mlflow.log_metric('Save_model_Test_acc', best_acc, step = epoch)
+                model.save_weights(args.save_path + args.dataset)        
     return
 
 
@@ -147,13 +162,13 @@ def main(arguments):
     args.hiddens = str(arguments[2])  # '1024-512-128'
     args.lr = float(arguments[3])  # 0.00001
     args.model_name_flag = str(arguments[4])  # 'trial_gcn_'
-    args.save_path = './checkpoints/' + args.model_name_flag
+    args.save_path = './checkpoints/' + args.model_name_flag + '_'
     args.dataset = str(arguments[5])  # 'yancfg_test'
     args.epochs = int(arguments[6])  # 1000
     args.embnormlize = False  # keep this False: else the output becomes NaN
 
     # add arguments: for logging results
-    args.writer_path = './logs/classifier/'  # wont change
+    args.writer_path = None  # wont change ##'./logs/classifier/'
     args.disable_tqdm = True  # make False to see progress bar
     args.save_thresh = 5  # save model state every 5 epochs
     
@@ -178,6 +193,21 @@ def main(arguments):
         'Malware': 1
     }
 
+    ## mlflow
+    mlflow.set_experiment(args.model_name_flag)
+    mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
+    mlflow.log_param('training_size', 105)
+    mlflow.log_param('testing_size', 100)   
+    mlflow.log_param('dataset', args.dataset)  
+    mlflow.log_param('Batch_Size', args.batch_size)
+    mlflow.log_param('Learning_Rate', args.lr)
+    mlflow.log_param('Epochs', args.epochs)
+    mlflow.log_param('Save_thresh', args.save_thresh)
+    mlflow.log_param('input_dim', args.d)
+    mlflow.log_param('output_dim', args.c)
+
+    
+
     # debugging argument
     args.debug = False  # prints out the data loading step + loads only 1 graph per sample ## args.debug = False
     if args.debug:
@@ -186,10 +216,18 @@ def main(arguments):
     # run train()
     train_GCNClassifier()
     
+    mlflow.end_run()
+    
     return
 
 
 # running the code
 if __name__ == "__main__":
     print("sys.args: ", sys.argv)
+    
+    ##  GPU settings
+    physical_devices = tf.config.experimental.list_physical_devices('GPU')
+    assert len(physical_devices) > 0, "Not enough GPU hardware devices available"
+    config = tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
     main(sys.argv[1:])

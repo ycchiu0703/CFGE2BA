@@ -21,7 +21,8 @@ class ExplainerModule(tf.keras.Model):
         x, embed, adj, node_mask = inputs
 
         # call NN1 and get node importance
-        importance = self.NN1(embed, node_mask, training=training, debug=debug)  # obtains node importance
+        ## importance = self.NN1(embed, node_mask, training=training, debug=debug)  # obtains node importance
+        importance, importance_score = self.NN1(embed, node_mask, training=training, debug=debug)  # obtains node importance
 
         # call NN2 to get graph classification
         out = self.NN2(importance, embed, training=training, debug=debug)  # gets class probabilities, might change it use GNN model component in future
@@ -29,7 +30,8 @@ class ExplainerModule(tf.keras.Model):
             print('+ call() node importance: ', tf.shape(importance))
             print('+ call() out', tf.shape(out))
         
-        return out, importance
+        ## return out, importance
+        return out, importance, importance_score
 
     def NN1(self, embed, node_mask=None, training=True, debug=False):
         """
@@ -45,7 +47,9 @@ class ExplainerModule(tf.keras.Model):
                 print('+ MLP1() reshaped node mask: ', tf.shape(node_mask))
             h = tf.math.multiply(h, node_mask)
         # do sigmoid() activation to get probability
-        return tf.sigmoid(h)
+        
+        ## return tf.sigmoid(h)
+        return tf.sigmoid(h), h
 
     def NN2(self, importance, embed, training=True, debug=False):
         """

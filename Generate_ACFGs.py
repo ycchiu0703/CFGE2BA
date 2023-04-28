@@ -73,46 +73,53 @@ def Generate_ACFG_Node_Attributes(G):
         ACFG.nodes[node]['feat'] = feat
     return ACFG
 
-desc_fpath = '/mnt/bigDisk/dataset/dataset.csv'
+def main():
 
-names = {'filename': str, 'label': str, 'threshold': str, 'arch': str}
-desc_df = pd.read_csv(desc_fpath, names=list(names.keys()), dtype = names, skiprows=1)
+    desc_fpath = '/mnt/bigDisk/dataset/dataset.csv'
 
-summary_dir = '/mnt/bigDisk/leon/rtools/CFGs/x86'
-fpaths = [os.path.join(summary_dir, f) for f in os.listdir(summary_dir)]
-fnames = [os.path.splitext(f)[0] for f in os.listdir(summary_dir)]
+    names = {'filename': str, 'label': str, 'threshold': str, 'arch': str}
+    desc_df = pd.read_csv(desc_fpath, names=list(names.keys()), dtype = names, skiprows=1)
 
-match_df = desc_df[desc_df['filename'].isin(fnames)]
-Bengin_files = match_df[(match_df['label'].isin(['BenignWare']))]['filename']
-Malware_files = match_df[~(match_df['label'].isin(['BenignWare']))]['filename']
+    summary_dir = '/mnt/bigDisk/leon/rtools/CFGs/x86'
+    fpaths = [os.path.join(summary_dir, f) for f in os.listdir(summary_dir)]
+    fnames = [os.path.splitext(f)[0] for f in os.listdir(summary_dir)]
 
-# 目標目錄的路徑
-directory_path = "/mnt/bigDisk/leon/rtools/CFGs/x86"
+    match_df = desc_df[desc_df['filename'].isin(fnames)]
+    Bengin_files = match_df[(match_df['label'].isin(['BenignWare']))]['filename']
+    Malware_files = match_df[~(match_df['label'].isin(['BenignWare']))]['filename']
 
-## Generate Benign ACFGs
+    # 目標目錄的路徑
+    directory_path = "/mnt/bigDisk/leon/rtools/CFGs/x86"
 
-for filename in tqdm(Bengin_files[100:125]):
-    file_path = os.path.join(directory_path, filename)    
-    
-    # 讀入pickle檔
-    G = nx.read_gpickle(file_path + ".pickle")
-    ACFG = Generate_ACFG_Node_Attributes(G)
-          
-    # 將圖形寫出為gpickle檔
-    nx.write_gpickle(ACFG, "./ACFGs/Test/Benign/" + filename+".gpickle")
-    print("Save : ",filename)
-print("Benign Done")
+    ## Generate Benign ACFGs
 
-## Generate Malware ACFGs
+    for filename in tqdm(Bengin_files[100:125]):
+        file_path = os.path.join(directory_path, filename)    
+        
+        # 讀入pickle檔
+        G = nx.read_gpickle(file_path + ".pickle")
+        ACFG = Generate_ACFG_Node_Attributes(G)
+            
+        # 將圖形寫出為gpickle檔
+        nx.write_gpickle(ACFG, "./ACFGs/Test/Benign/" + filename+".gpickle")
+        print("Save : ",filename)
+    print("Benign Done")
 
-for filename in tqdm(Malware_files[100:125]):
-    file_path = os.path.join(directory_path, filename)    
+    ## Generate Malware ACFGs
 
-    # 讀入pickle檔
-    G = nx.read_gpickle(file_path + ".pickle")
-    ACFG = Generate_ACFG_Node_Attributes(G)
-    
-    # 將圖形寫出為gpickle檔
-    nx.write_gpickle(ACFG, "./ACFGs/Test/Malware/" + filename+".gpickle")
+    for filename in tqdm(Malware_files[100:125]):
+        file_path = os.path.join(directory_path, filename)    
 
-print("Malware Done")
+        # 讀入pickle檔
+        G = nx.read_gpickle(file_path + ".pickle")
+        ACFG = Generate_ACFG_Node_Attributes(G)
+        
+        # 將圖形寫出為gpickle檔
+        nx.write_gpickle(ACFG, "./ACFGs/Test/Malware/" + filename+".gpickle")
+
+    print("Malware Done")
+
+    return 
+
+if __name__ == "__main__":
+    main()

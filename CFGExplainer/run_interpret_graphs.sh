@@ -1,9 +1,9 @@
 #!/bin/bash
 
-declare -a path="data"
+declare -a path="Partition_samples"      ## declare -a path="data"
 declare -a hiddens="1024-512-128"
-declare -a model_name="classifier_lynxv2_"  # for classifier
-declare -a data_name="yancfg_complete_sample2"
+declare -a model_name="GCNClassifier_"      ## model_name="classifier_lynxv2_"  # for classifier
+declare -a data_name="connlabcfg"    ## data_name="yancfg_complete_sample2"
 declare -a expname="ep300_b32_elr00001_"
 
 # will always run the experiment in first available gpu: 0

@@ -1,0 +1,36 @@
+CFGExplainer result: [malware = Benign |  graph = 67a97ad419947330ae3bac1c5c5cab26484ae9869158419733a2cae86b5606b3| #nodes = 3]
+
+node :1
+node importance :[0.52277654]
+node importance score:[0.09116935]
+node 0 info:
+ start: 4203808
+ prev: []
+ instructions: 
+  4203808, ['sub', 'rsp, 8']
+  4203812, ['mov', 'rax, qword ptr [rip + 0x202a95]']
+  4203819, ['test', 'rax, rax']
+  4203822, ['je', '0x402532']
+ next: [4203826, 4203824]
+
+node :2
+node importance :[0.51049054]
+node importance score:[0.04196819]
+node 1 info:
+ start: 4203826
+ prev: [4203822, 4203824]
+ instructions: 
+  4203826, ['add', 'rsp, 8']
+  4203830, ['ret', '']
+ next: []
+
+node :3
+node importance :[0.51016355]
+node importance score:[0.0406597]
+node 2 info:
+ start: 4203824
+ prev: [4203822]
+ instructions: 
+  4203824, ['call', 'rax']
+ next: [4203826]
+

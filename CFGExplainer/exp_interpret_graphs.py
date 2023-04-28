@@ -125,7 +125,8 @@ def interpret(step_size, feat, graph, node_mask, class_label, all_nodes, node_or
             subgraphs[i] = copy.deepcopy(graph)
             
             # 4. get result from CFGExplainer
-            _, importance = explainer((_feat, _emb, _adj, _mask), training=False)
+            ## _, importance = explainer((_feat, _emb, _adj, _mask), training=False)
+            _, importance, importance_score = explainer((_feat, _emb, _adj, _mask), training=False)
             
             # 5. loop through nodes left and assign node score to node
             # this is done to map the numeric node id -> the actual node name
@@ -169,7 +170,8 @@ def interpret(step_size, feat, graph, node_mask, class_label, all_nodes, node_or
     time_taken += (tend - tstart)
     block_order.reverse()  # reverse the block order, now the nodes are from most important -> least important
 
-    return block_order, subgraphs, time_taken
+    ## return block_order, subgraphs, time_taken, importance    
+    return block_order, subgraphs, time_taken, importance, importance_score
 
 
 def scaled_interpret_experiment(malware_name, class_label, graph_load_path, path_mod, model, explainer):
@@ -207,11 +209,11 @@ def scaled_interpret_experiment(malware_name, class_label, graph_load_path, path
         # 3. obtain the results
         
         step_size = 10   ## # step_size = 1
-        block_order, subgraphs, time_taken = interpret(step_size, feat, graph, node_mask, class_label, all_nodes, node_ordering, data_loader, model, explainer)
+        block_order, subgraphs, time_taken, importance, importance_score = interpret(step_size, feat, graph, node_mask, class_label, all_nodes, node_ordering, data_loader, model, explainer)
 
         # 4. save the results: top_blocks.pickle, top_blocks.txt, class_probability.txt, <adjacency matrices of subgraphs>
         graph_name = name.strip('padded_')
-        graph_name = graph_name.strip('gpickle')
+        graph_name = graph_name.strip('.gpickle')
         save_path = './interpretability_results/' + malware_name + '/' + graph_name
         if isdir(save_path) is False:
             mkdir(save_path)
@@ -220,13 +222,17 @@ def scaled_interpret_experiment(malware_name, class_label, graph_load_path, path
         graph_name = name.strip('.gpickle').strip('padded_')
         filename = save_path + '/top_blocks.pickle'
         data_loader.save_pickle(filename, block_order)
-
+        
         # 4.2. save top blocks in text format
         output_str = "CFGExplainer result: [malware = " + malware_name + " |  graph = " + graph_name + "| #nodes = " + str(num_all_nodes) + "]\n\n"
         for i, node in enumerate(block_order):
             output_str += "node :" + str(i + 1) + "\n"
+            output_str += "node importance :" + str(importance[node].numpy()) + "\n"
+            output_str += "node importance score:" + str(importance_score[node].numpy()) + "\n"
             output_str += block_info[node]
             output_str += "\n"
+            # top_node.append(node)
+            
 
         filename = save_path + '/results_top_blocks.txt'
         save_to_text(filename, output_str)
@@ -329,7 +335,8 @@ def main(arguments):
         if isdir(save_path) is False:
             mkdir(save_path)
         print('\n>> running ', malware_name, ' CFGExplainer experiment')
-        scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer)
+        scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer) ## scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer)
+        
     
     return
 

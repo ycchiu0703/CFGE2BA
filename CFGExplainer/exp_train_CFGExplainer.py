@@ -5,6 +5,7 @@ from util.models import GCN
 from util.metrics import accuracy
 from util.graphprocessor import YANCFG
 
+import mlflow
 import tensorflow as tf
 from tensorboardX import SummaryWriter
 from tqdm import tqdm
@@ -22,9 +23,10 @@ def train_CFGExplainer():
     """
     will run the training for explainer
     """
-    
+
     # 1. load pre-trained GCN model
     model = GCN(input_dim=args.d, output_dim=args.c)
+
     model.load_weights(args.save_path + args.dataset)  # load the weights
 
     # 2. load graph data
@@ -46,6 +48,8 @@ def train_CFGExplainer():
         optimizer = tf.keras.optimizers.Adam(learning_rate=args.elr)
     print('+ gcn model:', model)
     print('+ explainer model:', explainer)
+
+    best_acc = 0.0
 
     # running the training epochs
     for epoch in tqdm(range(args.eepochs), disable=args.disable_tqdm):
@@ -82,10 +86,16 @@ def train_CFGExplainer():
         if args.writer_path is not None:
             writer.add_scalar('CFGExplainer loss', train_loss.numpy(), epoch + 1)
             writer.add_scalar('CFGExplainer acc', train_acc.numpy(), epoch + 1)
-            
+
+        ## mlflow 
+        mlflow.log_metric("train_acc", train_acc.numpy(), step = epoch)
+        mlflow.log_metric("train_loss", train_loss.numpy(), step = epoch)
+
         if (epoch % args.save_thresh == 0) or (epoch == args.eepochs - 1):
-            if args.save_model:
-                explainer.save_weights(args.explainer_path)
+           if args.save_model and best_acc <= train_acc.numpy():
+                best_acc = train_acc.numpy()
+                mlflow.log_metric('Save_model_Train_acc', best_acc, step = epoch)
+                model.save_weights(args.save_path + args.dataset)
     
     if writer:
         writer.close()
@@ -106,7 +116,7 @@ def main(arguments):
     # other arguments are left intact as defaults, check config.py
     # add new arguments: model
     args.d = 8      ## args.d = 13 (input dim)
-    args.c = 2      ## args.c = 2 (output dim)
+    args.c = 2      ## args.c = 12 (output dim)
     args.n = 4096  # the number of nodes in padded graph (fixed for experiment) ## args.n = 4690
     args.batch_size = int(arguments[0])  # batch size
     args.path = str(arguments[1])  # the path to load the data
@@ -150,9 +160,23 @@ def main(arguments):
         'Malware': 1
     }
 
+    ## mlflow
+    mlflow.set_experiment("CFGExplainer")
+    mlflow.start_run(run_name = "GCNClassifier")
+    mlflow.log_param('training_size', 100)
+    mlflow.log_param('testing_size', 100)   
+    mlflow.log_param('dataset', args.dataset)  
+    mlflow.log_param('Batch_Size', args.batch_size)
+    mlflow.log_param('Learning_Rate', args.lr)
+    mlflow.log_param('Epochs', args.eepochs)
+    mlflow.log_param('Save_thresh', args.save_thresh)
+    mlflow.log_param('input_dim', args.d)
+    mlflow.log_param('output_dim', args.c)
+
     # run explain code
     train_CFGExplainer()
-    
+    mlflow.end_run()
+
     return
 
 

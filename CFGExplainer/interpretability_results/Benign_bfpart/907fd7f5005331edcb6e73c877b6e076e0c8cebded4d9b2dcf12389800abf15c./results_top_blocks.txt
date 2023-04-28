@@ -1,0 +1,1216 @@
+CFGExplainer result: [malware = Benign |  graph = 907fd7f5005331edcb6e73c877b6e076e0c8cebded4d9b2dcf12389800abf15| #nodes = 123]
+
+node :1
+node 3 info:
+ start: 134519964
+ prev: [135266320]
+ instructions: 
+  134519964, ['push', 'ebp']
+  134519965, ['mov', 'ebp, esp']
+  134519967, ['push', 'ebx']
+  134519968, ['call', '0x804a540']
+ next: [134522176, 134519973]
+
+node :2
+node 5 info:
+ start: 134519973
+ prev: [134519968, 134522179]
+ instructions: 
+  134519973, ['add', 'ebx, 0x244f']
+  134519979, ['call', '0x804a610']
+ next: [134522384, 134519984]
+
+node :3
+node 7 info:
+ start: 134522395
+ prev: [134522390]
+ instructions: 
+  134522395, ['pop', 'edx']
+  134522396, ['add', 'edx, 0x1ad9']
+  134522402, ['mov', 'eax, 0x8049dc0']
+  134522407, ['test', 'eax, eax']
+  134522409, ['je', '0x804a64b']
+ next: [134522411, 134522443]
+
+node :4
+node 14 info:
+ start: 134522224
+ prev: [134522471]
+ instructions: 
+  134522224, ['mov', 'eax, 0x804c298']
+  134522229, ['sub', 'eax, 0x804c298']
+  134522234, ['sar', 'eax, 2']
+  134522237, ['mov', 'edx, eax']
+  134522239, ['shr', 'edx, 0x1f']
+  134522242, ['add', 'eax, edx']
+  134522244, ['sar', 'eax, 1']
+  134522246, ['jne', '0x804a589']
+ next: [134522248, 134522249]
+
+node :5
+node 4 info:
+ start: 134522176
+ prev: [134519968]
+ instructions: 
+  134522176, ['mov', 'ebx, dword ptr [esp]']
+  134522179, ['ret', '']
+ next: [134519973]
+
+node :6
+node 11 info:
+ start: 134522470
+ prev: [134522450, 134522459, 134522468]
+ instructions: 
+  134522470, ['leave', '']
+  134522471, ['jmp', '0x804a570']
+ next: [134522224]
+
+node :7
+node 18 info:
+ start: 134522249
+ prev: [134522246]
+ instructions: 
+  134522249, ['mov', 'edx, 0']
+  134522254, ['test', 'edx, edx']
+  134522256, ['je', '0x804a588']
+ next: [134522248, 134522258]
+
+node :8
+node 9 info:
+ start: 134522443
+ prev: [134522409, 134522438]
+ instructions: 
+  134522443, ['mov', 'eax, dword ptr [0x804c010]']
+  134522448, ['test', 'eax, eax']
+  134522450, ['je', '0x804a666']
+ next: [134522470, 134522452]
+
+node :9
+node 6 info:
+ start: 134522384
+ prev: [134519979]
+ instructions: 
+  134522384, ['push', 'ebp']
+  134522385, ['mov', 'ebp, esp']
+  134522387, ['sub', 'esp, 0x18']
+  134522390, ['call', '0x804a61b']
+ next: [134522395]
+
+node :10
+node 8 info:
+ start: 134522411
+ prev: [134522409]
+ instructions: 
+  134522411, ['mov', 'dword ptr [esp + 0xc], edx']
+  134522415, ['mov', 'dword ptr [esp + 8], 0']
+  134522423, ['mov', 'dword ptr [esp + 4], 0x804c2c8']
+  134522431, ['mov', 'dword ptr [esp], 0x804be80']
+  134522438, ['call', '0x8049dc0']
+ next: [134520256, 134522443]
+
+node :11
+node 20 info:
+ start: 134522258
+ prev: [134522256]
+ instructions: 
+  134522258, ['push', 'ebp']
+  134522259, ['mov', 'ebp, esp']
+  134522261, ['sub', 'esp, 0x18']
+  134522264, ['mov', 'dword ptr [esp + 4], eax']
+  134522268, ['mov', 'dword ptr [esp], 0x804c298']
+  134522275, ['call', 'edx']
+ next: [134522277]
+
+node :12
+node 2 info:
+ start: 135266320
+ prev: [134520048]
+ instructions: 
+  135266320, ['nop', '']
+ next: [134519964, 136319060]
+
+node :13
+node 17 info:
+ start: 134522248
+ prev: [134522246, 134522256]
+ instructions: 
+  134522248, ['ret', '']
+ next: [134519984]
+
+node :14
+node 117 info:
+ start: 134522277
+ prev: [134522275]
+ instructions: 
+  134522277, ['leave', '']
+  134522278, ['ret', '']
+ next: [134519984]
+
+node :15
+node 21 info:
+ start: 134528008
+ prev: [134519984]
+ instructions: 
+  134528008, ['push', 'ebp']
+  134528009, ['mov', 'ebp, esp']
+  134528011, ['push', 'ebx']
+  134528012, ['push', 'edx']
+  134528013, ['mov', 'eax, dword ptr [0x804c000]']
+  134528018, ['mov', 'ebx, 0x804c000']
+  134528023, ['cmp', 'eax, -1']
+  134528026, ['je', '0x804bc28']
+ next: [134528040, 134528028]
+
+node :16
+node 118 info:
+ start: 134528030
+ prev: [134528028]
+ instructions: 
+  134528030, ['sub', 'ebx, 4']
+  134528033, ['mov', 'eax, dword ptr [ebx]']
+  134528035, ['cmp', 'eax, -1']
+  134528038, ['jne', '0x804bc1c']
+ next: [134528028, 134528040]
+
+node :17
+node 0 info:
+ start: 134522140
+ prev: []
+ instructions: 
+  134522140, ['xor', 'ebp, ebp']
+  134522142, ['pop', 'esi']
+  134522143, ['mov', 'ecx, esp']
+  134522145, ['and', 'esp, 0xfffffff0']
+  134522148, ['push', 'eax']
+  134522149, ['push', 'esp']
+  134522150, ['push', 'edx']
+  134522151, ['push', '0x804bc2c']
+  134522156, ['push', '0x8049c9c']
+  134522161, ['push', 'ecx']
+  134522162, ['push', 'esi']
+  134522163, ['push', '0x804a310']
+  134522168, ['call', '0x8049cf0']
+ next: [134520048]
+
+node :18
+node 1 info:
+ start: 134520048
+ prev: [134522168]
+ instructions: 
+  134520048, ['jmp', 'dword ptr [0x804c108]']
+ next: [135266320]
+
+node :19
+node 12 info:
+ start: 134522452
+ prev: [134522450]
+ instructions: 
+  134522452, ['mov', 'eax, 0']
+  134522457, ['test', 'eax, eax']
+  134522459, ['je', '0x804a666']
+ next: [134522470, 134522461]
+
+node :20
+node 19 info:
+ start: 134519984
+ prev: [134519979, 134522248, 134522278]
+ instructions: 
+  134519984, ['call', '0x804bc08']
+ next: [134528008, 134519989]
+
+node :21
+node 23 info:
+ start: 134528028
+ prev: [134528026, 134528038]
+ instructions: 
+  134528028, ['call', 'eax']
+ next: [134528030]
+
+node :22
+node 50 info:
+ start: 134521818
+ prev: [134521813, 135266580]
+ instructions: 
+  134521818, ['mov', 'dword ptr [ebp - 0x7c], esi']
+  134521821, ['mov', 'dword ptr [esp], ebx']
+  134521824, ['call', '0x8049d80']
+ next: [134520192, 134521829]
+
+node :23
+node 52 info:
+ start: 135266356
+ prev: [134520192]
+ instructions: 
+  135266356, ['nop', '']
+ next: [134521829]
+
+node :24
+node 54 info:
+ start: 134521882
+ prev: [134521875, 134521879]
+ instructions: 
+  134521882, ['test', 'eax, eax']
+  134521884, ['jne', '0x804a415']
+ next: [134521886, 134521877]
+
+node :25
+node 53 info:
+ start: 134521829
+ prev: [134521824, 135266356]
+ instructions: 
+  134521829, ['mov', 'byte ptr [ebp - 0x8b], 0']
+  134521836, ['mov', 'dword ptr [ebp - 0x90], 0x100']
+  134521846, ['mov', 'byte ptr [ebp - 0x8c], 0']
+  134521853, ['mov', 'dword ptr [ebp - 0x80], 0xffffffff']
+  134521860, ['mov', 'edx, dword ptr [ebp - 0x7c]']
+  134521863, ['lea', 'ecx, [edx + 4]']
+  134521866, ['mov', 'eax, dword ptr [edx + 4]']
+  134521869, ['and', 'eax, 0xfffffffc']
+  134521872, ['add', 'esp, 0x10']
+  134521875, ['jmp', '0x804a41a']
+ next: [134521882]
+
+node :26
+node 120 info:
+ start: 134521877
+ prev: [134521884]
+ instructions: 
+  134521877, ['mov', 'ecx, eax']
+  134521879, ['mov', 'eax, dword ptr [eax + 4]']
+ next: [134521882]
+
+node :27
+node 22 info:
+ start: 134528040
+ prev: [134528026, 134528038]
+ instructions: 
+  134528040, ['pop', 'eax']
+  134528041, ['pop', 'ebx']
+  134528042, ['pop', 'ebp']
+  134528043, ['ret', '']
+ next: [134519989]
+
+node :28
+node 24 info:
+ start: 134519989
+ prev: [134519984, 134528043]
+ instructions: 
+  134519989, ['pop', 'ebx']
+  134519990, ['pop', 'ebp']
+  134519991, ['ret', '']
+ next: [136319060]
+
+node :29
+node 25 info:
+ start: 136319060
+ prev: [135266320, 134519991]
+ instructions: 
+  136319060, ['nop', '']
+ next: [134521616, 136319064]
+
+node :30
+node 77 info:
+ start: 134521963
+ prev: [134521958, 135266608]
+ instructions: 
+  134521963, ['mov', 'byte ptr [ebp - 0x8c], al']
+  134521969, ['add', 'esp, 0xc']
+  134521972, ['movzx', 'eax, byte ptr [ebp - 0x8b]']
+  134521979, ['push', 'eax']
+  134521980, ['push', '0x15']
+  134521982, ['push', 'ebx']
+  134521983, ['call', '0x804a190']
+ next: [134521232, 134521988]
+
+node :31
+node 81 info:
+ start: 135266608
+ prev: [134521232]
+ instructions: 
+  135266608, ['nop', '']
+ next: [134521988]
+
+node :32
+node 27 info:
+ start: 134520864
+ prev: [134521671]
+ instructions: 
+  134520864, ['jmp', 'dword ptr [0x804c1d4]']
+ next: [135266516]
+
+node :33
+node 56 info:
+ start: 134522005
+ prev: [134521891, 134521900, 134522002]
+ instructions: 
+  134522005, ['push', 'ebx']
+  134522006, ['push', '0x80']
+  134522011, ['push', '1']
+  134522013, ['lea', 'esi, [ebp - 0x5e4]']
+  134522019, ['lea', 'ebx, [ebp - 0x5bc]']
+  134522025, ['push', 'ebx']
+  134522026, ['call', '0x8049e50']
+ next: [134520400, 134522031, 134520400]
+
+node :34
+node 60 info:
+ start: 135266404
+ prev: [134520400]
+ instructions: 
+  135266404, ['nop', '']
+ next: [134522031]
+
+node :35
+node 87 info:
+ start: 134520288
+ prev: [134521997]
+ instructions: 
+  134520288, ['jmp', 'dword ptr [0x804c144]']
+ next: [135266376]
+
+node :36
+node 97 info:
+ start: 135266404
+ prev: [134520400]
+ instructions: 
+  135266404, ['nop', '']
+ next: [134522031]
+
+node :37
+node 26 info:
+ start: 134521616
+ prev: [136319060]
+ instructions: 
+  134521616, ['lea', 'ecx, [esp + 4]']
+  134521620, ['and', 'esp, 0xfffffff0']
+  134521623, ['push', 'dword ptr [ecx - 4]']
+  134521626, ['push', 'ebp']
+  134521627, ['mov', 'ebp, esp']
+  134521629, ['push', 'esi']
+  134521630, ['push', 'ebx']
+  134521631, ['push', 'ecx']
+  134521632, ['sub', 'esp, 0x5f4']
+  134521638, ['push', '0']
+  134521640, ['push', '0']
+  134521642, ['push', '0']
+  134521644, ['push', '0']
+  134521646, ['push', '0']
+  134521648, ['push', '0']
+  134521650, ['push', '0']
+  134521652, ['push', '0']
+  134521654, ['push', '0']
+  134521656, ['push', '0']
+  134521658, ['push', '0']
+  134521660, ['push', '0']
+  134521662, ['push', '0']
+  134521664, ['lea', 'eax, [ebp - 0x5e4]']
+  134521670, ['push', 'eax']
+  134521671, ['call', '0x804a020']
+ next: [134520864, 134521676]
+
+node :38
+node 55 info:
+ start: 134521886
+ prev: [134521884]
+ instructions: 
+  134521886, ['lea', 'eax, [edx + 4]']
+  134521889, ['cmp', 'ecx, eax']
+  134521891, ['je', '0x804a495']
+ next: [134522005, 134521893]
+
+node :39
+node 84 info:
+ start: 134521988
+ prev: [134521983, 135266608]
+ instructions: 
+  134521988, ['mov', 'byte ptr [ebp - 0x8b], al']
+  134521994, ['mov', 'dword ptr [esp], ebx']
+  134521997, ['call', '0x8049de0']
+ next: [134520288, 134522002]
+
+node :40
+node 57 info:
+ start: 134521893
+ prev: [134521891]
+ instructions: 
+  134521893, ['mov', 'eax, dword ptr [edx + 0x14]']
+  134521896, ['cmp', 'dword ptr [ecx + eax], 0']
+  134521900, ['jne', '0x804a495']
+ next: [134521902, 134522005]
+
+node :41
+node 121 info:
+ start: 134522002
+ prev: [134521997, 135266376]
+ instructions: 
+  134522002, ['add', 'esp, 0x10']
+ next: [134522005]
+
+node :42
+node 90 info:
+ start: 135266376
+ prev: [134520288]
+ instructions: 
+  135266376, ['nop', '']
+ next: [134522002]
+
+node :43
+node 62 info:
+ start: 134522031
+ prev: [134522026, 135266404, 135266404]
+ instructions: 
+  134522031, ['add', 'esp, 0xc']
+  134522034, ['push', '0x40']
+  134522036, ['push', '2']
+  134522038, ['push', 'ebx']
+  134522039, ['call', '0x8049e50']
+ next: [134520400, 134522044]
+
+node :44
+node 28 info:
+ start: 135266516
+ prev: [134520864]
+ instructions: 
+  135266516, ['nop', '']
+ next: [134521676]
+
+node :45
+node 68 info:
+ start: 134522044
+ prev: [134522039, 135266404]
+ instructions: 
+  134522044, ['add', 'esp, 0xc']
+  134522047, ['push', '0x200']
+  134522052, ['push', '3']
+  134522054, ['push', 'ebx']
+  134522055, ['call', '0x8049e50']
+ next: [134520400, 134522060]
+
+node :46
+node 72 info:
+ start: 135266404
+ prev: [134520400]
+ instructions: 
+  135266404, ['nop', '']
+ next: [134522060]
+
+node :47
+node 30 info:
+ start: 134520912
+ prev: [134521713]
+ instructions: 
+  134520912, ['jmp', 'dword ptr [0x804c1e0]']
+ next: [135266528]
+
+node :48
+node 32 info:
+ start: 134521718
+ prev: [134521713, 135266528]
+ instructions: 
+  134521718, ['add', 'esp, 0xc']
+  134521721, ['push', '-1']
+  134521723, ['push', '1']
+  134521725, ['lea', 'eax, [ebp - 0x78]']
+  134521728, ['push', 'eax']
+  134521729, ['call', '0x804a040']
+ next: [134520896, 134521734]
+
+node :49
+node 76 info:
+ start: 134520400
+ prev: [134522068]
+ instructions: 
+  134520400, ['jmp', 'dword ptr [0x804c160]']
+ next: [135266404]
+
+node :50
+node 74 info:
+ start: 134522060
+ prev: [134522055, 135266404]
+ instructions: 
+  134522060, ['add', 'esp, 0xc']
+  134522063, ['push', '0x40']
+  134522065, ['push', '4']
+  134522067, ['push', 'ebx']
+  134522068, ['call', '0x8049e50']
+ next: [134520400, 134522073]
+
+node :51
+node 29 info:
+ start: 134521676
+ prev: [134521671, 135266516]
+ instructions: 
+  134521676, ['mov', 'dword ptr [ebp - 0x5e4], 0x804bdd0']
+  134521686, ['mov', 'dword ptr [ebp - 0x580], 0x804be6c']
+  134521696, ['mov', 'byte ptr [ebp - 0x9c], 0']
+  134521703, ['add', 'esp, 0x34']
+  134521706, ['lea', 'eax, [ebp - 0x98]']
+  134521712, ['push', 'eax']
+  134521713, ['call', '0x804a050']
+ next: [134520912, 134521718]
+
+node :52
+node 58 info:
+ start: 134520400
+ prev: [134522026]
+ instructions: 
+  134520400, ['jmp', 'dword ptr [0x804c160]']
+ next: [135266404]
+
+node :53
+node 94 info:
+ start: 134520400
+ prev: [134522026]
+ instructions: 
+  134520400, ['jmp', 'dword ptr [0x804c160]']
+ next: [135266404]
+
+node :54
+node 31 info:
+ start: 135266528
+ prev: [134520912]
+ instructions: 
+  135266528, ['nop', '']
+ next: [134521718]
+
+node :55
+node 33 info:
+ start: 134520896
+ prev: [134521729]
+ instructions: 
+  134520896, ['jmp', 'dword ptr [0x804c1dc]']
+ next: [135266524]
+
+node :56
+node 78 info:
+ start: 135266404
+ prev: [134520400]
+ instructions: 
+  135266404, ['nop', '']
+ next: [134522073]
+
+node :57
+node 34 info:
+ start: 135266524
+ prev: [134520896]
+ instructions: 
+  135266524, ['nop', '']
+ next: [134521734]
+
+node :58
+node 80 info:
+ start: 134522073
+ prev: [134522068, 135266404]
+ instructions: 
+  134522073, ['add', 'esp, 0x10']
+  134522076, ['cmp', 'byte ptr [ebp - 0x8b], 0']
+  134522083, ['jne', '0x804a4f5']
+ next: [134522085, 134522101]
+
+node :59
+node 36 info:
+ start: 134521040
+ prev: [134521747]
+ instructions: 
+  134521040, ['jmp', 'dword ptr [0x804c200]']
+ next: [135266560]
+
+node :60
+node 122 info:
+ start: 134522098
+ prev: [134522093, 135266368]
+ instructions: 
+  134522098, ['add', 'esp, 0x10']
+ next: [134522101]
+
+node :61
+node 35 info:
+ start: 134521734
+ prev: [134521729, 135266524]
+ instructions: 
+  134521734, ['push', '0']
+  134521736, ['push', '0xc']
+  134521738, ['push', '0x804a689']
+  134521743, ['lea', 'eax, [ebp - 0x50]']
+  134521746, ['push', 'eax']
+  134521747, ['call', '0x804a0d0']
+ next: [134521040, 134521752]
+
+node :62
+node 82 info:
+ start: 134522085
+ prev: [134522083]
+ instructions: 
+  134522085, ['push', 'ecx']
+  134522086, ['push', 'ecx']
+  134522087, ['push', '0x3e8']
+  134522092, ['push', 'esi']
+  134522093, ['call', '0x8049db0']
+ next: [134520240, 134522098]
+
+node :63
+node 88 info:
+ start: 135266368
+ prev: [134520240]
+ instructions: 
+  135266368, ['nop', '']
+ next: [134522098]
+
+node :64
+node 37 info:
+ start: 135266560
+ prev: [134521040]
+ instructions: 
+  135266560, ['nop', '']
+ next: [134521752]
+
+node :65
+node 83 info:
+ start: 134522101
+ prev: [134522083, 134522098]
+ instructions: 
+  134522101, ['sub', 'esp, 0xc']
+  134522104, ['lea', 'ebx, [ebp - 0x5e4]']
+  134522110, ['push', 'ebx']
+  134522111, ['call', '0x8049ed0']
+ next: [134520528, 134522116, 134520528]
+
+node :66
+node 38 info:
+ start: 134521752
+ prev: [134521747, 135266560]
+ instructions: 
+  134521752, ['add', 'esp, 0x20']
+  134521755, ['push', '0']
+  134521757, ['push', '0xc']
+  134521759, ['push', '0x804a67a']
+  134521764, ['lea', 'eax, [ebp - 0x34]']
+  134521767, ['push', 'eax']
+  134521768, ['call', '0x804a0d0']
+ next: [134521040, 134521773]
+
+node :67
+node 40 info:
+ start: 135266560
+ prev: [134521040]
+ instructions: 
+  135266560, ['nop', '']
+ next: [134521773]
+
+node :68
+node 42 info:
+ start: 134520800
+ prev: [134521787]
+ instructions: 
+  134520800, ['jmp', 'dword ptr [0x804c1c4]']
+ next: [135266500]
+
+node :69
+node 59 info:
+ start: 134521902
+ prev: [134521900]
+ instructions: 
+  134521902, ['lea', 'ebx, [ebp - 0x5f0]']
+  134521908, ['push', 'esi']
+  134521909, ['push', 'dword ptr [ecx + 0xc]']
+  134521912, ['push', 'edx']
+  134521913, ['push', 'ebx']
+  134521914, ['call', '0x8049df0']
+ next: [134520304, 134521919]
+
+node :70
+node 63 info:
+ start: 135266380
+ prev: [134520304]
+ instructions: 
+  135266380, ['nop', '']
+ next: [134521919]
+
+node :71
+node 89 info:
+ start: 135266436
+ prev: [134520528]
+ instructions: 
+  135266436, ['nop', '']
+ next: [134522116]
+
+node :72
+node 95 info:
+ start: 135266436
+ prev: [134520528]
+ instructions: 
+  135266436, ['nop', '']
+ next: [134522116]
+
+node :73
+node 41 info:
+ start: 134521773
+ prev: [134521768, 135266560]
+ instructions: 
+  134521773, ['pop', 'eax']
+  134521774, ['pop', 'edx']
+  134521775, ['push', '0x804bdad']
+  134521780, ['lea', 'ebx, [ebp - 0x5ec]']
+  134521786, ['push', 'ebx']
+  134521787, ['call', '0x8049fe0']
+ next: [134520800, 134521792]
+
+node :74
+node 86 info:
+ start: 134520528
+ prev: [134522111]
+ instructions: 
+  134520528, ['jmp', 'dword ptr [0x804c180]']
+ next: [135266436]
+
+node :75
+node 92 info:
+ start: 134520528
+ prev: [134522111]
+ instructions: 
+  134520528, ['jmp', 'dword ptr [0x804c180]']
+ next: [135266436]
+
+node :76
+node 61 info:
+ start: 134520304
+ prev: [134521914]
+ instructions: 
+  134520304, ['jmp', 'dword ptr [0x804c148]']
+ next: [135266380]
+
+node :77
+node 43 info:
+ start: 135266500
+ prev: [134520800]
+ instructions: 
+  135266500, ['nop', '']
+ next: [134521792]
+
+node :78
+node 91 info:
+ start: 134522116
+ prev: [134522111, 135266436, 135266436]
+ instructions: 
+  134522116, ['mov', 'dword ptr [esp], ebx']
+  134522119, ['call', '0x804a7e4']
+ next: [134522852, 134522124]
+
+node :79
+node 44 info:
+ start: 134521792
+ prev: [134521787, 135266500]
+ instructions: 
+  134521792, ['mov', 'dword ptr [esp], 0x50']
+  134521799, ['call', '0x8049d90']
+ next: [134520208, 134521804]
+
+node :80
+node 65 info:
+ start: 134521919
+ prev: [134521914, 135266380]
+ instructions: 
+  134521919, ['push', 'eax']
+  134521920, ['push', 'eax']
+  134521921, ['push', 'dword ptr [ebp - 0x90]']
+  134521927, ['push', '0x8000014']
+  134521932, ['push', 'ebx']
+  134521933, ['call', '0x804a280']
+ next: [134521472, 134521938]
+
+node :81
+node 46 info:
+ start: 135266360
+ prev: [134520208]
+ instructions: 
+  135266360, ['nop', '']
+ next: [134521804]
+
+node :82
+node 69 info:
+ start: 135266668
+ prev: [134521472]
+ instructions: 
+  135266668, ['nop', '']
+ next: [134521938]
+
+node :83
+node 96 info:
+ start: 134521104
+ prev: [134522887]
+ instructions: 
+  134521104, ['jmp', 'dword ptr [0x804c210]']
+ next: [135266576]
+
+node :84
+node 99 info:
+ start: 134522892
+ prev: [134522887, 135266576]
+ instructions: 
+  134522892, ['pop', 'eax']
+  134522893, ['pop', 'edx']
+  134522894, ['push', '0x804a6db']
+  134522899, ['lea', 'eax, [ebx + 0x594]']
+  134522905, ['push', 'eax']
+  134522906, ['call', '0x804a110']
+ next: [134521104, 134522911]
+
+node :85
+node 45 info:
+ start: 134520208
+ prev: [134521799]
+ instructions: 
+  134520208, ['jmp', 'dword ptr [0x804c130]']
+ next: [135266360]
+
+node :86
+node 67 info:
+ start: 134521472
+ prev: [134521933]
+ instructions: 
+  134521472, ['jmp', 'dword ptr [0x804c26c]']
+ next: [135266668]
+
+node :87
+node 93 info:
+ start: 134522852
+ prev: [134522119]
+ instructions: 
+  134522852, ['push', 'ebp']
+  134522853, ['mov', 'ebp, esp']
+  134522855, ['push', 'esi']
+  134522856, ['push', 'ebx']
+  134522857, ['mov', 'ebx, dword ptr [ebp + 8]']
+  134522860, ['mov', 'dword ptr [ebx], 0x804bdd0']
+  134522866, ['mov', 'dword ptr [ebx + 0x64], 0x804be6c']
+  134522873, ['push', 'esi']
+  134522874, ['push', 'esi']
+  134522875, ['push', '0x804a6af']
+  134522880, ['lea', 'eax, [ebx + 0x5b0]']
+  134522886, ['push', 'eax']
+  134522887, ['call', '0x804a110']
+ next: [134521104, 134522892]
+
+node :88
+node 66 info:
+ start: 135266404
+ prev: [134520400]
+ instructions: 
+  135266404, ['nop', '']
+ next: [134522044]
+
+node :89
+node 64 info:
+ start: 134520400
+ prev: [134522039]
+ instructions: 
+  134520400, ['jmp', 'dword ptr [0x804c160]']
+ next: [135266404]
+
+node :90
+node 98 info:
+ start: 135266576
+ prev: [134521104]
+ instructions: 
+  135266576, ['nop', '']
+ next: [134522892]
+
+node :91
+node 47 info:
+ start: 134521804
+ prev: [134521799, 135266360]
+ instructions: 
+  134521804, ['mov', 'esi, eax']
+  134521806, ['add', 'esp, 0xc']
+  134521809, ['push', '5']
+  134521811, ['push', 'ebx']
+  134521812, ['push', 'eax']
+  134521813, ['call', '0x804a120']
+ next: [134521120, 134521818]
+
+node :92
+node 71 info:
+ start: 134521938
+ prev: [134521933, 135266668]
+ instructions: 
+  134521938, ['mov', 'dword ptr [ebp - 0x90], eax']
+  134521944, ['add', 'esp, 0x1c']
+  134521947, ['movzx', 'eax, byte ptr [ebp - 0x8c]']
+  134521954, ['push', 'eax']
+  134521955, ['push', '0x16']
+  134521957, ['push', 'ebx']
+  134521958, ['call', '0x804a190']
+ next: [134521232, 134521963]
+
+node :93
+node 101 info:
+ start: 135266576
+ prev: [134521104]
+ instructions: 
+  135266576, ['nop', '']
+ next: [134522911]
+
+node :94
+node 100 info:
+ start: 134521104
+ prev: [134522906]
+ instructions: 
+  134521104, ['jmp', 'dword ptr [0x804c210]']
+ next: [135266576]
+
+node :95
+node 102 info:
+ start: 134522911
+ prev: [134522906, 135266576]
+ instructions: 
+  134522911, ['lea', 'eax, [ebx + 0x56c]']
+  134522917, ['mov', 'dword ptr [esp], eax']
+  134522920, ['call', '0x8049f40']
+ next: [134520640, 134522925]
+
+node :96
+node 48 info:
+ start: 134521120
+ prev: [134521813]
+ instructions: 
+  134521120, ['jmp', 'dword ptr [0x804c214]']
+ next: [135266580]
+
+node :97
+node 104 info:
+ start: 135266464
+ prev: [134520640]
+ instructions: 
+  135266464, ['nop', '']
+ next: [134522925]
+
+node :98
+node 106 info:
+ start: 134521088
+ prev: [134522947]
+ instructions: 
+  134521088, ['jmp', 'dword ptr [0x804c20c]']
+ next: [135266572]
+
+node :99
+node 103 info:
+ start: 134520640
+ prev: [134522920]
+ instructions: 
+  134520640, ['jmp', 'dword ptr [0x804c19c]']
+ next: [135266464]
+
+node :100
+node 39 info:
+ start: 134521040
+ prev: [134521768]
+ instructions: 
+  134521040, ['jmp', 'dword ptr [0x804c200]']
+ next: [135266560]
+
+node :101
+node 15 info:
+ start: 134522461
+ prev: [134522459]
+ instructions: 
+  134522461, ['mov', 'dword ptr [esp], 0x804c010']
+  134522468, ['call', 'eax']
+ next: [134522470]
+
+node :102
+node 73 info:
+ start: 134521232
+ prev: [134521958]
+ instructions: 
+  134521232, ['jmp', 'dword ptr [0x804c230]']
+ next: [135266608]
+
+node :103
+node 85 info:
+ start: 134520240
+ prev: [134522093]
+ instructions: 
+  134520240, ['jmp', 'dword ptr [0x804c138]']
+ next: [135266368]
+
+node :104
+node 49 info:
+ start: 135266580
+ prev: [134521120]
+ instructions: 
+  135266580, ['nop', '']
+ next: [134521818]
+
+node :105
+node 70 info:
+ start: 134520400
+ prev: [134522055]
+ instructions: 
+  134520400, ['jmp', 'dword ptr [0x804c160]']
+ next: [135266404]
+
+node :106
+node 105 info:
+ start: 134522925
+ prev: [134522920, 135266464]
+ instructions: 
+  134522925, ['lea', 'esi, [ebx + 0x54c]']
+  134522931, ['add', 'esp, 0xc']
+  134522934, ['push', 'dword ptr [ebx + 0x550]']
+  134522940, ['push', 'dword ptr [ebx + 0x54c]']
+  134522946, ['push', 'esi']
+  134522947, ['call', '0x804a100']
+ next: [134521088, 134522952]
+
+node :107
+node 51 info:
+ start: 134520192
+ prev: [134521824]
+ instructions: 
+  134520192, ['jmp', 'dword ptr [0x804c12c]']
+ next: [135266356]
+
+node :108
+node 75 info:
+ start: 135266608
+ prev: [134521232]
+ instructions: 
+  135266608, ['nop', '']
+ next: [134521963]
+
+node :109
+node 107 info:
+ start: 135266572
+ prev: [134521088]
+ instructions: 
+  135266572, ['nop', '']
+ next: [134522952]
+
+node :110
+node 111 info:
+ start: 134522960
+ prev: [134522955, 135266700]
+ instructions: 
+  134522960, ['add', 'esp, 0x10']
+  134522963, ['mov', 'dword ptr [ebp + 8], ebx']
+  134522966, ['lea', 'esp, [ebp - 8]']
+  134522969, ['pop', 'ebx']
+  134522970, ['pop', 'esi']
+  134522971, ['pop', 'ebp']
+  134522972, ['jmp', '0x804a090']
+ next: [134520976]
+
+node :111
+node 108 info:
+ start: 134522952
+ prev: [134522947, 135266572]
+ instructions: 
+  134522952, ['mov', 'dword ptr [esp], esi']
+  134522955, ['call', '0x804a300']
+ next: [134521600, 134522960]
+
+node :112
+node 79 info:
+ start: 134521232
+ prev: [134521983]
+ instructions: 
+  134521232, ['jmp', 'dword ptr [0x804c230]']
+ next: [135266608]
+
+node :113
+node 110 info:
+ start: 135266700
+ prev: [134521600]
+ instructions: 
+  135266700, ['nop', '']
+ next: [134522960]
+
+node :114
+node 113 info:
+ start: 135266544
+ prev: [134520976]
+ instructions: 
+  135266544, ['nop', '']
+ next: [134522124]
+
+node :115
+node 109 info:
+ start: 134521600
+ prev: [134522955]
+ instructions: 
+  134521600, ['jmp', 'dword ptr [0x804c28c]']
+ next: [135266700]
+
+node :116
+node 112 info:
+ start: 134520976
+ prev: [134522972]
+ instructions: 
+  134520976, ['jmp', 'dword ptr [0x804c1f0]']
+ next: [135266544]
+
+node :117
+node 114 info:
+ start: 134522124
+ prev: [134522119, 135266544]
+ instructions: 
+  134522124, ['xor', 'eax, eax']
+  134522126, ['lea', 'esp, [ebp - 0xc]']
+  134522129, ['pop', 'ecx']
+  134522130, ['pop', 'ebx']
+  134522131, ['pop', 'esi']
+  134522132, ['pop', 'ebp']
+  134522133, ['lea', 'esp, [ecx - 4]']
+  134522136, ['ret', '']
+ next: [136319064]
+
+node :118
+node 10 info:
+ start: 134520256
+ prev: [134522438]
+ instructions: 
+  134520256, ['jmp', 'dword ptr [0x804c13c]']
+ next: [134520262]
+
+node :119
+node 115 info:
+ start: 136319064
+ prev: [136319060, 134522136]
+ instructions: 
+  136319064, ['nop', '']
+ next: [136319064]
+
+node :120
+node 16 info:
+ start: 134520000
+ prev: [134520267]
+ instructions: 
+  134520000, ['push', 'dword ptr [0x804c0f8]']
+  134520006, ['jmp', 'dword ptr [0x804c0fc]']
+ next: []
+
+node :121
+node 119 info:
+ start: 134522173
+ prev: [136319064]
+ instructions: 
+  134522173, ['nop', '']
+ next: []
+
+node :122
+node 13 info:
+ start: 134520262
+ prev: [134520256]
+ instructions: 
+  134520262, ['push', '0x78']
+  134520267, ['jmp', '0x8049cc0']
+ next: [134520000]
+
+node :123
+node 116 info:
+ start: 136319064
+ prev: [136319064]
+ instructions: 
+  136319064, ['nop', '']
+ next: [134522173]
+

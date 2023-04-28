@@ -1,0 +1,44 @@
+CFGExplainer result: [malware = Benign |  graph = 9e7be8fba9a8a5dd6cd12a3c94464c17924462584732e1fd33c37cc0e16c69| #nodes = 4]
+
+node :1
+node 0 info:
+ start: 4199040
+ prev: []
+ instructions: 
+  4199040, ['lea', 'rdi, [rip + 0x204f11]']
+  4199047, ['lea', 'rax, [rip + 0x204f11]']
+  4199054, ['push', 'rbp']
+  4199055, ['sub', 'rax, rdi']
+  4199058, ['mov', 'rbp, rsp']
+  4199061, ['cmp', 'rax, 0xe']
+  4199065, ['jbe', '0x4012b0']
+ next: [4199088, 4199067]
+
+node :2
+node 1 info:
+ start: 4199088
+ prev: [4199065, 4199077]
+ instructions: 
+  4199088, ['pop', 'rbp']
+  4199089, ['ret', '']
+ next: []
+
+node :3
+node 3 info:
+ start: 4199079
+ prev: [4199077]
+ instructions: 
+  4199079, ['pop', 'rbp']
+  4199080, ['jmp', 'rax']
+ next: []
+
+node :4
+node 2 info:
+ start: 4199067
+ prev: [4199065]
+ instructions: 
+  4199067, ['mov', 'rax, qword ptr [rip + 0x204d36]']
+  4199074, ['test', 'rax, rax']
+  4199077, ['je', '0x4012b0']
+ next: [4199088, 4199079]
+
