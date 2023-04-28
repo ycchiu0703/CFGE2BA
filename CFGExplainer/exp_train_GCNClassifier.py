@@ -171,22 +171,6 @@ def main(arguments):
     args.writer_path = None  # wont change ##'./logs/classifier/'
     args.disable_tqdm = True  # make False to see progress bar
     args.save_thresh = 5  # save model state every 5 epochs
-    
-    # orginal malware_list
-    # args.malware_list = {
-    #     'Bagle': 0,
-    #     'Benign_orignal': 1,
-    #     'Bifrose': 2,
-    #     'Hupigon': 3,
-    #     'Ldpinch': 4,
-    #     'Lmir': 5,
-    #     'Rbot': 6,
-    #     'Sdbot': 7,
-    #     'Swizzor': 8,
-    #     'Vundo': 9,
-    #     'Zbot': 10,
-    #     'Zlob': 11
-    # }
 
     args.malware_list = {
         'Benign': 0,
@@ -195,8 +179,8 @@ def main(arguments):
 
     ## mlflow
     mlflow.set_experiment(args.model_name_flag)
-    mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
-    mlflow.log_param('training_size', 105)
+    mlflow.start_run(run_name = "Clean_GCNClassifier") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
+    mlflow.log_param('training_size', 100)
     mlflow.log_param('testing_size', 100)   
     mlflow.log_param('dataset', args.dataset)  
     mlflow.log_param('Batch_Size', args.batch_size)

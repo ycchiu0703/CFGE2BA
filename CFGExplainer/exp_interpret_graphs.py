@@ -294,21 +294,6 @@ def main(arguments):
 
     print('> Dynamic Prune graphs [will run CFGExplainer iteratively]')
     # running the code
-    
-    # malware_list = {
-    #     'Bagle': 0,
-    #     'Benign': 1,
-    #     'Bifrose': 2,
-    #     'Hupigon': 3,
-    #     'Ldpinch': 4,
-    #     'Lmir': 5,
-    #     'Rbot': 6,
-    #     'Sdbot': 7,
-    #     'Swizzor': 8,
-    #     'Vundo': 9,
-    #     'Zbot': 10,
-    #     'Zlob': 11
-    # }
 
     malware_list = {
         'Benign': 0,
