@@ -1,8 +1,8 @@
 #!/bin/bash
 
 declare -a batch_size="10"      # batch_size="10"
-declare -a path="Partition_samples"          # path="data"
-declare -a hiddens="1024-512-128"
+declare -a path="data"          # path="data"
+declare -a hiddens="1024-512-128" ## hiddens="1024-512-128"
 declare -a lr="0.0001"
 declare -a model_name="GCNClassifier_"  ## model_name="GCNClassifier" ## model_name="GCNClassifier"
 declare -a data_name="connlabcfg" ## data_name="5%_Poison_connlabcfg" ## data_name="connlabcfg"

@@ -117,15 +117,16 @@ def Trigger_Generation(trigger_path:str, trigger_size=False):
     if trigger_size:                
         mapping = {}
         newnode = 0
-        for node in trigger.nodes(data=False):
+        for node, data in trigger.nodes(data=True):
+            data['NodeName'] = "Trigger_Node_" + str(newnode)
             mapping[node] = "Trigger_Node_" + str(newnode)
             newnode += 1
         trigger = nx.relabel_nodes(trigger, mapping)
         nx.write_gpickle(trigger, trigger_path)
         return trigger.number_of_nodes()
 
-    trigger_Start = trigger.nodes["Trigger_Node_0"]["Start"]
-    trigger_End = trigger.nodes["Trigger_Node_0"]["End"]
+    trigger_Start = trigger.nodes['Trigger_Node_0']["Start"]
+    trigger_End = trigger.nodes['Trigger_Node_0']["End"]
     for trigger_node in trigger.nodes(data=False):
         Start = trigger.nodes[trigger_node]["Start"]
         End = trigger.nodes[trigger_node]["End"]
@@ -133,6 +134,7 @@ def Trigger_Generation(trigger_path:str, trigger_size=False):
             trigger_Start = Start
         if trigger_End < End:
             trigger_End = End
+    
     return trigger, trigger_Start, trigger_End
 
 def Add_Trigger_to_ACFG(G, trigger_path:str):
@@ -174,24 +176,33 @@ def Add_Trigger_to_ACFG(G, trigger_path:str):
     ## Union Trigger an G
     Poison_graph = nx.union(G, trigger)
     addadr = Poison_graph.nodes[0]["Start"]
-    Poison_graph.nodes["Trigger_Node_37"]['Ins'] = [(Poison_graph.nodes["Trigger_Node_37"]['Ins'][0][0], ['jmp', str(addadr)])]
-    Poison_graph.nodes["Trigger_Node_37"]['Next'].append(addadr)
-    Poison_graph.nodes[0]["Prev"].append(Poison_graph.nodes["Trigger_Node_37"]['End'])
-    Poison_graph.add_edge("Trigger_Node_37", 0)
+    Poison_graph.nodes["Trigger_Node_3"]['Ins'] += [(Poison_graph.nodes["Trigger_Node_3"]['Ins'][-1][0] + 4 , ['jmp', str(addadr)])]
+    Poison_graph.nodes["Trigger_Node_3"]['Next'].append(addadr)
+    Poison_graph.nodes[0]["Prev"].append(Poison_graph.nodes["Trigger_Node_3"]['End'])
+    Poison_graph.add_edge("Trigger_Node_3", 0)
+
+    ## relabel trigger node name
+    mapping = {}
+    newnode = len(G.nodes)
+    for node in trigger.nodes(data=False):
+        mapping[node] = newnode
+        newnode += 1
+    Poison_graph = nx.relabel_nodes(Poison_graph, mapping)  
 
     # Recalculate Betweenness
     betweenness = nx.betweenness_centrality(Poison_graph)
     for node, centrality in betweenness.items():
         if "temp" in str(node):
             continue
-        Poison_graph.nodes[node]["feat"][7] = centrality    
+        Poison_graph.nodes[node]["feat"][7] = centrality
+    
     return Poison_graph
 
 def Append_temp_nodes(G):
     """
-    Append temp nodes to Experiment requirements: 4096
+    Append temp nodes to Experiment requirements: 512
     """
-    while len(G.nodes()) < 4096:
+    while len(G.nodes()) < 512:
         new_node = "temp_node_" + str(len(G.nodes()))
         G.add_node(new_node)
         G.nodes[new_node]['feat'] = [0] * 8
@@ -261,14 +272,14 @@ def main(trigger_path: str, Clean_Bengin_samples: int, Poison_Bengin_samples: in
 
             ## read .pickle graph
             G = nx.read_gpickle(file_path + ".pickle")
-            if G.number_of_nodes() > 4096 - trigger_size or G.number_of_nodes() == 0:
+            if G.number_of_nodes() > 400 - trigger_size or G.number_of_nodes() == 0: ## 
                 continue                
             ACFG = Generate_ACFG_Node_Attributes(G)
 
             if Poison:
                 ACFG = Add_Trigger_to_ACFG(ACFG, trigger_path)
             
-            if ACFG.number_of_nodes() < 4096:
+            if ACFG.number_of_nodes() < 512:
                 ACFG = Append_temp_nodes(ACFG)                
 
             ## write ACFG as .gpickle
@@ -326,14 +337,16 @@ def main(trigger_path: str, Clean_Bengin_samples: int, Poison_Bengin_samples: in
 
             ## read .pickle graph
             G = nx.read_gpickle(file_path + ".pickle")
-            if G.number_of_nodes() > 4096 - trigger_size or G.number_of_nodes() == 0:
+            
+            ## Reserve 500 nodes for partition
+            if G.number_of_nodes() > 400 or G.number_of_nodes() == 0:
                 continue                
             ACFG = Generate_ACFG_Node_Attributes(G)
 
             if Poison:
                 ACFG = Add_Trigger_to_ACFG(ACFG, trigger_path)
             
-            if ACFG.number_of_nodes() < 4096:
+            if ACFG.number_of_nodes() < 512:
                 ACFG = Append_temp_nodes(ACFG)                
 
             ## write ACFG as .gpickle
@@ -348,10 +361,10 @@ def main(trigger_path: str, Clean_Bengin_samples: int, Poison_Bengin_samples: in
 if __name__ == "__main__":
 
     trigger_path = './trigger/trigger.gpickle'
-    Clean_Bengin_samples = 250
-    Poison_Bengin_samples = 250
-    Clean_Malware_samples = 250
-    Poison_Malware_samples = 250
+    Clean_Bengin_samples = 5000
+    Poison_Bengin_samples = 500
+    Clean_Malware_samples = 5000
+    Poison_Malware_samples = 500
     print("num of Clean Bengin samples :", Clean_Bengin_samples)
     print("num of Poison Bengin samples :", Poison_Bengin_samples)
     print("num of Clean Malware samples :", Clean_Malware_samples)

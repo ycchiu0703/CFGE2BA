@@ -7,7 +7,7 @@ from util.graphprocessor import YANCFG
 
 import mlflow
 import tensorflow as tf
-from tensorboardX import SummaryWriter
+# from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
 from Explainer import ExplainerModule
@@ -36,10 +36,10 @@ def train_CFGExplainer():
     device = '/gpu:0'
     # 3. fit explainer
     # 3.1. initialize writer
-    name = 'CFGExplainer_' + args.explainer_name + args.model_name_flag + args.dataset
-    writer = None
-    if args.writer_path is not None:
-        writer = SummaryWriter(args.writer_path + name)
+    # name = 'CFGExplainer_' + args.explainer_name + args.model_name_flag + args.dataset
+    # writer = None
+    # if args.writer_path is not None:
+    #     writer = SummaryWriter(args.writer_path + name)
 
     # initilize the explainer model
     explainer, optimizer = None, None
@@ -55,7 +55,7 @@ def train_CFGExplainer():
     for epoch in tqdm(range(args.eepochs), disable=args.disable_tqdm):
 
         losses, exp_outputs, labels = [], [], []
-        train_batch = train.shuffle(args.batch_size).batch(args.batch_size)
+        train_batch = train.shuffle(num_samples).batch(args.batch_size)
         for batch_id, ts_batch in enumerate(train_batch):
 
             with tf.device(device):
@@ -65,7 +65,7 @@ def train_CFGExplainer():
                 batch_embs = model.getNodeEmb((batch_feats, batch_adjs), training=False)
                 
                 with tf.GradientTape() as tape:
-                    pred, _ = explainer((batch_feats, batch_embs, batch_adjs, batch_mask))
+                    pred, _, _ = explainer((batch_feats, batch_embs, batch_adjs, batch_mask))
                     # print(pred)
                     loss = explainer.loss(pred, batch_labels)
 
@@ -83,9 +83,9 @@ def train_CFGExplainer():
         train_acc = accuracy(exp_outputs, label)
 
         print('+ ep', epoch,' acc =', train_acc)
-        if args.writer_path is not None:
-            writer.add_scalar('CFGExplainer loss', train_loss.numpy(), epoch + 1)
-            writer.add_scalar('CFGExplainer acc', train_acc.numpy(), epoch + 1)
+        # if args.writer_path is not None:
+        #     writer.add_scalar('CFGExplainer loss', train_loss.numpy(), epoch + 1)
+        #     writer.add_scalar('CFGExplainer acc', train_acc.numpy(), epoch + 1)
 
         ## mlflow 
         mlflow.log_metric("train_acc", train_acc.numpy(), step = epoch)
@@ -95,10 +95,10 @@ def train_CFGExplainer():
            if args.save_model and best_acc <= train_acc.numpy():
                 best_acc = train_acc.numpy()
                 mlflow.log_metric('Save_model_Train_acc', best_acc, step = epoch)
-                model.save_weights(args.save_path + args.dataset)
+                explainer.save_weights(args.explainer_path)
     
-    if writer:
-        writer.close()
+    # if writer:
+    #     writer.close()
     return
 
 # --------------------------
@@ -117,7 +117,7 @@ def main(arguments):
     # add new arguments: model
     args.d = 8      ## args.d = 13 (input dim)
     args.c = 2      ## args.c = 12 (output dim)
-    args.n = 4096  # the number of nodes in padded graph (fixed for experiment) ## args.n = 4690
+    args.n = 512  # the number of nodes in padded graph (fixed for experiment) ## args.n = 4690
     args.batch_size = int(arguments[0])  # batch size
     args.path = str(arguments[1])  # the path to load the data
     args.hiddens = str(arguments[2])  # '1024-512-128'
@@ -127,8 +127,9 @@ def main(arguments):
     args.dataset = str(arguments[5])  # 'yancfg_test'
     args.eepochs = int(arguments[6])  # [explainer] epochs 1000
     args.embnormlize = False  # keep this False: else the output becomes NaN
+    args.save_model = True
     
-    args.writer_path = './logs/explainer/'  # wont change
+    # args.writer_path = './logs/explainer/'  # wont change
     args.disable_tqdm = True  # make True to hide progress bar
     args.save_thresh = 1  # save model state every 1 epoch
 
@@ -139,21 +140,6 @@ def main(arguments):
     args.explainer_name = str(arguments[7])
     args.explainer_path = './checkpoints/explainer_' + str(arguments[7]) + args.model_name_flag + args.dataset  # path to save the explainer model
     args.results_save_path = './interpretability_results'  # the path to save the results (add a git-ignore?)
-    
-    # args.malware_list = {
-    #     'Bagle': 0,
-    #     'Benign': 1,
-    #     'Bifrose': 2,
-    #     'Hupigon': 3,
-    #     'Ldpinch': 4,
-    #     'Lmir': 5,
-    #     'Rbot': 6,
-    #     'Sdbot': 7,
-    #     'Swizzor': 8,
-    #     'Vundo': 9,
-    #     'Zbot': 10,
-    #     'Zlob': 11
-    # }
 
     args.malware_list = {
         'Benign': 0,
@@ -163,8 +149,8 @@ def main(arguments):
     ## mlflow
     mlflow.set_experiment("CFGExplainer")
     mlflow.start_run(run_name = "GCNClassifier")
-    mlflow.log_param('training_size', 100)
-    mlflow.log_param('testing_size', 100)   
+    mlflow.log_param('training_size', 8000)
+    mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  
     mlflow.log_param('Batch_Size', args.batch_size)
     mlflow.log_param('Learning_Rate', args.lr)
@@ -183,4 +169,10 @@ def main(arguments):
 # running the code
 if __name__ == "__main__":
     print("sys.args: ", sys.argv)
+    
+    ##  GPU settings
+    physical_devices = tf.config.experimental.list_physical_devices('GPU')
+    assert len(physical_devices) > 0, "Not enough GPU hardware devices available"
+    config = tf.config.experimental.set_memory_growth(physical_devices[0], True)
+
     main(sys.argv[1:])

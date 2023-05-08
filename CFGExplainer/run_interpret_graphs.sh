@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a path="Partition_samples"      ## declare -a path="data"
+declare -a path="data"      ## declare -a path="data"
 declare -a hiddens="1024-512-128"
 declare -a model_name="GCNClassifier_"      ## model_name="classifier_lynxv2_"  # for classifier
 declare -a data_name="connlabcfg"    ## data_name="yancfg_complete_sample2"

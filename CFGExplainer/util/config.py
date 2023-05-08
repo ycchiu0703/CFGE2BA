@@ -23,14 +23,14 @@ def get_params():
     parser.add_argument('--random_edges_motif', type=int, default=0, help='Node to be explained')
 
     parser.add_argument('--epochs', type=int, default=5000, help='Number of epochs to train.')
-    parser.add_argument('--dropout',type=float, default=0.0, help='dropout rate (1 - keep probability).')
-    parser.add_argument('--weight_decay',type=float, default=0.0, help='l2 norm')
+    parser.add_argument('--dropout',type=float, default=0.0, help='dropout rate (1 - keep probability).') ## parser.add_argument('--dropout',type=float, default=0.0, help='dropout rate (1 - keep probability).')
+    parser.add_argument('--weight_decay',type=float, default=0.0, help='l2 norm') ## 0.0
     parser.add_argument('--hiddens', type=str, default='20-20-20')
     parser.add_argument("--lr", type=float, default=0.001,help='initial learning rate.')
     parser.add_argument('--act', type=str, default='relu', help='activation funciton')  #
     parser.add_argument('--initializer', default='glorot')
 
-    parser.add_argument('--normadj', type=bool, default=False)  #
+    parser.add_argument('--normadj', type=bool, default=False)
     parser.add_argument('--bn', type=bool, default=False)
     parser.add_argument('--concat', type=bool, default=False)
     parser.add_argument('--valid', type=bool, default=False)

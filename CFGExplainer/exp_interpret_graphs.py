@@ -124,8 +124,14 @@ def interpret(step_size, feat, graph, node_mask, class_label, all_nodes, node_or
 
             subgraphs[i] = copy.deepcopy(graph)
             
+            print('_adj shape :', tf.shape(_adj))
+            print('_mask shape :', tf.shape(_mask))
+            print('_feat shape :', tf.shape(_feat))
+            print('_emb shape :', tf.shape(_emb))
+
             # 4. get result from CFGExplainer
             ## _, importance = explainer((_feat, _emb, _adj, _mask), training=False)
+
             _, importance, importance_score = explainer((_feat, _emb, _adj, _mask), training=False)
             
             # 5. loop through nodes left and assign node score to node
@@ -274,14 +280,14 @@ def main(arguments):
     # add new arguments: model
     args.d = 8     ## args.d = 13 (input dim)
     args.c = 2     ## args.c = 12 (output dim)
-    args.n = 4096  # the number of nodes, fixed for experiment
+    args.n = 512  # the number of nodes, fixed for experiment
     args.batch_size = 1  # batch size
     args.path = str(arguments[0])  # the path to load the data
     args.hiddens = str(arguments[1])  # '1024-512-128'
     args.model_name_flag = str(arguments[2])  # 'trial_gcn_'
-    args.save_path = './checkpoints/' + args.model_name_flag
-    args.dataset = str(arguments[3])  # 'yancfg_test'
-    explainer_name = str(arguments[4])  # sample1_ep300_b32_elr0001_
+    args.save_path = './checkpoints/' + args.model_name_flag ## 'GCNClassifier_'
+    args.dataset = str(arguments[3])  # 'connlabcfg'
+    explainer_name = str(arguments[4])  # 'ep300_b32_elr00001_'
     args.embnormlize = False  # keep this False: else the output becomes NaN
 
     # add arguments: for logging results
@@ -306,13 +312,14 @@ def main(arguments):
     print('+ loaded GCN model: ', model)
 
     # loading the explainer
-    # explainer_name = "_ep300_b32_elr00005_sciflow_CFGExplainer_"  # MLP-version1
+    # explainer_name = "ep300_b32_elr00001_GCNClassifier_connlabcfg"  # MLP-version1
     args.explainer_path = './checkpoints/explainer_' + explainer_name + args.model_name_flag + args.dataset  # path to save the explainer model
     explainer = None
     device = '/gpu:0'  # or '/cpu:0' or CPU
     with tf.device(device):
         explainer = ExplainerModule(model=model, output_dim=args.c)
         explainer.load_weights(args.explainer_path)
+        print('elayers: ', explainer.summary())
         print('+ loaded explainer model: ', explainer)
 
     for malware_name, class_label in malware_list.items():
@@ -320,6 +327,8 @@ def main(arguments):
         if isdir(save_path) is False:
             mkdir(save_path)
         print('\n>> running ', malware_name, ' CFGExplainer experiment')
+        
+        return
         scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer) ## scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer)
         
     

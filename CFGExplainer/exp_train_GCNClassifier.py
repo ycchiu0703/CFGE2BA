@@ -13,7 +13,7 @@ import mlflow
 from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
-# ------------------------------
+# ------------------------------    
 # function to train GCN model
 # ------------------------------
 
@@ -25,7 +25,7 @@ def train_GCNClassifier():
 
     # loading the datasets
     data_loader = YANCFG()
-    train, _, _ = data_loader.load_yancfg_data(args.path, 'padded_train', args.malware_list)
+    train, _, num_train_samples = data_loader.load_yancfg_data(args.path, 'padded_train', args.malware_list)
     print('+ loaded train dataset')
     # print("train.shape :", train.shape)
     test, _, _ = data_loader.load_yancfg_data(args.path, 'padded_test', args.malware_list)
@@ -52,7 +52,8 @@ def train_GCNClassifier():
 
         # run minibatch training for each epoch
         outputs, labels, losses = [], [], []
-        train_batch = train.shuffle(args.batch_size).batch(args.batch_size)
+        
+        train_batch = train.shuffle(num_train_samples).batch(args.batch_size) ## train_batch = train.shuffle(args.batch_size).batch(args.batch_size)
         for batch_id, ts_batch in enumerate(train_batch):
             
             ## clear_session
@@ -61,6 +62,11 @@ def train_GCNClassifier():
             
             with tf.device('/gpu:0'):   ## with tf.device('/gpu:0'):
                 batch_adjs, batch_feats, batch_labels, batch_ids, batch_masks = ts_batch
+                
+                # ## check shaffle
+                # print('ep: ', epoch, ' batch: ', batch_id)
+                # print(batch_labels)
+                
                 with tf.GradientTape() as tape:
                     output = model.call((batch_feats, batch_adjs), training=True)
                     cross_loss = softmax_cross_entropy(output, batch_labels)
@@ -166,6 +172,7 @@ def main(arguments):
     args.dataset = str(arguments[5])  # 'yancfg_test'
     args.epochs = int(arguments[6])  # 1000
     args.embnormlize = False  # keep this False: else the output becomes NaN
+    args.save_model = True
 
     # add arguments: for logging results
     args.writer_path = None  # wont change ##'./logs/classifier/'
@@ -180,8 +187,8 @@ def main(arguments):
     ## mlflow
     mlflow.set_experiment(args.model_name_flag)
     mlflow.start_run(run_name = "Clean_GCNClassifier") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
-    mlflow.log_param('training_size', 100)
-    mlflow.log_param('testing_size', 100)   
+    mlflow.log_param('training_size', 8000)
+    mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  
     mlflow.log_param('Batch_Size', args.batch_size)
     mlflow.log_param('Learning_Rate', args.lr)
@@ -189,6 +196,9 @@ def main(arguments):
     mlflow.log_param('Save_thresh', args.save_thresh)
     mlflow.log_param('input_dim', args.d)
     mlflow.log_param('output_dim', args.c)
+    mlflow.log_param('dropout_rate', args.dropout)
+    mlflow.log_param('hiddens', args.hiddens)
+
 
     
 

@@ -95,12 +95,13 @@ class YANCFG:
         graphs, feats, labels, ids = [], [], [], []
         node_masks = []
         sample_id = 0
+        num_samples = 0
         info = {}  # modification: dict() to store malware_name and type
         for malware_name, label in malware_list.items():
             
             graph_path = path + '/' + path_mod + '/' + malware_name + '/0_list.txt'
             names = self.load_graphnames(graph_path)
-            num_samples = 0
+            # num_samples = 0
             for name in names:
                 # keeping track of the information
                 info[sample_id] = (name, malware_name)

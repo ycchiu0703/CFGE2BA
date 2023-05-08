@@ -70,13 +70,19 @@ class ExplainerModule(tf.keras.Model):
         reshaped_importance = tf.reshape(importance, _dim) # so that each embedding is multiplied with importance
         # do scalar multiplication
         h = tf.math.multiply(embed, reshaped_importance)
+        
+        # print('NN2 tf.shape(h):', tf.shape(h))
 
         for layer in self.predlayers:
             h = layer(h)
 
+        # print('NN2 tf.shape(h):', tf.shape(h))
         # h_flatten = tf.reshape(h, [tf_shape[0], -1]) # tf_shape[0] = batch_size during training
         h_flatten = tf.reshape(h, _flatten)
+        
+        # print('NN2 tf.shape(h_flatten):', tf.shape(h_flatten))
         out = self.class_layer(h_flatten)  # class labels
+        # print('NN2 tf.shape(out):', tf.shape(out))
         
         if debug:
             print('+ MLP2 <tensor shapes>')

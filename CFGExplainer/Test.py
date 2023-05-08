@@ -19,7 +19,7 @@ def test_GCNClassifier():
     print("+ load model weights Successfully!")
     
     data_loader = YANCFG()
-    test, _, _ = data_loader.load_yancfg_data(args.path, 'original', args.malware_list) ##    test, _, _ = data_loader.load_yancfg_data(args.path, 'Poison', args.malware_list)
+    test, _, _ = data_loader.load_yancfg_data(args.path, 'padded_test', args.malware_list) ##    test, _, _ = data_loader.load_yancfg_data(args.path, 'Poison', args.malware_list)
 
     test_batch = test.batch(args.batch_size)
     del test
@@ -49,6 +49,7 @@ def evaluate_model(model, batch_dataset):
         with tf.device('/gpu:0'):   ## with tf.device('/gpu:0'):
             batch_adjs, batch_feats, batch_labels, batch_ids, batch_masks = ts_batch
             output = model.call((batch_feats, batch_adjs), training=False)
+            output = tf.nn.softmax(output)
             outputs.append(output)
             labels.append(batch_labels)
     # compute the results
@@ -56,8 +57,12 @@ def evaluate_model(model, batch_dataset):
     all_labels = tf.concat(labels, axis=0)
 
     print("num of sample : ", len(all_labels))
+    print(tf.argmax(all_outputs, 1).numpy().tolist())
+    print(tf.argmax(all_labels, 1).numpy().tolist())
 
     acc = accuracy(all_outputs, all_labels)
+    # print('output :', all_outputs)
+    print('acc', acc)
 
     mlflow.log_param('num of sample', len(all_labels))
     mlflow.log_param('ASR', 1 - acc.numpy())
