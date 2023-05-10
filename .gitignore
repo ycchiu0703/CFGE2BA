@@ -5,6 +5,7 @@
 # ignore mlruns
 /CFGExplainer/mlruns
 /CFGExplainer/logs
+/CFGExplainer/interpretability_results
 # /CFGExplainer/data
 
 

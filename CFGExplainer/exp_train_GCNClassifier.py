@@ -8,9 +8,14 @@ from util.graphprocessor import YANCFG
 import networkx as nx
 import tensorflow as tf
 import mlflow
+import mlflow.tensorflow
+
+from datetime import datetime
+
+
 
 # for writing results
-from tensorboardX import SummaryWriter
+# from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
 # ------------------------------    
@@ -33,16 +38,16 @@ def train_GCNClassifier():
     del test
     print('+ loaded test dataset')
 
-    # intializing the writer
-    name = args.model_name_flag + args.dataset
-    writer = None
-    if args.writer_path is not None:
-        writer = SummaryWriter(args.writer_path + name)
+    ## intializing the writer
+    # name = args.model_name_flag + args.dataset
+    # writer = None
+    # if args.writer_path is not None:
+    #     writer = SummaryWriter(args.writer_path + name)
 
     # creating the model
     model = GCN(input_dim=args.d, output_dim=args.c)
     print('+ model: \n', model)
-    
+
     optimizer = tf.keras.optimizers.Adam(learning_rate=args.lr)
     
     best_acc = 0.0
@@ -66,7 +71,7 @@ def train_GCNClassifier():
                 # ## check shaffle
                 # print('ep: ', epoch, ' batch: ', batch_id)
                 # print(batch_labels)
-                
+
                 with tf.GradientTape() as tape:
                     output = model.call((batch_feats, batch_adjs), training=True)
                     cross_loss = softmax_cross_entropy(output, batch_labels)
@@ -90,13 +95,13 @@ def train_GCNClassifier():
         # test_batch = test.batch(args.batch_size)  # no need to shuffle
         results = evaluate_model(model, test_batch)
 
-        if args.writer_path is not None:
-            # logging for training
-            writer.add_scalar('loss/train_loss', train_loss.numpy(), epoch + 1)
-            writer.add_scalar('accuracy/train_acc', train_acc.numpy(), epoch + 1)
-            # logging for val step
-            writer.add_scalar('loss/test_loss', results['loss'].numpy(), epoch + 1)
-            writer.add_scalar('accuracy/test_acc', results['accuracy'].numpy(), epoch + 1)
+        # if args.writer_path is not None:
+        #     # logging for training
+        #     writer.add_scalar('loss/train_loss', train_loss.numpy(), epoch + 1)
+        #     writer.add_scalar('accuracy/train_acc', train_acc.numpy(), epoch + 1)
+        #     # logging for val step
+        #     writer.add_scalar('loss/test_loss', results['loss'].numpy(), epoch + 1)
+        #     writer.add_scalar('accuracy/test_acc', results['accuracy'].numpy(), epoch + 1)
 
         ## mlflow 
         mlflow.log_metric("train_acc", train_acc.numpy(), step = epoch)
@@ -109,7 +114,8 @@ def train_GCNClassifier():
                 best_acc = results['accuracy'].numpy()
                 mlflow.log_metric('Save_model_Train_acc', train_acc, step = epoch)
                 mlflow.log_metric('Save_model_Test_acc', best_acc, step = epoch)
-                model.save_weights(args.save_path + args.dataset)        
+                model.save_weights(args.save_path + args.dataset)
+                      
     return
 
 
@@ -159,23 +165,28 @@ def main(arguments):
     Args:
     arguments: the sys.args for running code
     """
+
     # other arguments are left intact as defaults, check config.py
     # add new arguments: model
     args.d = 8     ## args.d = 13 (input dim)
     args.c = 2     ## args.c = 12 (output dim)
+    args.n = 512
     args.batch_size = int(arguments[0])  # batch size
     args.path = str(arguments[1])  # the path to load the data
     args.hiddens = str(arguments[2])  # '1024-512-128'
     args.lr = float(arguments[3])  # 0.00001
-    args.model_name_flag = str(arguments[4])  # 'trial_gcn_'
-    args.save_path = './checkpoints/' + args.model_name_flag + '_'
-    args.dataset = str(arguments[5])  # 'yancfg_test'
+    args.model_name_flag = str(arguments[4])  # "GCNClassifier"
+    
+    ## use current datetime to name mlflow model name
+    current_datetime = datetime.now().strftime("%m-%d_%H:%M:%S")
+    args.save_path = './checkpoints/' + current_datetime + '-' + args.model_name_flag + '_'
+    args.dataset = str(arguments[5])  # "connlabcfg"
     args.epochs = int(arguments[6])  # 1000
     args.embnormlize = False  # keep this False: else the output becomes NaN
     args.save_model = True
 
     # add arguments: for logging results
-    args.writer_path = None  # wont change ##'./logs/classifier/'
+    # args.writer_path = None  # wont change ##'./logs/classifier/'
     args.disable_tqdm = True  # make False to see progress bar
     args.save_thresh = 5  # save model state every 5 epochs
 
@@ -186,7 +197,7 @@ def main(arguments):
 
     ## mlflow
     mlflow.set_experiment(args.model_name_flag)
-    mlflow.start_run(run_name = "Clean_GCNClassifier") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
+    mlflow.start_run(run_name = "5%_GCNClassifier") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
     mlflow.log_param('training_size', 8000)
     mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  
@@ -198,6 +209,7 @@ def main(arguments):
     mlflow.log_param('output_dim', args.c)
     mlflow.log_param('dropout_rate', args.dropout)
     mlflow.log_param('hiddens', args.hiddens)
+    mlflow.log_param('datetime', current_datetime)
 
 
     

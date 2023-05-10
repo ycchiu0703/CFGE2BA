@@ -114,16 +114,16 @@ def Trigger_Generation(trigger_path:str, trigger_size=False):
     """
     trigger = nx.read_gpickle(trigger_path)
     
-    if trigger_size:                
-        mapping = {}
-        newnode = 0
-        for node, data in trigger.nodes(data=True):
-            data['NodeName'] = "Trigger_Node_" + str(newnode)
-            mapping[node] = "Trigger_Node_" + str(newnode)
-            newnode += 1
-        trigger = nx.relabel_nodes(trigger, mapping)
-        nx.write_gpickle(trigger, trigger_path)
-        return trigger.number_of_nodes()
+    # if trigger_size:                
+    #     mapping = {}
+    #     newnode = 0
+    #     for node, data in trigger.nodes(data=True):
+    #         data['NodeName'] = "Trigger_Node_" + str(newnode)
+    #         mapping[node] = "Trigger_Node_" + str(newnode)
+    #         newnode += 1
+    #     trigger = nx.relabel_nodes(trigger, mapping)
+    #     nx.write_gpickle(trigger, trigger_path)
+    #     return trigger.number_of_nodes()
 
     trigger_Start = trigger.nodes['Trigger_Node_0']["Start"]
     trigger_End = trigger.nodes['Trigger_Node_0']["End"]
@@ -137,9 +137,9 @@ def Trigger_Generation(trigger_path:str, trigger_size=False):
     
     return trigger, trigger_Start, trigger_End
 
-def Add_Trigger_to_ACFG(G, trigger_path:str):
+def Add_Trigger_to_ACFG(G, trigger_path:str, starting_point=0):
     """
-    Add Trigger to ACFG ,return poison data
+    Add Trigger to ACFG ,return poison data and start point
     """
 
     ## Caculate Start and End address of G
@@ -175,16 +175,18 @@ def Add_Trigger_to_ACFG(G, trigger_path:str):
 
     ## Union Trigger an G
     Poison_graph = nx.union(G, trigger)
-    addadr = Poison_graph.nodes[0]["Start"]
-    Poison_graph.nodes["Trigger_Node_3"]['Ins'] += [(Poison_graph.nodes["Trigger_Node_3"]['Ins'][-1][0] + 4 , ['jmp', str(addadr)])]
-    Poison_graph.nodes["Trigger_Node_3"]['Next'].append(addadr)
-    Poison_graph.nodes[0]["Prev"].append(Poison_graph.nodes["Trigger_Node_3"]['End'])
-    Poison_graph.add_edge("Trigger_Node_3", 0)
+    addadr = Poison_graph.nodes[starting_point]["Start"]
+    Poison_graph.nodes["Trigger_Node_10"]['Ins'] += [(Poison_graph.nodes["Trigger_Node_10"]['Ins'][-1][0] + 4 , ['jmp', str(addadr)])]
+    Poison_graph.nodes["Trigger_Node_10"]['Next'].append(addadr)
+    Poison_graph.nodes[starting_point]["Prev"].append(Poison_graph.nodes["Trigger_Node_10"]['End'])
+    Poison_graph.add_edge("Trigger_Node_10", starting_point)
 
     ## relabel trigger node name
     mapping = {}
     newnode = len(G.nodes)
     for node in trigger.nodes(data=False):
+        if "Trigger_Node_6" == str(node):
+            starting_point =  newnode
         mapping[node] = newnode
         newnode += 1
     Poison_graph = nx.relabel_nodes(Poison_graph, mapping)  
@@ -196,7 +198,7 @@ def Add_Trigger_to_ACFG(G, trigger_path:str):
             continue
         Poison_graph.nodes[node]["feat"][7] = centrality
     
-    return Poison_graph
+    return Poison_graph, starting_point
 
 def Append_temp_nodes(G):
     """
@@ -277,7 +279,7 @@ def main(trigger_path: str, Clean_Bengin_samples: int, Poison_Bengin_samples: in
             ACFG = Generate_ACFG_Node_Attributes(G)
 
             if Poison:
-                ACFG = Add_Trigger_to_ACFG(ACFG, trigger_path)
+                ACFG, starting_point = Add_Trigger_to_ACFG(ACFG, trigger_path, 0)
             
             if ACFG.number_of_nodes() < 512:
                 ACFG = Append_temp_nodes(ACFG)                
@@ -344,7 +346,7 @@ def main(trigger_path: str, Clean_Bengin_samples: int, Poison_Bengin_samples: in
             ACFG = Generate_ACFG_Node_Attributes(G)
 
             if Poison:
-                ACFG = Add_Trigger_to_ACFG(ACFG, trigger_path)
+                ACFG, starting_point = Add_Trigger_to_ACFG(ACFG, trigger_path, 0)
             
             if ACFG.number_of_nodes() < 512:
                 ACFG = Append_temp_nodes(ACFG)                

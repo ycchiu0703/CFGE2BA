@@ -124,10 +124,10 @@ def interpret(step_size, feat, graph, node_mask, class_label, all_nodes, node_or
 
             subgraphs[i] = copy.deepcopy(graph)
             
-            print('_adj shape :', tf.shape(_adj))
-            print('_mask shape :', tf.shape(_mask))
-            print('_feat shape :', tf.shape(_feat))
-            print('_emb shape :', tf.shape(_emb))
+            # print('_adj shape :', tf.shape(_adj))
+            # print('_mask shape :', tf.shape(_mask))
+            # print('_feat shape :', tf.shape(_feat))
+            # print('_emb shape :', tf.shape(_emb))
 
             # 4. get result from CFGExplainer
             ## _, importance = explainer((_feat, _emb, _adj, _mask), training=False)
@@ -218,17 +218,20 @@ def scaled_interpret_experiment(malware_name, class_label, graph_load_path, path
         block_order, subgraphs, time_taken, importance, importance_score = interpret(step_size, feat, graph, node_mask, class_label, all_nodes, node_ordering, data_loader, model, explainer)
 
         # 4. save the results: top_blocks.pickle, top_blocks.txt, class_probability.txt, <adjacency matrices of subgraphs>
-        graph_name = name.strip('padded_')
-        graph_name = graph_name.strip('.gpickle')
+        graph_name = name[:-8]
         save_path = './interpretability_results/' + malware_name + '/' + graph_name
         if isdir(save_path) is False:
             mkdir(save_path)
 
         # 4.1. save the block order in pickle
-        graph_name = name.strip('.gpickle').strip('padded_')
         filename = save_path + '/top_blocks.pickle'
         data_loader.save_pickle(filename, block_order)
         
+        # 4.1.1 save the importance score in pickle
+
+        importance_filename = save_path + '/importance_score.pickle'
+        data_loader.save_pickle(importance_filename, importance_score)
+
         # 4.2. save top blocks in text format
         output_str = "CFGExplainer result: [malware = " + malware_name + " |  graph = " + graph_name + "| #nodes = " + str(num_all_nodes) + "]\n\n"
         for i, node in enumerate(block_order):
@@ -319,7 +322,7 @@ def main(arguments):
     with tf.device(device):
         explainer = ExplainerModule(model=model, output_dim=args.c)
         explainer.load_weights(args.explainer_path)
-        print('elayers: ', explainer.summary())
+        # print('elayers: ', explainer.summary())
         print('+ loaded explainer model: ', explainer)
 
     for malware_name, class_label in malware_list.items():
@@ -327,8 +330,6 @@ def main(arguments):
         if isdir(save_path) is False:
             mkdir(save_path)
         print('\n>> running ', malware_name, ' CFGExplainer experiment')
-        
-        return
         scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer) ## scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer)
         
     

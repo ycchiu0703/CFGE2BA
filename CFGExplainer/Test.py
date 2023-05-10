@@ -84,7 +84,7 @@ def main(arguments):
     # add new arguments: model
     args.d = 8      ## args.d = 13 (input dim)
     args.c = 2      ## args.c = 12 (output dim)
-    args.n = 4096  # the number of nodes in padded graph (fixed for experiment) ## args.n = 4690
+    args.n = 512  # the number of nodes in padded graph (fixed for experiment) ## args.n = 4690
     args.batch_size = int(arguments[0])  # batch size
     args.path = str(arguments[1])  # the path to load the data
     args.hiddens = str(arguments[2])  # '1024-512-128'
@@ -113,7 +113,7 @@ def main(arguments):
     }
     ## mlflow
     mlflow.set_experiment("Test_ASR")
-    mlflow.start_run(run_name = "Clean_GCNClassifier")
+    mlflow.start_run(run_name = "5%_Poison_GCNClassifier")      ## mlflow.start_run(run_name = "Clean_GCNClassifier")
 
     # run explain code
     test_GCNClassifier()
