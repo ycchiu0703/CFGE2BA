@@ -219,9 +219,11 @@ def scaled_interpret_experiment(malware_name, class_label, graph_load_path, path
 
         # 4. save the results: top_blocks.pickle, top_blocks.txt, class_probability.txt, <adjacency matrices of subgraphs>
         graph_name = name[:-8]
-        save_path = './interpretability_results/' + malware_name + '/' + graph_name
-        if isdir(save_path) is False:
-            mkdir(save_path)
+        save_path = './poison_interpretability_results/' + malware_name + '/' + graph_name  ## save_path = './interpretability_results/' + malware_name + '/' + graph_name
+        
+        os.makedirs(save_path, exist_ok=True)
+        # if isdir(save_path) is False:
+            # mkdir(save_path)
 
         # 4.1. save the block order in pickle
         filename = save_path + '/top_blocks.pickle'
@@ -330,7 +332,7 @@ def main(arguments):
         if isdir(save_path) is False:
             mkdir(save_path)
         print('\n>> running ', malware_name, ' CFGExplainer experiment')
-        scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer) ## scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer)
+        scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_test', model, explainer) ## scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer)
         
     
     return

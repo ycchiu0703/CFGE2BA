@@ -148,7 +148,7 @@ def main(arguments):
 
     ## mlflow
     mlflow.set_experiment("CFGExplainer")
-    mlflow.start_run(run_name = "GCNClassifier")
+    mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
     mlflow.log_param('training_size', 8000)
     mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  

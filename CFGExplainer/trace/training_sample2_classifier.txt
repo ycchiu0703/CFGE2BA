@@ -1,51 +1,53 @@
-2023-05-10 16:36:04.853240: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-10 16:36:05.609141: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2023-05-10 16:36:05.609697: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
-2023-05-10 16:36:05.655415: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:36:05.655568: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+2023-05-12 01:11:57.618277: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-05-12 01:11:58.419223: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-05-12 01:11:58.419775: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2023-05-12 01:11:58.504686: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:11:58.505072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
 pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 3080 Ti computeCapability: 8.6
 coreClock: 1.83GHz coreCount: 80 deviceMemorySize: 11.75GiB deviceMemoryBandwidth: 849.46GiB/s
-2023-05-10 16:36:05.655583: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-10 16:36:05.657351: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-05-10 16:36:05.657393: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-05-10 16:36:05.658117: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
-2023-05-10 16:36:05.658288: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
-2023-05-10 16:36:05.659742: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
-2023-05-10 16:36:05.660077: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
-2023-05-10 16:36:05.660181: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
-2023-05-10 16:36:05.660232: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:36:05.660325: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:36:05.660385: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
-2023-05-10 16:42:04.084910: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2023-05-10 16:42:04.085150: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:42:04.085272: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+2023-05-12 01:11:58.505124: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-05-12 01:11:58.510669: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-05-12 01:11:58.510797: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-05-12 01:11:58.512604: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-05-12 01:11:58.512940: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-05-12 01:11:58.516452: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-05-12 01:11:58.517515: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-05-12 01:11:58.517787: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-05-12 01:11:58.517944: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:11:58.518229: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:11:58.518397: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-05-12 01:18:14.597501: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-05-12 01:18:14.597670: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:18:14.597792: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
 pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 3080 Ti computeCapability: 8.6
 coreClock: 1.83GHz coreCount: 80 deviceMemorySize: 11.75GiB deviceMemoryBandwidth: 849.46GiB/s
-2023-05-10 16:42:04.085297: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-10 16:42:04.085321: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-05-10 16:42:04.085328: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-05-10 16:42:04.085334: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
-2023-05-10 16:42:04.085340: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
-2023-05-10 16:42:04.085345: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
-2023-05-10 16:42:04.085358: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
-2023-05-10 16:42:04.085363: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
-2023-05-10 16:42:04.085394: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:42:04.085463: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:42:04.085519: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
-2023-05-10 16:42:04.085532: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-10 16:42:04.367922: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
-2023-05-10 16:42:04.367967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
-2023-05-10 16:42:04.367971: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
-2023-05-10 16:42:04.368161: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:42:04.368302: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:42:04.368372: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-10 16:42:04.368472: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 44 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3080 Ti, pci bus id: 0000:01:00.0, compute capability: 8.6)
-2023-05-10 16:42:04.369716: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
-2023-05-10 16:43:50.612037: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
-2023-05-10 16:43:56.553489: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
-2023-05-10 16:44:01.136090: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-05-10 16:44:01.487054: E tensorflow/stream_executor/cuda/cuda_blas.cc:226] failed to create cublas handle: CUBLAS_STATUS_NOT_INITIALIZED
-2023-05-10 16:44:01.487099: W tensorflow/stream_executor/stream.cc:1455] attempting to perform BLAS operation using StreamExecutor without BLAS support
+2023-05-12 01:18:14.597815: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-05-12 01:18:14.597836: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-05-12 01:18:14.597842: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-05-12 01:18:14.597848: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-05-12 01:18:14.597856: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-05-12 01:18:14.597861: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-05-12 01:18:14.597872: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-05-12 01:18:14.597878: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-05-12 01:18:14.597909: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:18:14.597979: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:18:14.598035: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-05-12 01:18:14.598049: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-05-12 01:18:14.880171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-05-12 01:18:14.880213: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2023-05-12 01:18:14.880217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2023-05-12 01:18:14.880392: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:18:14.880535: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:18:14.880606: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-05-12 01:18:14.880678: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10873 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3080 Ti, pci bus id: 0000:01:00.0, compute capability: 8.6)
+2023-05-12 01:18:14.881513: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-05-12 01:19:59.082114: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
+2023-05-12 01:20:05.160142: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-05-12 01:20:10.185960: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-05-12 01:20:10.556348: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-05-12 01:20:10.570000: I tensorflow/stream_executor/cuda/cuda_blas.cc:1838] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+2023-05-12 01:20:40.834679: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
+2023-05-12 01:20:46.192464: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
 sys.args:  ['exp_train_GCNClassifier.py', '10', 'data_poison', '1024-512-128', '0.0001', 'GCNClassifier', '5%_poison_connlabcfg', '200']
 + loaded padded_train Benign
 + loaded padded_train Malware
@@ -55,27 +57,204 @@ sys.args:  ['exp_train_GCNClassifier.py', '10', 'data_poison', '1024-512-128', '
 + loaded test dataset
 created Graph GCN model
 + model: 
- <util.models.GCN object at 0x7f5ea7a70eb0>
-Traceback (most recent call last):
-  File "exp_train_GCNClassifier.py", line 239, in <module>
-    main(sys.argv[1:])
-  File "exp_train_GCNClassifier.py", line 223, in main
-    train_GCNClassifier()
-  File "exp_train_GCNClassifier.py", line 76, in train_GCNClassifier
-    output = model.call((batch_feats, batch_adjs), training=True)
-  File "/home/ycchiu/git-rep/CFGE2BA/CFGExplainer/util/models.py", line 42, in call
-    out = self.getNodeEmb(inputs,training)
-  File "/home/ycchiu/git-rep/CFGE2BA/CFGExplainer/util/models.py", line 58, in getNodeEmb
-    x = layer.call((x,support),training)
-  File "/home/ycchiu/git-rep/CFGE2BA/CFGExplainer/util/layers.py", line 37, in call
-    output = tf.matmul(support, x)
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
-    return target(*args, **kwargs)
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 3276, in matmul
-    return gen_math_ops.batch_mat_mul_v2(
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/ops/gen_math_ops.py", line 1519, in batch_mat_mul_v2
-    _ops.raise_from_not_ok_status(e, name)
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 6862, in raise_from_not_ok_status
-    six.raise_from(core._status_to_exception(e.code, message), None)
-  File "<string>", line 3, in raise_from
-tensorflow.python.framework.errors_impl.InternalError: Blas xGEMMStridedBatched launch failed : a.shape=[10,512,512], b.shape=[10,512,8], m=512, n=8, k=512, batch_size=10 [Op:BatchMatMulV2]
+ <util.models.GCN object at 0x7f6af547a550>
+ep:  0 train loss:  0.3831178 train acc:  0.8435000
+ep:  1 train loss:  0.2226564 train acc:  0.9235000
+ep:  2 train loss:  0.2014589 train acc:  0.9336250
+ep:  3 train loss:  0.1913652 train acc:  0.9388750
+ep:  4 train loss:  0.1809734 train acc:  0.9407500
+ep:  5 train loss:  0.1760676 train acc:  0.9420000
+ep:  6 train loss:  0.1687154 train acc:  0.9453750
+ep:  7 train loss:  0.1624117 train acc:  0.9481250
+ep:  8 train loss:  0.1583470 train acc:  0.9497500
+ep:  9 train loss:  0.1598929 train acc:  0.9512500
+ep:  10 train loss:  0.1519798 train acc:  0.9522500
+ep:  11 train loss:  0.1482562 train acc:  0.9535000
+ep:  12 train loss:  0.1459420 train acc:  0.9536250
+ep:  13 train loss:  0.1427548 train acc:  0.9561250
+ep:  14 train loss:  0.1398840 train acc:  0.9560000
+ep:  15 train loss:  0.1389883 train acc:  0.9576250
+ep:  16 train loss:  0.1352832 train acc:  0.9571250
+ep:  17 train loss:  0.1330421 train acc:  0.9606250
+ep:  18 train loss:  0.1301007 train acc:  0.9595000
+ep:  19 train loss:  0.1304206 train acc:  0.9603750
+ep:  20 train loss:  0.1279667 train acc:  0.9600000
+ep:  21 train loss:  0.1244735 train acc:  0.9607500
+ep:  22 train loss:  0.1206332 train acc:  0.9620000
+ep:  23 train loss:  0.1214967 train acc:  0.9615000
+ep:  24 train loss:  0.1199686 train acc:  0.9606250
+ep:  25 train loss:  0.1141678 train acc:  0.9628750
+ep:  26 train loss:  0.1141433 train acc:  0.9610000
+ep:  27 train loss:  0.1086722 train acc:  0.9617500
+ep:  28 train loss:  0.1043973 train acc:  0.9627500
+ep:  29 train loss:  0.1065694 train acc:  0.9621250
+ep:  30 train loss:  0.1016874 train acc:  0.9618750
+ep:  31 train loss:  0.1011213 train acc:  0.9611250
+ep:  32 train loss:  0.0973782 train acc:  0.9601250
+ep:  33 train loss:  0.0994106 train acc:  0.9610000
+ep:  34 train loss:  0.0942637 train acc:  0.9635000
+ep:  35 train loss:  0.0930786 train acc:  0.9635000
+ep:  36 train loss:  0.0891730 train acc:  0.9640000
+ep:  37 train loss:  0.0892974 train acc:  0.9662500
+ep:  38 train loss:  0.0887438 train acc:  0.9665000
+ep:  39 train loss:  0.0885406 train acc:  0.9683750
+ep:  40 train loss:  0.0875612 train acc:  0.9682500
+ep:  41 train loss:  0.0862707 train acc:  0.9703750
+ep:  42 train loss:  0.0826056 train acc:  0.9706250
+ep:  43 train loss:  0.0871635 train acc:  0.9702500
+ep:  44 train loss:  0.0815453 train acc:  0.9697500
+ep:  45 train loss:  0.0911774 train acc:  0.9666250
+ep:  46 train loss:  0.0825296 train acc:  0.9716250
+ep:  47 train loss:  0.0837423 train acc:  0.9716250
+ep:  48 train loss:  0.0808289 train acc:  0.9730000
+ep:  49 train loss:  0.0803850 train acc:  0.9732500
+ep:  50 train loss:  0.0788794 train acc:  0.9733750
+ep:  51 train loss:  0.0770823 train acc:  0.9741250
+ep:  52 train loss:  0.0812862 train acc:  0.9703750
+ep:  53 train loss:  0.0785521 train acc:  0.9722500
+ep:  54 train loss:  0.0764724 train acc:  0.9758750
+ep:  55 train loss:  0.0786212 train acc:  0.9752500
+ep:  56 train loss:  0.0780168 train acc:  0.9731250
+ep:  57 train loss:  0.0748310 train acc:  0.9748750
+ep:  58 train loss:  0.0818384 train acc:  0.9740000
+ep:  59 train loss:  0.0735125 train acc:  0.9752500
+ep:  60 train loss:  0.0747968 train acc:  0.9760000
+ep:  61 train loss:  0.0786649 train acc:  0.9748750
+ep:  62 train loss:  0.0757964 train acc:  0.9760000
+ep:  63 train loss:  0.0712643 train acc:  0.9756250
+ep:  64 train loss:  0.0735033 train acc:  0.9766250
+ep:  65 train loss:  0.0728106 train acc:  0.9761250
+ep:  66 train loss:  0.0724833 train acc:  0.9758750
+ep:  67 train loss:  0.0722893 train acc:  0.9767500
+ep:  68 train loss:  0.0693302 train acc:  0.9802500
+ep:  69 train loss:  0.0747766 train acc:  0.9775000
+ep:  70 train loss:  0.0741469 train acc:  0.9767500
+ep:  71 train loss:  0.0745556 train acc:  0.9758750
+ep:  72 train loss:  0.0697033 train acc:  0.9788750
+ep:  73 train loss:  0.0694427 train acc:  0.9783750
+ep:  74 train loss:  0.0676737 train acc:  0.9796250
+ep:  75 train loss:  0.0688869 train acc:  0.9767500
+ep:  76 train loss:  0.0702231 train acc:  0.9788750
+ep:  77 train loss:  0.0723590 train acc:  0.9757500
+ep:  78 train loss:  0.0695787 train acc:  0.9767500
+ep:  79 train loss:  0.0696718 train acc:  0.9781250
+ep:  80 train loss:  0.0674447 train acc:  0.9783750
+ep:  81 train loss:  0.0666775 train acc:  0.9792500
+ep:  82 train loss:  0.0649024 train acc:  0.9800000
+ep:  83 train loss:  0.0664219 train acc:  0.9796250
+ep:  84 train loss:  0.0686053 train acc:  0.9798750
+ep:  85 train loss:  0.0668340 train acc:  0.9800000
+ep:  86 train loss:  0.0631707 train acc:  0.9811250
+ep:  87 train loss:  0.0660205 train acc:  0.9791250
+ep:  88 train loss:  0.0615862 train acc:  0.9817500
+ep:  89 train loss:  0.0604323 train acc:  0.9820000
+ep:  90 train loss:  0.0620324 train acc:  0.9818750
+ep:  91 train loss:  0.0620476 train acc:  0.9820000
+ep:  92 train loss:  0.0600183 train acc:  0.9837500
+ep:  93 train loss:  0.0601602 train acc:  0.9831250
+ep:  94 train loss:  0.0549190 train acc:  0.9853750
+ep:  95 train loss:  0.0547887 train acc:  0.9856250
+ep:  96 train loss:  0.0561316 train acc:  0.9837500
+ep:  97 train loss:  0.0548176 train acc:  0.9856250
+ep:  98 train loss:  0.0535119 train acc:  0.9856250
+ep:  99 train loss:  0.0528979 train acc:  0.9863750
+ep:  100 train loss:  0.0516314 train acc:  0.9870000
+ep:  101 train loss:  0.0603022 train acc:  0.9840000
+ep:  102 train loss:  0.0494077 train acc:  0.9871250
+ep:  103 train loss:  0.0501030 train acc:  0.9880000
+ep:  104 train loss:  0.0501824 train acc:  0.9875000
+ep:  105 train loss:  0.0491427 train acc:  0.9876250
+ep:  106 train loss:  0.0524202 train acc:  0.9861250
+ep:  107 train loss:  0.0525696 train acc:  0.9875000
+ep:  108 train loss:  0.0522091 train acc:  0.9870000
+ep:  109 train loss:  0.0515864 train acc:  0.9878750
+ep:  110 train loss:  0.0491258 train acc:  0.9883750
+ep:  111 train loss:  0.0483974 train acc:  0.9887500
+ep:  112 train loss:  0.0491302 train acc:  0.9878750
+ep:  113 train loss:  0.0533509 train acc:  0.9875000
+ep:  114 train loss:  0.0500666 train acc:  0.9876250
+ep:  115 train loss:  0.0478309 train acc:  0.9885000
+ep:  116 train loss:  0.0477657 train acc:  0.9886250
+ep:  117 train loss:  0.0478766 train acc:  0.9883750
+ep:  118 train loss:  0.0480029 train acc:  0.9890000
+ep:  119 train loss:  0.0518318 train acc:  0.9876250
+ep:  120 train loss:  0.0491158 train acc:  0.9888750
+ep:  121 train loss:  0.0475460 train acc:  0.9887500
+ep:  122 train loss:  0.0496695 train acc:  0.9878750
+ep:  123 train loss:  0.0493154 train acc:  0.9877500
+ep:  124 train loss:  0.0482287 train acc:  0.9893750
+ep:  125 train loss:  0.0480015 train acc:  0.9890000
+ep:  126 train loss:  0.0492827 train acc:  0.9882500
+ep:  127 train loss:  0.0509745 train acc:  0.9880000
+ep:  128 train loss:  0.0463679 train acc:  0.9888750
+ep:  129 train loss:  0.0478301 train acc:  0.9887500
+ep:  130 train loss:  0.0494253 train acc:  0.9878750
+ep:  131 train loss:  0.0468259 train acc:  0.9891250
+ep:  132 train loss:  0.0474296 train acc:  0.9892500
+ep:  133 train loss:  0.0520639 train acc:  0.9880000
+ep:  134 train loss:  0.0508663 train acc:  0.9883750
+ep:  135 train loss:  0.0475137 train acc:  0.9890000
+ep:  136 train loss:  0.0466241 train acc:  0.9891250
+ep:  137 train loss:  0.0463988 train acc:  0.9895000
+ep:  138 train loss:  0.0473803 train acc:  0.9887500
+ep:  139 train loss:  0.0531991 train acc:  0.9872500
+ep:  140 train loss:  0.0467150 train acc:  0.9892500
+ep:  141 train loss:  0.0453853 train acc:  0.9890000
+ep:  142 train loss:  0.0489079 train acc:  0.9890000
+ep:  143 train loss:  0.0480210 train acc:  0.9887500
+ep:  144 train loss:  0.0478122 train acc:  0.9888750
+ep:  145 train loss:  0.0477903 train acc:  0.9887500
+ep:  146 train loss:  0.0555468 train acc:  0.9862500
+ep:  147 train loss:  0.0455579 train acc:  0.9895000
+ep:  148 train loss:  0.0464261 train acc:  0.9892500
+ep:  149 train loss:  0.0464688 train acc:  0.9892500
+ep:  150 train loss:  0.0464851 train acc:  0.9888750
+ep:  151 train loss:  0.0464934 train acc:  0.9892500
+ep:  152 train loss:  0.0468429 train acc:  0.9885000
+ep:  153 train loss:  0.0470585 train acc:  0.9888750
+ep:  154 train loss:  0.0463840 train acc:  0.9887500
+ep:  155 train loss:  0.0460797 train acc:  0.9893750
+ep:  156 train loss:  0.0472197 train acc:  0.9892500
+ep:  157 train loss:  0.0538595 train acc:  0.9870000
+ep:  158 train loss:  0.0461158 train acc:  0.9892500
+ep:  159 train loss:  0.0473884 train acc:  0.9893750
+ep:  160 train loss:  0.0465444 train acc:  0.9892500
+ep:  161 train loss:  0.0477942 train acc:  0.9895000
+ep:  162 train loss:  0.0450933 train acc:  0.9896250
+ep:  163 train loss:  0.0475464 train acc:  0.9886250
+ep:  164 train loss:  0.0490317 train acc:  0.9887500
+ep:  165 train loss:  0.0469557 train acc:  0.9895000
+ep:  166 train loss:  0.0464949 train acc:  0.9892500
+ep:  167 train loss:  0.0462127 train acc:  0.9892500
+ep:  168 train loss:  0.0468063 train acc:  0.9890000
+ep:  169 train loss:  0.0468955 train acc:  0.9893750
+ep:  170 train loss:  0.0510503 train acc:  0.9886250
+ep:  171 train loss:  0.0518077 train acc:  0.9885000
+ep:  172 train loss:  0.0456286 train acc:  0.9896250
+ep:  173 train loss:  0.0456648 train acc:  0.9892500
+ep:  174 train loss:  0.0465303 train acc:  0.9895000
+ep:  175 train loss:  0.0460409 train acc:  0.9895000
+ep:  176 train loss:  0.0503523 train acc:  0.9878750
+ep:  177 train loss:  0.0513144 train acc:  0.9886250
+ep:  178 train loss:  0.0460624 train acc:  0.9892500
+ep:  179 train loss:  0.0460863 train acc:  0.9893750
+ep:  180 train loss:  0.0453848 train acc:  0.9896250
+ep:  181 train loss:  0.0461988 train acc:  0.9891250
+ep:  182 train loss:  0.0455973 train acc:  0.9892500
+ep:  183 train loss:  0.0489607 train acc:  0.9885000
+ep:  184 train loss:  0.0536303 train acc:  0.9883750
+ep:  185 train loss:  0.0464513 train acc:  0.9891250
+ep:  186 train loss:  0.0457415 train acc:  0.9893750
+ep:  187 train loss:  0.0458395 train acc:  0.9892500
+ep:  188 train loss:  0.0457171 train acc:  0.9895000
+ep:  189 train loss:  0.0463351 train acc:  0.9892500
+ep:  190 train loss:  0.0466696 train acc:  0.9891250
+ep:  191 train loss:  0.0489797 train acc:  0.9882500
+ep:  192 train loss:  0.0458446 train acc:  0.9892500
+ep:  193 train loss:  0.0455495 train acc:  0.9893750
+ep:  194 train loss:  0.0459653 train acc:  0.9895000
+ep:  195 train loss:  0.0527957 train acc:  0.9877500
+ep:  196 train loss:  0.0487432 train acc:  0.9887500
+ep:  197 train loss:  0.0458758 train acc:  0.9893750
+ep:  198 train loss:  0.0454811 train acc:  0.9893750
+ep:  199 train loss:  0.0458577 train acc:  0.9893750

@@ -6,6 +6,7 @@
 /CFGExplainer/mlruns
 /CFGExplainer/logs
 /CFGExplainer/interpretability_results
+/CFGExplainer/poison_interpretability_results
 # /CFGExplainer/data
 
 
