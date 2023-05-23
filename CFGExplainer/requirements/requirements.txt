@@ -174,7 +174,7 @@ mock=4.0.2=py_0
 more-itertools=8.6.0=pyhd3eb1b0_0
 mpc=1.1.0=h10f8cd9_1
 mpfr=4.0.2=hb69a4c5_1
-mpmath=1.1.0=py38_0
+# mpmath=1.1.0=py38_0
 msgpack-python=1.0.0=py38hfd86e86_1
 multipledispatch=0.6.0=py38_0
 nbclient=0.5.1=py_0
