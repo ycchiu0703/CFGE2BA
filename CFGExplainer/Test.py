@@ -113,7 +113,7 @@ def main(arguments):
     }
     ## mlflow
     mlflow.set_experiment("Test_ASR")
-    mlflow.start_run(run_name = "Clean_GCNClassifier")      ## mlflow.start_run(run_name = "Clean_GCNClassifier")
+    mlflow.start_run(run_name = "5%_GCNClassifier_triggersize_11-1")      ## mlflow.start_run(run_name = "Clean_GCNClassifier")
 
     # run explain code
     test_GCNClassifier()
