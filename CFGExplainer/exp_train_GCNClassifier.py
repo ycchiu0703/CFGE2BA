@@ -12,10 +12,6 @@ import mlflow.tensorflow
 
 from datetime import datetime
 
-
-
-# for writing results
-# from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
 # ------------------------------    
@@ -38,12 +34,6 @@ def train_GCNClassifier():
     del test
     print('+ loaded test dataset')
 
-    ## intializing the writer
-    # name = args.model_name_flag + args.dataset
-    # writer = None
-    # if args.writer_path is not None:
-    #     writer = SummaryWriter(args.writer_path + name)
-
     # creating the model
     model = GCN(input_dim=args.d, output_dim=args.c)
     print('+ model: \n', model)
@@ -65,7 +55,7 @@ def train_GCNClassifier():
             tf.keras.backend.clear_session()
             # print('ep: ', epoch, ' batch: ', batch_id)
             
-            with tf.device('/gpu:0'):   ## with tf.device('/gpu:0'):
+            with tf.device('/gpu:0'):  
                 batch_adjs, batch_feats, batch_labels, batch_ids, batch_masks = ts_batch
                 
                 # ## check shaffle
@@ -94,14 +84,6 @@ def train_GCNClassifier():
         # test iterations: will be done per epoch
         # test_batch = test.batch(args.batch_size)  # no need to shuffle
         results = evaluate_model(model, test_batch)
-
-        # if args.writer_path is not None:
-        #     # logging for training
-        #     writer.add_scalar('loss/train_loss', train_loss.numpy(), epoch + 1)
-        #     writer.add_scalar('accuracy/train_acc', train_acc.numpy(), epoch + 1)
-        #     # logging for val step
-        #     writer.add_scalar('loss/test_loss', results['loss'].numpy(), epoch + 1)
-        #     writer.add_scalar('accuracy/test_acc', results['accuracy'].numpy(), epoch + 1)
 
         ## mlflow 
         mlflow.log_metric("train_acc", train_acc.numpy(), step = epoch)
@@ -197,7 +179,7 @@ def main(arguments):
 
     ## mlflow
     mlflow.set_experiment(args.model_name_flag)
-    mlflow.start_run(run_name = "5%_GCNClassifier") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
+    mlflow.start_run(run_name = "5%_Poison_GCNClassifier_trigger_11-8_random") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
     mlflow.log_param('training_size', 8000)
     mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  

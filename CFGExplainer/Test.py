@@ -112,8 +112,8 @@ def main(arguments):
         'Malware': 1
     }
     ## mlflow
-    mlflow.set_experiment("Test_ASR")
-    mlflow.start_run(run_name = "5%_GCNClassifier_triggersize_11-1")      ## mlflow.start_run(run_name = "Clean_GCNClassifier")
+    mlflow.set_experiment("15_Partition_Test_ASR")
+    mlflow.start_run(run_name = "5%_GCNClassifier_trigger_11-4")      ## mlflow.start_run(run_name = "Clean_GCNClassifier")
 
     # run explain code
     test_GCNClassifier()
