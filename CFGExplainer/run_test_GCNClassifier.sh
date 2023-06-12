@@ -1,7 +1,7 @@
 #!/bin/bash
 
 declare -a batch_size="10"                                  ## batch_size="10"
-declare -a path="Partition_samples"                         ## path="data_testing"              ## path="Partition_Trigger_samples"
+declare -a path="AddTrigger_Trigger_Partition_samples"                         ## path="data_testing"              ## path="Partition_Trigger_samples"
 declare -a hiddens="1024-512-128"                           ## hiddens="1024-512-128"
 declare -a lr="0.0001"
 declare -a model_name="05-28_23:56:16-GCNClassifier_"       ## model_name="GCNClassifier_"      ## model_name="05-11_13:04:22-GCNClassifier_"

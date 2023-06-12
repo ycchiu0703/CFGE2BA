@@ -179,7 +179,7 @@ def main(arguments):
 
     ## mlflow
     mlflow.set_experiment(args.model_name_flag)
-    mlflow.start_run(run_name = "5%_Poison_GCNClassifier_trigger_11-8_random") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
+    mlflow.start_run(run_name = "5%_Poison_GCNClassifier_trigger_11-4_random") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
     mlflow.log_param('training_size', 8000)
     mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  

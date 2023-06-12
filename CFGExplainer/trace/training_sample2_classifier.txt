@@ -1,137 +1,53 @@
-2023-05-31 21:52:26.370274: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-31 21:52:27.196414: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2023-05-31 21:52:27.196971: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
-2023-05-31 21:52:27.239059: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:52:27.239174: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+2023-06-09 14:40:23.217736: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-06-09 14:40:23.981882: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-06-09 14:40:23.982430: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2023-06-09 14:40:24.024818: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:40:24.024954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
 pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 3080 Ti computeCapability: 8.6
 coreClock: 1.83GHz coreCount: 80 deviceMemorySize: 11.75GiB deviceMemoryBandwidth: 849.46GiB/s
-2023-05-31 21:52:27.239189: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-31 21:52:27.246217: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-05-31 21:52:27.246273: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-05-31 21:52:27.247124: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
-2023-05-31 21:52:27.247291: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
-2023-05-31 21:52:27.249727: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
-2023-05-31 21:52:27.250076: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
-2023-05-31 21:52:27.250164: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
-2023-05-31 21:52:27.250216: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:52:27.250316: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:52:27.250378: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
-2023-05-31 21:58:38.607045: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2023-05-31 21:58:38.607235: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:58:38.607353: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+2023-06-09 14:40:24.024968: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-06-09 14:40:24.026669: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-06-09 14:40:24.026755: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-06-09 14:40:24.027564: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-06-09 14:40:24.027767: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-06-09 14:40:24.029753: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-06-09 14:40:24.030221: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-06-09 14:40:24.030357: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-06-09 14:40:24.030422: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:40:24.030546: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:40:24.030625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-06-09 14:46:20.733450: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-06-09 14:46:20.733720: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:46:20.733845: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
 pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 3080 Ti computeCapability: 8.6
 coreClock: 1.83GHz coreCount: 80 deviceMemorySize: 11.75GiB deviceMemoryBandwidth: 849.46GiB/s
-2023-05-31 21:58:38.607372: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-31 21:58:38.607393: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-05-31 21:58:38.607398: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-05-31 21:58:38.607405: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
-2023-05-31 21:58:38.607410: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
-2023-05-31 21:58:38.607415: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
-2023-05-31 21:58:38.607426: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
-2023-05-31 21:58:38.607431: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
-2023-05-31 21:58:38.607457: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:58:38.607548: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:58:38.607603: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
-2023-05-31 21:58:38.607617: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-05-31 21:58:38.905249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
-2023-05-31 21:58:38.905290: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
-2023-05-31 21:58:38.905296: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
-2023-05-31 21:58:38.905481: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:58:38.905626: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:58:38.905698: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-05-31 21:58:38.905771: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 70 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3080 Ti, pci bus id: 0000:01:00.0, compute capability: 8.6)
-2023-05-31 21:58:38.906720: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
-2023-05-31 22:00:30.999314: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
-2023-05-31 22:00:37.202569: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
-2023-05-31 22:00:42.178383: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-05-31 22:00:42.560067: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-05-31 22:00:42.561423: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 32.00M (33554432 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:42.561728: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 28.80M (30199040 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:42.562014: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 25.92M (27179264 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:42.562307: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 23.33M (24461568 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:42.562590: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 21.00M (22015488 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:42.562595: W tensorflow/core/common_runtime/bfc_allocator.cc:314] Garbage collection: deallocate free memory regions (i.e., allocations) so that we can re-allocate a larger region to avoid OOM due to memory fragmentation. If you see this message frequently, you are running near the threshold of the available device memory and re-allocation may incur great performance overhead. You may try smaller batch sizes to observe the performance impact. Set TF_ENABLE_GPU_GARBAGE_COLLECTION=false if you'd like to disable this feature.
-2023-05-31 22:00:42.569925: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 32.00M (33554432 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:42.570225: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 32.00M (33554432 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:52.572073: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 32.00M (33554432 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:52.573603: I tensorflow/stream_executor/cuda/cuda_driver.cc:789] failed to allocate 32.00M (33554432 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
-2023-05-31 22:00:52.573640: W tensorflow/core/common_runtime/bfc_allocator.cc:433] Allocator (GPU_0_bfc) ran out of memory trying to allocate 20.00MiB (rounded to 20971520)requested by op BatchMatMulV2
-Current allocation summary follows.
-2023-05-31 22:00:52.573658: I tensorflow/core/common_runtime/bfc_allocator.cc:972] BFCAllocator dump for GPU_0_bfc
-2023-05-31 22:00:52.573675: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (256): 	Total Chunks: 10, Chunks in use: 10. 2.5KiB allocated for chunks. 2.5KiB in use in bin. 60B client-requested in use in bin.
-2023-05-31 22:00:52.573687: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (512): 	Total Chunks: 1, Chunks in use: 1. 512B allocated for chunks. 512B in use in bin. 512B client-requested in use in bin.
-2023-05-31 22:00:52.573699: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (1024): 	Total Chunks: 1, Chunks in use: 1. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
-2023-05-31 22:00:52.573711: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (2048): 	Total Chunks: 1, Chunks in use: 1. 2.0KiB allocated for chunks. 2.0KiB in use in bin. 2.0KiB client-requested in use in bin.
-2023-05-31 22:00:52.573723: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (4096): 	Total Chunks: 1, Chunks in use: 1. 4.0KiB allocated for chunks. 4.0KiB in use in bin. 4.0KiB client-requested in use in bin.
-2023-05-31 22:00:52.573734: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573746: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (16384): 	Total Chunks: 1, Chunks in use: 0. 23.8KiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573759: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (32768): 	Total Chunks: 2, Chunks in use: 1. 64.0KiB allocated for chunks. 32.0KiB in use in bin. 32.0KiB client-requested in use in bin.
-2023-05-31 22:00:52.573770: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573783: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (131072): 	Total Chunks: 3, Chunks in use: 2. 512.0KiB allocated for chunks. 320.0KiB in use in bin. 320.0KiB client-requested in use in bin.
-2023-05-31 22:00:52.573796: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (262144): 	Total Chunks: 1, Chunks in use: 1. 414.0KiB allocated for chunks. 414.0KiB in use in bin. 256.0KiB client-requested in use in bin.
-2023-05-31 22:00:52.573807: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573818: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573851: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (2097152): 	Total Chunks: 2, Chunks in use: 1. 4.00MiB allocated for chunks. 2.00MiB in use in bin. 2.00MiB client-requested in use in bin.
-2023-05-31 22:00:52.573862: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573873: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (8388608): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573886: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (16777216): 	Total Chunks: 1, Chunks in use: 1. 16.00MiB allocated for chunks. 16.00MiB in use in bin. 10.00MiB client-requested in use in bin.
-2023-05-31 22:00:52.573896: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573907: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573918: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573929: I tensorflow/core/common_runtime/bfc_allocator.cc:979] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
-2023-05-31 22:00:52.573940: I tensorflow/core/common_runtime/bfc_allocator.cc:995] Bin for 20.00MiB was 16.00MiB, Chunk State: 
-2023-05-31 22:00:52.573951: I tensorflow/core/common_runtime/bfc_allocator.cc:1008] Next region of size 1048576
-2023-05-31 22:00:52.573966: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441400000 of size 1280 next 1
-2023-05-31 22:00:52.573977: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441400500 of size 256 next 2
-2023-05-31 22:00:52.573986: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441400600 of size 256 next 8
-2023-05-31 22:00:52.573995: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441400700 of size 4096 next 9
-2023-05-31 22:00:52.574005: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441401700 of size 256 next 11
-2023-05-31 22:00:52.574015: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441401800 of size 2048 next 14
-2023-05-31 22:00:52.574024: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441402000 of size 256 next 16
-2023-05-31 22:00:52.574034: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441402100 of size 512 next 15
-2023-05-31 22:00:52.574043: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441402300 of size 256 next 18
-2023-05-31 22:00:52.574052: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441402400 of size 256 next 19
-2023-05-31 22:00:52.574061: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441402500 of size 256 next 20
-2023-05-31 22:00:52.574071: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441402600 of size 256 next 21
-2023-05-31 22:00:52.574083: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 7f3441402700 of size 24320 next 3
-2023-05-31 22:00:52.574092: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441408600 of size 256 next 4
-2023-05-31 22:00:52.574101: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 7f3441408700 of size 32768 next 5
-2023-05-31 22:00:52.574110: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441410700 of size 256 next 6
-2023-05-31 22:00:52.574127: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441410800 of size 32768 next 7
-2023-05-31 22:00:52.574138: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441418800 of size 163840 next 23
-2023-05-31 22:00:52.574148: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441440800 of size 163840 next 24
-2023-05-31 22:00:52.574157: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 7f3441468800 of size 196608 next 17
-2023-05-31 22:00:52.574168: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441498800 of size 423936 next 18446744073709551615
-2023-05-31 22:00:52.574176: I tensorflow/core/common_runtime/bfc_allocator.cc:1008] Next region of size 4194304
-2023-05-31 22:00:52.574186: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] Free  at 7f3441800000 of size 2097152 next 13
-2023-05-31 22:00:52.574195: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f3441a00000 of size 2097152 next 18446744073709551615
-2023-05-31 22:00:52.574204: I tensorflow/core/common_runtime/bfc_allocator.cc:1008] Next region of size 16777216
-2023-05-31 22:00:52.574213: I tensorflow/core/common_runtime/bfc_allocator.cc:1028] InUse at 7f44ee000000 of size 16777216 next 18446744073709551615
-2023-05-31 22:00:52.574222: I tensorflow/core/common_runtime/bfc_allocator.cc:1033]      Summary of in-use Chunks by size: 
-2023-05-31 22:00:52.574234: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 10 Chunks of size 256 totalling 2.5KiB
-2023-05-31 22:00:52.574244: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 512 totalling 512B
-2023-05-31 22:00:52.574253: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 1280 totalling 1.2KiB
-2023-05-31 22:00:52.574262: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 2048 totalling 2.0KiB
-2023-05-31 22:00:52.574271: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 4096 totalling 4.0KiB
-2023-05-31 22:00:52.574280: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 32768 totalling 32.0KiB
-2023-05-31 22:00:52.574289: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 2 Chunks of size 163840 totalling 320.0KiB
-2023-05-31 22:00:52.574300: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 423936 totalling 414.0KiB
-2023-05-31 22:00:52.574309: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 2097152 totalling 2.00MiB
-2023-05-31 22:00:52.574319: I tensorflow/core/common_runtime/bfc_allocator.cc:1036] 1 Chunks of size 16777216 totalling 16.00MiB
-2023-05-31 22:00:52.574328: I tensorflow/core/common_runtime/bfc_allocator.cc:1040] Sum Total of in-use chunks: 18.76MiB
-2023-05-31 22:00:52.574337: I tensorflow/core/common_runtime/bfc_allocator.cc:1042] total_region_allocated_bytes_: 22020096 memory_limit_: 74186752 available bytes: 52166656 curr_region_allocation_bytes_: 33554432
-2023-05-31 22:00:52.574352: I tensorflow/core/common_runtime/bfc_allocator.cc:1048] Stats: 
-Limit:                        74186752
-InUse:                        19669248
-MaxInUse:                     19669248
-NumAllocs:                          29
-MaxAllocSize:                 16777216
-Reserved:                            0
-PeakReserved:                        0
-LargestFreeBlock:                    0
-
-2023-05-31 22:00:52.574367: W tensorflow/core/common_runtime/bfc_allocator.cc:441] *****_________**********************************************************xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-2023-05-31 22:00:52.574408: W tensorflow/core/framework/op_kernel.cc:1763] OP_REQUIRES failed at batch_matmul_op_impl.h:685 : Resource exhausted: OOM when allocating tensor with shape[10,512,1024] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+2023-06-09 14:46:20.733871: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-06-09 14:46:20.733893: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-06-09 14:46:20.733899: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-06-09 14:46:20.733906: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-06-09 14:46:20.733912: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-06-09 14:46:20.733918: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-06-09 14:46:20.733935: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-06-09 14:46:20.733940: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-06-09 14:46:20.733968: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:46:20.734036: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:46:20.734109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-06-09 14:46:20.734122: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-06-09 14:46:21.024534: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-06-09 14:46:21.024572: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2023-06-09 14:46:21.024578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2023-06-09 14:46:21.024729: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:46:21.024878: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:46:21.024952: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-06-09 14:46:21.025054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10873 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3080 Ti, pci bus id: 0000:01:00.0, compute capability: 8.6)
+2023-06-09 14:46:21.026348: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-06-09 14:48:02.435815: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
+2023-06-09 14:48:08.272275: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-06-09 14:48:13.021933: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-06-09 14:48:13.372673: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-06-09 14:48:13.386351: I tensorflow/stream_executor/cuda/cuda_blas.cc:1838] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+2023-06-09 14:48:43.772916: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
+2023-06-09 14:48:49.167604: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
 sys.args:  ['exp_train_GCNClassifier.py', '10', 'data_poison', '1024-512-128', '0.0001', 'GCNClassifier', '5%_poison_connlabcfg', '200']
 + loaded padded_train Benign
 + loaded padded_train Malware
@@ -141,27 +57,204 @@ sys.args:  ['exp_train_GCNClassifier.py', '10', 'data_poison', '1024-512-128', '
 + loaded test dataset
 created Graph GCN model
 + model: 
- <util.models.GCN object at 0x7f41b985f970>
-Traceback (most recent call last):
-  File "exp_train_GCNClassifier.py", line 221, in <module>
-    main(sys.argv[1:])
-  File "exp_train_GCNClassifier.py", line 205, in main
-    train_GCNClassifier()
-  File "exp_train_GCNClassifier.py", line 66, in train_GCNClassifier
-    output = model.call((batch_feats, batch_adjs), training=True)
-  File "/home/ycchiu/git-rep/CFGE2BA/CFGExplainer/util/models.py", line 42, in call
-    out = self.getNodeEmb(inputs,training)
-  File "/home/ycchiu/git-rep/CFGE2BA/CFGExplainer/util/models.py", line 58, in getNodeEmb
-    x = layer.call((x,support),training)
-  File "/home/ycchiu/git-rep/CFGE2BA/CFGExplainer/util/layers.py", line 40, in call
-    output = tf.matmul(output, self.weight)
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
-    return target(*args, **kwargs)
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 3276, in matmul
-    return gen_math_ops.batch_mat_mul_v2(
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/ops/gen_math_ops.py", line 1519, in batch_mat_mul_v2
-    _ops.raise_from_not_ok_status(e, name)
-  File "/home/ycchiu/anaconda3/envs/ycc3/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 6862, in raise_from_not_ok_status
-    six.raise_from(core._status_to_exception(e.code, message), None)
-  File "<string>", line 3, in raise_from
-tensorflow.python.framework.errors_impl.ResourceExhaustedError: OOM when allocating tensor with shape[10,512,1024] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:BatchMatMulV2]
+ <util.models.GCN object at 0x7fed86d6e970>
+ep:  0 train loss:  0.3773830 train acc:  0.8496250
+ep:  1 train loss:  0.2251298 train acc:  0.9211250
+ep:  2 train loss:  0.2116953 train acc:  0.9321250
+ep:  3 train loss:  0.1908755 train acc:  0.9363750
+ep:  4 train loss:  0.1828737 train acc:  0.9396250
+ep:  5 train loss:  0.1611238 train acc:  0.9425000
+ep:  6 train loss:  0.1227550 train acc:  0.9621250
+ep:  7 train loss:  0.1093910 train acc:  0.9657500
+ep:  8 train loss:  0.1054936 train acc:  0.9666250
+ep:  9 train loss:  0.1027702 train acc:  0.9673750
+ep:  10 train loss:  0.0947192 train acc:  0.9703750
+ep:  11 train loss:  0.0912252 train acc:  0.9700000
+ep:  12 train loss:  0.0886246 train acc:  0.9716250
+ep:  13 train loss:  0.0858514 train acc:  0.9742500
+ep:  14 train loss:  0.0852025 train acc:  0.9751250
+ep:  15 train loss:  0.0845063 train acc:  0.9755000
+ep:  16 train loss:  0.0849415 train acc:  0.9768750
+ep:  17 train loss:  0.0777593 train acc:  0.9778750
+ep:  18 train loss:  0.0782888 train acc:  0.9773750
+ep:  19 train loss:  0.0766894 train acc:  0.9776250
+ep:  20 train loss:  0.0768243 train acc:  0.9777500
+ep:  21 train loss:  0.0764789 train acc:  0.9776250
+ep:  22 train loss:  0.0801316 train acc:  0.9792500
+ep:  23 train loss:  0.0728035 train acc:  0.9797500
+ep:  24 train loss:  0.0711749 train acc:  0.9807500
+ep:  25 train loss:  0.0702858 train acc:  0.9795000
+ep:  26 train loss:  0.0729923 train acc:  0.9795000
+ep:  27 train loss:  0.0709242 train acc:  0.9806250
+ep:  28 train loss:  0.0677130 train acc:  0.9820000
+ep:  29 train loss:  0.0704598 train acc:  0.9803750
+ep:  30 train loss:  0.0680760 train acc:  0.9820000
+ep:  31 train loss:  0.0675589 train acc:  0.9816250
+ep:  32 train loss:  0.0655064 train acc:  0.9832500
+ep:  33 train loss:  0.0683048 train acc:  0.9815000
+ep:  34 train loss:  0.0662685 train acc:  0.9816250
+ep:  35 train loss:  0.0653519 train acc:  0.9828750
+ep:  36 train loss:  0.0650078 train acc:  0.9830000
+ep:  37 train loss:  0.0640376 train acc:  0.9832500
+ep:  38 train loss:  0.0665245 train acc:  0.9827500
+ep:  39 train loss:  0.0624647 train acc:  0.9838750
+ep:  40 train loss:  0.0628143 train acc:  0.9838750
+ep:  41 train loss:  0.0614863 train acc:  0.9841250
+ep:  42 train loss:  0.0618408 train acc:  0.9840000
+ep:  43 train loss:  0.0615675 train acc:  0.9848750
+ep:  44 train loss:  0.0621724 train acc:  0.9841250
+ep:  45 train loss:  0.0618947 train acc:  0.9855000
+ep:  46 train loss:  0.0609569 train acc:  0.9848750
+ep:  47 train loss:  0.0586031 train acc:  0.9847500
+ep:  48 train loss:  0.0603022 train acc:  0.9846250
+ep:  49 train loss:  0.0601467 train acc:  0.9851250
+ep:  50 train loss:  0.0586281 train acc:  0.9856250
+ep:  51 train loss:  0.0590373 train acc:  0.9851250
+ep:  52 train loss:  0.0596020 train acc:  0.9853750
+ep:  53 train loss:  0.0592067 train acc:  0.9850000
+ep:  54 train loss:  0.0587665 train acc:  0.9855000
+ep:  55 train loss:  0.0579328 train acc:  0.9861250
+ep:  56 train loss:  0.0569168 train acc:  0.9856250
+ep:  57 train loss:  0.0572201 train acc:  0.9861250
+ep:  58 train loss:  0.0578876 train acc:  0.9863750
+ep:  59 train loss:  0.0561942 train acc:  0.9870000
+ep:  60 train loss:  0.0567571 train acc:  0.9858750
+ep:  61 train loss:  0.0572078 train acc:  0.9865000
+ep:  62 train loss:  0.0561682 train acc:  0.9868750
+ep:  63 train loss:  0.0556391 train acc:  0.9863750
+ep:  64 train loss:  0.0555464 train acc:  0.9867500
+ep:  65 train loss:  0.0591677 train acc:  0.9857500
+ep:  66 train loss:  0.0557941 train acc:  0.9862500
+ep:  67 train loss:  0.0545659 train acc:  0.9873750
+ep:  68 train loss:  0.0565811 train acc:  0.9860000
+ep:  69 train loss:  0.0549713 train acc:  0.9871250
+ep:  70 train loss:  0.0529980 train acc:  0.9873750
+ep:  71 train loss:  0.0550554 train acc:  0.9870000
+ep:  72 train loss:  0.0540157 train acc:  0.9868750
+ep:  73 train loss:  0.0534090 train acc:  0.9876250
+ep:  74 train loss:  0.0543376 train acc:  0.9872500
+ep:  75 train loss:  0.0540866 train acc:  0.9876250
+ep:  76 train loss:  0.0567919 train acc:  0.9863750
+ep:  77 train loss:  0.0536272 train acc:  0.9873750
+ep:  78 train loss:  0.0524901 train acc:  0.9877500
+ep:  79 train loss:  0.0534025 train acc:  0.9871250
+ep:  80 train loss:  0.0524410 train acc:  0.9880000
+ep:  81 train loss:  0.0556857 train acc:  0.9863750
+ep:  82 train loss:  0.0548822 train acc:  0.9866250
+ep:  83 train loss:  0.0525377 train acc:  0.9877500
+ep:  84 train loss:  0.0520924 train acc:  0.9880000
+ep:  85 train loss:  0.0516959 train acc:  0.9878750
+ep:  86 train loss:  0.0532330 train acc:  0.9872500
+ep:  87 train loss:  0.0539434 train acc:  0.9875000
+ep:  88 train loss:  0.0517499 train acc:  0.9872500
+ep:  89 train loss:  0.0513489 train acc:  0.9878750
+ep:  90 train loss:  0.0516292 train acc:  0.9877500
+ep:  91 train loss:  0.0546356 train acc:  0.9867500
+ep:  92 train loss:  0.0527081 train acc:  0.9881250
+ep:  93 train loss:  0.0512507 train acc:  0.9881250
+ep:  94 train loss:  0.0513264 train acc:  0.9880000
+ep:  95 train loss:  0.0511661 train acc:  0.9877500
+ep:  96 train loss:  0.0527732 train acc:  0.9875000
+ep:  97 train loss:  0.0512416 train acc:  0.9876250
+ep:  98 train loss:  0.0508410 train acc:  0.9880000
+ep:  99 train loss:  0.0510743 train acc:  0.9880000
+ep:  100 train loss:  0.0514249 train acc:  0.9880000
+ep:  101 train loss:  0.0510203 train acc:  0.9880000
+ep:  102 train loss:  0.0509050 train acc:  0.9880000
+ep:  103 train loss:  0.0522555 train acc:  0.9866250
+ep:  104 train loss:  0.0517546 train acc:  0.9875000
+ep:  105 train loss:  0.0502385 train acc:  0.9873750
+ep:  106 train loss:  0.0499226 train acc:  0.9882500
+ep:  107 train loss:  0.0515607 train acc:  0.9877500
+ep:  108 train loss:  0.0500576 train acc:  0.9883750
+ep:  109 train loss:  0.0505636 train acc:  0.9882500
+ep:  110 train loss:  0.0508874 train acc:  0.9877500
+ep:  111 train loss:  0.0498545 train acc:  0.9882500
+ep:  112 train loss:  0.0495836 train acc:  0.9881250
+ep:  113 train loss:  0.0553603 train acc:  0.9867500
+ep:  114 train loss:  0.0507578 train acc:  0.9881250
+ep:  115 train loss:  0.0494802 train acc:  0.9882500
+ep:  116 train loss:  0.0492497 train acc:  0.9883750
+ep:  117 train loss:  0.0494591 train acc:  0.9882500
+ep:  118 train loss:  0.0493964 train acc:  0.9885000
+ep:  119 train loss:  0.0498601 train acc:  0.9881250
+ep:  120 train loss:  0.0493801 train acc:  0.9885000
+ep:  121 train loss:  0.0498902 train acc:  0.9880000
+ep:  122 train loss:  0.0499126 train acc:  0.9882500
+ep:  123 train loss:  0.0486638 train acc:  0.9885000
+ep:  124 train loss:  0.0529153 train acc:  0.9871250
+ep:  125 train loss:  0.0508967 train acc:  0.9872500
+ep:  126 train loss:  0.0493361 train acc:  0.9881250
+ep:  127 train loss:  0.0484199 train acc:  0.9886250
+ep:  128 train loss:  0.0481485 train acc:  0.9885000
+ep:  129 train loss:  0.0514708 train acc:  0.9875000
+ep:  130 train loss:  0.0493205 train acc:  0.9885000
+ep:  131 train loss:  0.0484829 train acc:  0.9883750
+ep:  132 train loss:  0.0484226 train acc:  0.9887500
+ep:  133 train loss:  0.0486244 train acc:  0.9882500
+ep:  134 train loss:  0.0485036 train acc:  0.9885000
+ep:  135 train loss:  0.0511483 train acc:  0.9877500
+ep:  136 train loss:  0.0495533 train acc:  0.9883750
+ep:  137 train loss:  0.0481933 train acc:  0.9883750
+ep:  138 train loss:  0.0479576 train acc:  0.9886250
+ep:  139 train loss:  0.0553194 train acc:  0.9867500
+ep:  140 train loss:  0.0488716 train acc:  0.9881250
+ep:  141 train loss:  0.0482339 train acc:  0.9883750
+ep:  142 train loss:  0.0477949 train acc:  0.9886250
+ep:  143 train loss:  0.0477099 train acc:  0.9887500
+ep:  144 train loss:  0.0477995 train acc:  0.9885000
+ep:  145 train loss:  0.0488640 train acc:  0.9882500
+ep:  146 train loss:  0.0489163 train acc:  0.9885000
+ep:  147 train loss:  0.0479440 train acc:  0.9885000
+ep:  148 train loss:  0.0481656 train acc:  0.9886250
+ep:  149 train loss:  0.0479311 train acc:  0.9885000
+ep:  150 train loss:  0.0499060 train acc:  0.9877500
+ep:  151 train loss:  0.0488198 train acc:  0.9885000
+ep:  152 train loss:  0.0480174 train acc:  0.9883750
+ep:  153 train loss:  0.0484082 train acc:  0.9883750
+ep:  154 train loss:  0.0474503 train acc:  0.9886250
+ep:  155 train loss:  0.0477584 train acc:  0.9885000
+ep:  156 train loss:  0.0504941 train acc:  0.9880000
+ep:  157 train loss:  0.0483847 train acc:  0.9885000
+ep:  158 train loss:  0.0477896 train acc:  0.9885000
+ep:  159 train loss:  0.0480452 train acc:  0.9886250
+ep:  160 train loss:  0.0477785 train acc:  0.9885000
+ep:  161 train loss:  0.0498117 train acc:  0.9878750
+ep:  162 train loss:  0.0487362 train acc:  0.9882500
+ep:  163 train loss:  0.0476704 train acc:  0.9886250
+ep:  164 train loss:  0.0474319 train acc:  0.9886250
+ep:  165 train loss:  0.0476351 train acc:  0.9886250
+ep:  166 train loss:  0.0481785 train acc:  0.9883750
+ep:  167 train loss:  0.0476734 train acc:  0.9886250
+ep:  168 train loss:  0.0476970 train acc:  0.9885000
+ep:  169 train loss:  0.0475907 train acc:  0.9886250
+ep:  170 train loss:  0.0477585 train acc:  0.9886250
+ep:  171 train loss:  0.0499524 train acc:  0.9875000
+ep:  172 train loss:  0.0478065 train acc:  0.9886250
+ep:  173 train loss:  0.0471654 train acc:  0.9887500
+ep:  174 train loss:  0.0477038 train acc:  0.9885000
+ep:  175 train loss:  0.0470898 train acc:  0.9886250
+ep:  176 train loss:  0.0518607 train acc:  0.9873750
+ep:  177 train loss:  0.0475733 train acc:  0.9883750
+ep:  178 train loss:  0.0472753 train acc:  0.9887500
+ep:  179 train loss:  0.0468708 train acc:  0.9885000
+ep:  180 train loss:  0.0472239 train acc:  0.9886250
+ep:  181 train loss:  0.0470941 train acc:  0.9887500
+ep:  182 train loss:  0.0492829 train acc:  0.9873750
+ep:  183 train loss:  0.0501506 train acc:  0.9882500
+ep:  184 train loss:  0.0472985 train acc:  0.9886250
+ep:  185 train loss:  0.0469146 train acc:  0.9885000
+ep:  186 train loss:  0.0472332 train acc:  0.9887500
+ep:  187 train loss:  0.0470570 train acc:  0.9887500
+ep:  188 train loss:  0.0473043 train acc:  0.9886250
+ep:  189 train loss:  0.0474154 train acc:  0.9887500
+ep:  190 train loss:  0.0473431 train acc:  0.9886250
+ep:  191 train loss:  0.0473802 train acc:  0.9888750
+ep:  192 train loss:  0.0472124 train acc:  0.9890000
+ep:  193 train loss:  0.0471383 train acc:  0.9885000
+ep:  194 train loss:  0.0498946 train acc:  0.9877500
+ep:  195 train loss:  0.0474726 train acc:  0.9888750
+ep:  196 train loss:  0.0468531 train acc:  0.9887500
+ep:  197 train loss:  0.0471465 train acc:  0.9888750
+ep:  198 train loss:  0.0471345 train acc:  0.9887500
+ep:  199 train loss:  0.0526556 train acc:  0.9877500
