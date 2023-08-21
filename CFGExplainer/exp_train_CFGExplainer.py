@@ -7,7 +7,6 @@ from util.graphprocessor import YANCFG
 
 import mlflow
 import tensorflow as tf
-# from tensorboardX import SummaryWriter
 from tqdm import tqdm
 
 from Explainer import ExplainerModule
@@ -35,12 +34,6 @@ def train_CFGExplainer():
     
     device = '/gpu:0'
     # 3. fit explainer
-    # 3.1. initialize writer
-    # name = 'CFGExplainer_' + args.explainer_name + args.model_name_flag + args.dataset
-    # writer = None
-    # if args.writer_path is not None:
-    #     writer = SummaryWriter(args.writer_path + name)
-
     # initilize the explainer model
     explainer, optimizer = None, None
     with tf.device(device):
@@ -83,9 +76,6 @@ def train_CFGExplainer():
         train_acc = accuracy(exp_outputs, label)
 
         print('+ ep', epoch,' acc =', train_acc)
-        # if args.writer_path is not None:
-        #     writer.add_scalar('CFGExplainer loss', train_loss.numpy(), epoch + 1)
-        #     writer.add_scalar('CFGExplainer acc', train_acc.numpy(), epoch + 1)
 
         ## mlflow 
         mlflow.log_metric("train_acc", train_acc.numpy(), step = epoch)
@@ -96,9 +86,6 @@ def train_CFGExplainer():
                 best_acc = train_acc.numpy()
                 mlflow.log_metric('Save_model_Train_acc', best_acc, step = epoch)
                 explainer.save_weights(args.explainer_path)
-    
-    # if writer:
-    #     writer.close()
     return
 
 # --------------------------
@@ -129,7 +116,6 @@ def main(arguments):
     args.embnormlize = False  # keep this False: else the output becomes NaN
     args.save_model = True
     
-    # args.writer_path = './logs/explainer/'  # wont change
     args.disable_tqdm = True  # make True to hide progress bar
     args.save_thresh = 1  # save model state every 1 epoch
 
@@ -147,8 +133,8 @@ def main(arguments):
     }
 
     ## mlflow
-    mlflow.set_experiment("CFGExplainer")
-    mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
+    mlflow.set_experiment("FCG_CFGExplainer")
+    mlflow.start_run(run_name = "Clean_GCNClassifier") ##   mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
     mlflow.log_param('training_size', 8000)
     mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  

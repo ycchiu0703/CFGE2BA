@@ -1,2 +1,2 @@
-model_checkpoint_path: "06-09_14:40:24-GCNClassifier_5%_poison_connlabcfg"
-all_model_checkpoint_paths: "06-09_14:40:24-GCNClassifier_5%_poison_connlabcfg"
+model_checkpoint_path: "08-07_01:15:53-GCNClassifier_connlabcfg"
+all_model_checkpoint_paths: "08-07_01:15:53-GCNClassifier_connlabcfg"

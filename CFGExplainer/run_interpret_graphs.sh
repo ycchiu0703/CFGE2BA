@@ -1,9 +1,9 @@
 #!/bin/bash
 
-declare -a path="data_testing"      ## declare -a path="data"
+declare -a path="AFCGs"      ## declare -a path="data"
 declare -a hiddens="1024-512-128"
-declare -a model_name="05-11_13:04:22-GCNClassifier_"      ## model_name="classifier_lynxv2_"  # for classifier
-declare -a data_name="5%_poison_connlabcfg"    ## data_name="yancfg_complete_sample2"
+declare -a model_name="06-15_19:40:42-GCNClassifier_"      ## model_name="classifier_lynxv2_"  # for classifier
+declare -a data_name="connlabfcg"                           ## data_name="yancfg_complete_sample2"
 declare -a expname="ep300_b32_elr00001_"
 
 # will always run the experiment in first available gpu: 0

@@ -54,8 +54,10 @@ def get_all_block_info(graph):
         _prev = node_dict['Prev']
         _ins = node_dict['Ins']
         _next = node_dict['Next']
+        _bName = node_dict['bName']
     
         out += 'node ' + str(node_name) + ' info:\n'    ## out += 'node ' + node_name + ' info:\n'
+        out += ' Function Name :' + str(_bName) + '\n'
         out += ' start: ' + str(_start) + '\n'
         out += ' prev: ' + str(_prev) + '\n'
         out += ' instructions: \n'
@@ -219,7 +221,7 @@ def scaled_interpret_experiment(malware_name, class_label, graph_load_path, path
 
         # 4. save the results: top_blocks.pickle, top_blocks.txt, class_probability.txt, <adjacency matrices of subgraphs>
         graph_name = name[:-8]
-        save_path = './poison_interpretability_results/' + malware_name + '/' + graph_name  ## save_path = './interpretability_results/' + malware_name + '/' + graph_name
+        save_path = './FCG_interpretability_results/' + malware_name + '/' + graph_name  ## save_path = './interpretability_results/' + malware_name + '/' + graph_name
         
         os.makedirs(save_path, exist_ok=True)
         # if isdir(save_path) is False:
@@ -328,11 +330,11 @@ def main(arguments):
         print('+ loaded explainer model: ', explainer)
 
     for malware_name, class_label in malware_list.items():
-        save_path = "./interpretability_results/" + malware_name
+        save_path = "./FCG_interpretability_results/" + malware_name
         if isdir(save_path) is False:
             mkdir(save_path)
         print('\n>> running ', malware_name, ' CFGExplainer experiment')
-        scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_test', model, explainer) ## scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer)
+        scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_train', model, explainer) ## scaled_interpret_experiment(malware_name, class_label, args.path, 'padded_test', model, explainer)
         
     
     return

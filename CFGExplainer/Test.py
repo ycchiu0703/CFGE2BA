@@ -19,7 +19,7 @@ def test_GCNClassifier():
     print("+ load model weights Successfully!")
     
     data_loader = YANCFG()
-    test, _, _ = data_loader.load_yancfg_data(args.path, 'padded_test', args.malware_list) ##    test, _, _ = data_loader.load_yancfg_data(args.path, 'Poison', args.malware_list)
+    test, _, _ = data_loader.load_yancfg_data(args.path, 'AFCG_test', args.malware_list) ##    test, _, _ = data_loader.load_yancfg_data(args.path, 'padded_test', args.malware_list)
 
     test_batch = test.batch(args.batch_size)
     del test
@@ -112,8 +112,8 @@ def main(arguments):
         'Malware': 1
     }
     ## mlflow
-    mlflow.set_experiment("1_Trigger_15_Trigger_Partition_Test_ASR")
-    mlflow.start_run(run_name = "5%_GCNClassifier_trigger_11-13")      ## mlflow.start_run(run_name = "Clean_GCNClassifier")
+    mlflow.set_experiment("FCG_Test_ASR")
+    mlflow.start_run(run_name = "Clean_GCNClassifier")      ## mlflow.start_run(run_name = "Clean_GCNClassifier") ## mlflow.start_run(run_name = "5%_GCNClassifier_trigger_2-1")
 
     # run explain code
     test_GCNClassifier()

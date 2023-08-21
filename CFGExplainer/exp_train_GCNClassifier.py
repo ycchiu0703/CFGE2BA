@@ -91,13 +91,13 @@ def train_GCNClassifier():
         mlflow.log_metric("test_acc", results['accuracy'].numpy(), step = epoch)
         mlflow.log_metric("test_loss", results['loss'].numpy(), step = epoch)
 
-        if (epoch % args.save_thresh == 0) or (epoch == args.epochs - 1):
-            if args.save_model and best_acc <= results['accuracy'].numpy():
-                best_acc = results['accuracy'].numpy()
-                mlflow.log_metric('Save_model_Train_acc', train_acc, step = epoch)
-                mlflow.log_metric('Save_model_Test_acc', best_acc, step = epoch)
-                model.save_weights(args.save_path + args.dataset)
-                      
+        # if (epoch % args.save_thresh == 0) or (epoch == args.epochs - 1):
+        if args.save_model and best_acc <= results['accuracy'].numpy():
+            best_acc = results['accuracy'].numpy()
+            mlflow.log_metric('Save_model_Train_acc', train_acc, step = epoch)
+            mlflow.log_metric('Save_model_Test_acc', best_acc, step = epoch)
+            model.save_weights(args.save_path + args.dataset)
+                    
     return
 
 
@@ -178,8 +178,8 @@ def main(arguments):
     }
 
     ## mlflow
-    mlflow.set_experiment(args.model_name_flag)
-    mlflow.start_run(run_name = "5%_Poison_GCNClassifier_trigger_11-4_random") ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
+    mlflow.set_experiment('CFG_' + args.model_name_flag)
+    mlflow.start_run(run_name = "Clean_GCNClassifier_cv4")          ## mlflow.start_run(run_name = "5%_Poison_GCNClassifier")
     mlflow.log_param('training_size', 8000)
     mlflow.log_param('testing_size', 2000)   
     mlflow.log_param('dataset', args.dataset)  

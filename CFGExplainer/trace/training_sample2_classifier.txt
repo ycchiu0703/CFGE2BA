@@ -1,54 +1,54 @@
-2023-06-09 14:40:23.217736: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-06-09 14:40:23.981882: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2023-06-09 14:40:23.982430: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
-2023-06-09 14:40:24.024818: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:40:24.024954: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+2023-08-07 01:15:52.796634: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-08-07 01:15:53.570827: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-08-07 01:15:53.571322: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2023-08-07 01:15:53.595765: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:15:53.595845: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
 pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 3080 Ti computeCapability: 8.6
 coreClock: 1.83GHz coreCount: 80 deviceMemorySize: 11.75GiB deviceMemoryBandwidth: 849.46GiB/s
-2023-06-09 14:40:24.024968: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-06-09 14:40:24.026669: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-06-09 14:40:24.026755: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-06-09 14:40:24.027564: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
-2023-06-09 14:40:24.027767: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
-2023-06-09 14:40:24.029753: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
-2023-06-09 14:40:24.030221: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
-2023-06-09 14:40:24.030357: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
-2023-06-09 14:40:24.030422: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:40:24.030546: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:40:24.030625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
-2023-06-09 14:46:20.733450: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
-2023-06-09 14:46:20.733720: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:46:20.733845: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+2023-08-07 01:15:53.595858: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-08-07 01:15:53.597107: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-08-07 01:15:53.597143: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-08-07 01:15:53.597751: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-08-07 01:15:53.597882: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-08-07 01:15:53.599201: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-08-07 01:15:53.599508: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-08-07 01:15:53.599582: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-08-07 01:15:53.599632: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:15:53.599704: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:15:53.599743: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-08-07 01:21:47.671702: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2023-08-07 01:21:47.671888: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:21:47.672014: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
 pciBusID: 0000:01:00.0 name: NVIDIA GeForce RTX 3080 Ti computeCapability: 8.6
 coreClock: 1.83GHz coreCount: 80 deviceMemorySize: 11.75GiB deviceMemoryBandwidth: 849.46GiB/s
-2023-06-09 14:46:20.733871: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-06-09 14:46:20.733893: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-06-09 14:46:20.733899: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-06-09 14:46:20.733906: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
-2023-06-09 14:46:20.733912: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
-2023-06-09 14:46:20.733918: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
-2023-06-09 14:46:20.733935: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
-2023-06-09 14:46:20.733940: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
-2023-06-09 14:46:20.733968: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:46:20.734036: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:46:20.734109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
-2023-06-09 14:46:20.734122: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
-2023-06-09 14:46:21.024534: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
-2023-06-09 14:46:21.024572: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
-2023-06-09 14:46:21.024578: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
-2023-06-09 14:46:21.024729: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:46:21.024878: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:46:21.024952: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2023-06-09 14:46:21.025054: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10873 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3080 Ti, pci bus id: 0000:01:00.0, compute capability: 8.6)
-2023-06-09 14:46:21.026348: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
-2023-06-09 14:48:02.435815: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
-2023-06-09 14:48:08.272275: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
-2023-06-09 14:48:13.021933: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
-2023-06-09 14:48:13.372673: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
-2023-06-09 14:48:13.386351: I tensorflow/stream_executor/cuda/cuda_blas.cc:1838] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
-2023-06-09 14:48:43.772916: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 2097152000 exceeds 10% of free system memory.
-2023-06-09 14:48:49.167604: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
-sys.args:  ['exp_train_GCNClassifier.py', '10', 'data_poison', '1024-512-128', '0.0001', 'GCNClassifier', '5%_poison_connlabcfg', '200']
+2023-08-07 01:21:47.672036: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-08-07 01:21:47.672055: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-08-07 01:21:47.672061: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-08-07 01:21:47.672067: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2023-08-07 01:21:47.672074: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2023-08-07 01:21:47.672080: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2023-08-07 01:21:47.672093: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2023-08-07 01:21:47.672098: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2023-08-07 01:21:47.672128: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:21:47.672176: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:21:47.672209: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2023-08-07 01:21:47.672224: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2023-08-07 01:21:47.937830: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2023-08-07 01:21:47.937869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2023-08-07 01:21:47.937873: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2023-08-07 01:21:47.938059: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:21:47.938176: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:21:47.938223: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2023-08-07 01:21:47.938276: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10868 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce RTX 3080 Ti, pci bus id: 0000:01:00.0, compute capability: 8.6)
+2023-08-07 01:21:47.940042: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-08-07 01:23:35.438101: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-08-07 01:23:40.152200: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2023-08-07 01:23:40.405512: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2023-08-07 01:23:40.409331: I tensorflow/stream_executor/cuda/cuda_blas.cc:1838] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+2023-08-07 01:23:47.723027: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-08-07 01:23:59.627115: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+2023-08-07 01:24:11.523440: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 8388608000 exceeds 10% of free system memory.
+sys.args:  ['exp_train_GCNClassifier.py', '10', 'data', '1024-512-128', '0.0001', 'GCNClassifier', 'connlabcfg', '200']
 + loaded padded_train Benign
 + loaded padded_train Malware
 + loaded train dataset
@@ -57,204 +57,204 @@ sys.args:  ['exp_train_GCNClassifier.py', '10', 'data_poison', '1024-512-128', '
 + loaded test dataset
 created Graph GCN model
 + model: 
- <util.models.GCN object at 0x7fed86d6e970>
-ep:  0 train loss:  0.3773830 train acc:  0.8496250
-ep:  1 train loss:  0.2251298 train acc:  0.9211250
-ep:  2 train loss:  0.2116953 train acc:  0.9321250
-ep:  3 train loss:  0.1908755 train acc:  0.9363750
-ep:  4 train loss:  0.1828737 train acc:  0.9396250
-ep:  5 train loss:  0.1611238 train acc:  0.9425000
-ep:  6 train loss:  0.1227550 train acc:  0.9621250
-ep:  7 train loss:  0.1093910 train acc:  0.9657500
-ep:  8 train loss:  0.1054936 train acc:  0.9666250
-ep:  9 train loss:  0.1027702 train acc:  0.9673750
-ep:  10 train loss:  0.0947192 train acc:  0.9703750
-ep:  11 train loss:  0.0912252 train acc:  0.9700000
-ep:  12 train loss:  0.0886246 train acc:  0.9716250
-ep:  13 train loss:  0.0858514 train acc:  0.9742500
-ep:  14 train loss:  0.0852025 train acc:  0.9751250
-ep:  15 train loss:  0.0845063 train acc:  0.9755000
-ep:  16 train loss:  0.0849415 train acc:  0.9768750
-ep:  17 train loss:  0.0777593 train acc:  0.9778750
-ep:  18 train loss:  0.0782888 train acc:  0.9773750
-ep:  19 train loss:  0.0766894 train acc:  0.9776250
-ep:  20 train loss:  0.0768243 train acc:  0.9777500
-ep:  21 train loss:  0.0764789 train acc:  0.9776250
-ep:  22 train loss:  0.0801316 train acc:  0.9792500
-ep:  23 train loss:  0.0728035 train acc:  0.9797500
-ep:  24 train loss:  0.0711749 train acc:  0.9807500
-ep:  25 train loss:  0.0702858 train acc:  0.9795000
-ep:  26 train loss:  0.0729923 train acc:  0.9795000
-ep:  27 train loss:  0.0709242 train acc:  0.9806250
-ep:  28 train loss:  0.0677130 train acc:  0.9820000
-ep:  29 train loss:  0.0704598 train acc:  0.9803750
-ep:  30 train loss:  0.0680760 train acc:  0.9820000
-ep:  31 train loss:  0.0675589 train acc:  0.9816250
-ep:  32 train loss:  0.0655064 train acc:  0.9832500
-ep:  33 train loss:  0.0683048 train acc:  0.9815000
-ep:  34 train loss:  0.0662685 train acc:  0.9816250
-ep:  35 train loss:  0.0653519 train acc:  0.9828750
-ep:  36 train loss:  0.0650078 train acc:  0.9830000
-ep:  37 train loss:  0.0640376 train acc:  0.9832500
-ep:  38 train loss:  0.0665245 train acc:  0.9827500
-ep:  39 train loss:  0.0624647 train acc:  0.9838750
-ep:  40 train loss:  0.0628143 train acc:  0.9838750
-ep:  41 train loss:  0.0614863 train acc:  0.9841250
-ep:  42 train loss:  0.0618408 train acc:  0.9840000
-ep:  43 train loss:  0.0615675 train acc:  0.9848750
-ep:  44 train loss:  0.0621724 train acc:  0.9841250
-ep:  45 train loss:  0.0618947 train acc:  0.9855000
-ep:  46 train loss:  0.0609569 train acc:  0.9848750
-ep:  47 train loss:  0.0586031 train acc:  0.9847500
-ep:  48 train loss:  0.0603022 train acc:  0.9846250
-ep:  49 train loss:  0.0601467 train acc:  0.9851250
-ep:  50 train loss:  0.0586281 train acc:  0.9856250
-ep:  51 train loss:  0.0590373 train acc:  0.9851250
-ep:  52 train loss:  0.0596020 train acc:  0.9853750
-ep:  53 train loss:  0.0592067 train acc:  0.9850000
-ep:  54 train loss:  0.0587665 train acc:  0.9855000
-ep:  55 train loss:  0.0579328 train acc:  0.9861250
-ep:  56 train loss:  0.0569168 train acc:  0.9856250
-ep:  57 train loss:  0.0572201 train acc:  0.9861250
-ep:  58 train loss:  0.0578876 train acc:  0.9863750
-ep:  59 train loss:  0.0561942 train acc:  0.9870000
-ep:  60 train loss:  0.0567571 train acc:  0.9858750
-ep:  61 train loss:  0.0572078 train acc:  0.9865000
-ep:  62 train loss:  0.0561682 train acc:  0.9868750
-ep:  63 train loss:  0.0556391 train acc:  0.9863750
-ep:  64 train loss:  0.0555464 train acc:  0.9867500
-ep:  65 train loss:  0.0591677 train acc:  0.9857500
-ep:  66 train loss:  0.0557941 train acc:  0.9862500
-ep:  67 train loss:  0.0545659 train acc:  0.9873750
-ep:  68 train loss:  0.0565811 train acc:  0.9860000
-ep:  69 train loss:  0.0549713 train acc:  0.9871250
-ep:  70 train loss:  0.0529980 train acc:  0.9873750
-ep:  71 train loss:  0.0550554 train acc:  0.9870000
-ep:  72 train loss:  0.0540157 train acc:  0.9868750
-ep:  73 train loss:  0.0534090 train acc:  0.9876250
-ep:  74 train loss:  0.0543376 train acc:  0.9872500
-ep:  75 train loss:  0.0540866 train acc:  0.9876250
-ep:  76 train loss:  0.0567919 train acc:  0.9863750
-ep:  77 train loss:  0.0536272 train acc:  0.9873750
-ep:  78 train loss:  0.0524901 train acc:  0.9877500
-ep:  79 train loss:  0.0534025 train acc:  0.9871250
-ep:  80 train loss:  0.0524410 train acc:  0.9880000
-ep:  81 train loss:  0.0556857 train acc:  0.9863750
-ep:  82 train loss:  0.0548822 train acc:  0.9866250
-ep:  83 train loss:  0.0525377 train acc:  0.9877500
-ep:  84 train loss:  0.0520924 train acc:  0.9880000
-ep:  85 train loss:  0.0516959 train acc:  0.9878750
-ep:  86 train loss:  0.0532330 train acc:  0.9872500
-ep:  87 train loss:  0.0539434 train acc:  0.9875000
-ep:  88 train loss:  0.0517499 train acc:  0.9872500
-ep:  89 train loss:  0.0513489 train acc:  0.9878750
-ep:  90 train loss:  0.0516292 train acc:  0.9877500
-ep:  91 train loss:  0.0546356 train acc:  0.9867500
-ep:  92 train loss:  0.0527081 train acc:  0.9881250
-ep:  93 train loss:  0.0512507 train acc:  0.9881250
-ep:  94 train loss:  0.0513264 train acc:  0.9880000
-ep:  95 train loss:  0.0511661 train acc:  0.9877500
-ep:  96 train loss:  0.0527732 train acc:  0.9875000
-ep:  97 train loss:  0.0512416 train acc:  0.9876250
-ep:  98 train loss:  0.0508410 train acc:  0.9880000
-ep:  99 train loss:  0.0510743 train acc:  0.9880000
-ep:  100 train loss:  0.0514249 train acc:  0.9880000
-ep:  101 train loss:  0.0510203 train acc:  0.9880000
-ep:  102 train loss:  0.0509050 train acc:  0.9880000
-ep:  103 train loss:  0.0522555 train acc:  0.9866250
-ep:  104 train loss:  0.0517546 train acc:  0.9875000
-ep:  105 train loss:  0.0502385 train acc:  0.9873750
-ep:  106 train loss:  0.0499226 train acc:  0.9882500
-ep:  107 train loss:  0.0515607 train acc:  0.9877500
-ep:  108 train loss:  0.0500576 train acc:  0.9883750
-ep:  109 train loss:  0.0505636 train acc:  0.9882500
-ep:  110 train loss:  0.0508874 train acc:  0.9877500
-ep:  111 train loss:  0.0498545 train acc:  0.9882500
-ep:  112 train loss:  0.0495836 train acc:  0.9881250
-ep:  113 train loss:  0.0553603 train acc:  0.9867500
-ep:  114 train loss:  0.0507578 train acc:  0.9881250
-ep:  115 train loss:  0.0494802 train acc:  0.9882500
-ep:  116 train loss:  0.0492497 train acc:  0.9883750
-ep:  117 train loss:  0.0494591 train acc:  0.9882500
-ep:  118 train loss:  0.0493964 train acc:  0.9885000
-ep:  119 train loss:  0.0498601 train acc:  0.9881250
-ep:  120 train loss:  0.0493801 train acc:  0.9885000
-ep:  121 train loss:  0.0498902 train acc:  0.9880000
-ep:  122 train loss:  0.0499126 train acc:  0.9882500
-ep:  123 train loss:  0.0486638 train acc:  0.9885000
-ep:  124 train loss:  0.0529153 train acc:  0.9871250
-ep:  125 train loss:  0.0508967 train acc:  0.9872500
-ep:  126 train loss:  0.0493361 train acc:  0.9881250
-ep:  127 train loss:  0.0484199 train acc:  0.9886250
-ep:  128 train loss:  0.0481485 train acc:  0.9885000
-ep:  129 train loss:  0.0514708 train acc:  0.9875000
-ep:  130 train loss:  0.0493205 train acc:  0.9885000
-ep:  131 train loss:  0.0484829 train acc:  0.9883750
-ep:  132 train loss:  0.0484226 train acc:  0.9887500
-ep:  133 train loss:  0.0486244 train acc:  0.9882500
-ep:  134 train loss:  0.0485036 train acc:  0.9885000
-ep:  135 train loss:  0.0511483 train acc:  0.9877500
-ep:  136 train loss:  0.0495533 train acc:  0.9883750
-ep:  137 train loss:  0.0481933 train acc:  0.9883750
-ep:  138 train loss:  0.0479576 train acc:  0.9886250
-ep:  139 train loss:  0.0553194 train acc:  0.9867500
-ep:  140 train loss:  0.0488716 train acc:  0.9881250
-ep:  141 train loss:  0.0482339 train acc:  0.9883750
-ep:  142 train loss:  0.0477949 train acc:  0.9886250
-ep:  143 train loss:  0.0477099 train acc:  0.9887500
-ep:  144 train loss:  0.0477995 train acc:  0.9885000
-ep:  145 train loss:  0.0488640 train acc:  0.9882500
-ep:  146 train loss:  0.0489163 train acc:  0.9885000
-ep:  147 train loss:  0.0479440 train acc:  0.9885000
-ep:  148 train loss:  0.0481656 train acc:  0.9886250
-ep:  149 train loss:  0.0479311 train acc:  0.9885000
-ep:  150 train loss:  0.0499060 train acc:  0.9877500
-ep:  151 train loss:  0.0488198 train acc:  0.9885000
-ep:  152 train loss:  0.0480174 train acc:  0.9883750
-ep:  153 train loss:  0.0484082 train acc:  0.9883750
-ep:  154 train loss:  0.0474503 train acc:  0.9886250
-ep:  155 train loss:  0.0477584 train acc:  0.9885000
-ep:  156 train loss:  0.0504941 train acc:  0.9880000
-ep:  157 train loss:  0.0483847 train acc:  0.9885000
-ep:  158 train loss:  0.0477896 train acc:  0.9885000
-ep:  159 train loss:  0.0480452 train acc:  0.9886250
-ep:  160 train loss:  0.0477785 train acc:  0.9885000
-ep:  161 train loss:  0.0498117 train acc:  0.9878750
-ep:  162 train loss:  0.0487362 train acc:  0.9882500
-ep:  163 train loss:  0.0476704 train acc:  0.9886250
-ep:  164 train loss:  0.0474319 train acc:  0.9886250
-ep:  165 train loss:  0.0476351 train acc:  0.9886250
-ep:  166 train loss:  0.0481785 train acc:  0.9883750
-ep:  167 train loss:  0.0476734 train acc:  0.9886250
-ep:  168 train loss:  0.0476970 train acc:  0.9885000
-ep:  169 train loss:  0.0475907 train acc:  0.9886250
-ep:  170 train loss:  0.0477585 train acc:  0.9886250
-ep:  171 train loss:  0.0499524 train acc:  0.9875000
-ep:  172 train loss:  0.0478065 train acc:  0.9886250
-ep:  173 train loss:  0.0471654 train acc:  0.9887500
-ep:  174 train loss:  0.0477038 train acc:  0.9885000
-ep:  175 train loss:  0.0470898 train acc:  0.9886250
-ep:  176 train loss:  0.0518607 train acc:  0.9873750
-ep:  177 train loss:  0.0475733 train acc:  0.9883750
-ep:  178 train loss:  0.0472753 train acc:  0.9887500
-ep:  179 train loss:  0.0468708 train acc:  0.9885000
-ep:  180 train loss:  0.0472239 train acc:  0.9886250
-ep:  181 train loss:  0.0470941 train acc:  0.9887500
-ep:  182 train loss:  0.0492829 train acc:  0.9873750
-ep:  183 train loss:  0.0501506 train acc:  0.9882500
-ep:  184 train loss:  0.0472985 train acc:  0.9886250
-ep:  185 train loss:  0.0469146 train acc:  0.9885000
-ep:  186 train loss:  0.0472332 train acc:  0.9887500
-ep:  187 train loss:  0.0470570 train acc:  0.9887500
-ep:  188 train loss:  0.0473043 train acc:  0.9886250
-ep:  189 train loss:  0.0474154 train acc:  0.9887500
-ep:  190 train loss:  0.0473431 train acc:  0.9886250
-ep:  191 train loss:  0.0473802 train acc:  0.9888750
-ep:  192 train loss:  0.0472124 train acc:  0.9890000
-ep:  193 train loss:  0.0471383 train acc:  0.9885000
-ep:  194 train loss:  0.0498946 train acc:  0.9877500
-ep:  195 train loss:  0.0474726 train acc:  0.9888750
-ep:  196 train loss:  0.0468531 train acc:  0.9887500
-ep:  197 train loss:  0.0471465 train acc:  0.9888750
-ep:  198 train loss:  0.0471345 train acc:  0.9887500
-ep:  199 train loss:  0.0526556 train acc:  0.9877500
+ <util.models.GCN object at 0x7f24fca75640>
+ep:  0 train loss:  0.3955542 train acc:  0.8481250
+ep:  1 train loss:  0.2219984 train acc:  0.9256250
+ep:  2 train loss:  0.1949636 train acc:  0.9378750
+ep:  3 train loss:  0.1840132 train acc:  0.9401250
+ep:  4 train loss:  0.1699392 train acc:  0.9417500
+ep:  5 train loss:  0.1435146 train acc:  0.9497500
+ep:  6 train loss:  0.1154799 train acc:  0.9640000
+ep:  7 train loss:  0.1059663 train acc:  0.9667500
+ep:  8 train loss:  0.1017806 train acc:  0.9692500
+ep:  9 train loss:  0.0953575 train acc:  0.9707500
+ep:  10 train loss:  0.0920447 train acc:  0.9720000
+ep:  11 train loss:  0.0897825 train acc:  0.9737500
+ep:  12 train loss:  0.0881777 train acc:  0.9746250
+ep:  13 train loss:  0.0851822 train acc:  0.9746250
+ep:  14 train loss:  0.0837817 train acc:  0.9766250
+ep:  15 train loss:  0.0808859 train acc:  0.9776250
+ep:  16 train loss:  0.0813542 train acc:  0.9782500
+ep:  17 train loss:  0.0784377 train acc:  0.9780000
+ep:  18 train loss:  0.0762786 train acc:  0.9787500
+ep:  19 train loss:  0.0761984 train acc:  0.9800000
+ep:  20 train loss:  0.0745914 train acc:  0.9801250
+ep:  21 train loss:  0.0746425 train acc:  0.9802500
+ep:  22 train loss:  0.0726514 train acc:  0.9800000
+ep:  23 train loss:  0.0718346 train acc:  0.9815000
+ep:  24 train loss:  0.0713718 train acc:  0.9813750
+ep:  25 train loss:  0.0700255 train acc:  0.9822500
+ep:  26 train loss:  0.0690208 train acc:  0.9816250
+ep:  27 train loss:  0.0690771 train acc:  0.9818750
+ep:  28 train loss:  0.0686197 train acc:  0.9825000
+ep:  29 train loss:  0.0665971 train acc:  0.9827500
+ep:  30 train loss:  0.0675552 train acc:  0.9811250
+ep:  31 train loss:  0.0655666 train acc:  0.9832500
+ep:  32 train loss:  0.0658709 train acc:  0.9832500
+ep:  33 train loss:  0.0696817 train acc:  0.9821250
+ep:  34 train loss:  0.0661874 train acc:  0.9821250
+ep:  35 train loss:  0.0622749 train acc:  0.9833750
+ep:  36 train loss:  0.0653901 train acc:  0.9842500
+ep:  37 train loss:  0.0621019 train acc:  0.9835000
+ep:  38 train loss:  0.0628425 train acc:  0.9832500
+ep:  39 train loss:  0.0623642 train acc:  0.9841250
+ep:  40 train loss:  0.0636881 train acc:  0.9836250
+ep:  41 train loss:  0.0609777 train acc:  0.9845000
+ep:  42 train loss:  0.0643012 train acc:  0.9835000
+ep:  43 train loss:  0.0608726 train acc:  0.9856250
+ep:  44 train loss:  0.0600891 train acc:  0.9846250
+ep:  45 train loss:  0.0606296 train acc:  0.9847500
+ep:  46 train loss:  0.0624969 train acc:  0.9850000
+ep:  47 train loss:  0.0604618 train acc:  0.9851250
+ep:  48 train loss:  0.0591193 train acc:  0.9850000
+ep:  49 train loss:  0.0591835 train acc:  0.9853750
+ep:  50 train loss:  0.0594969 train acc:  0.9858750
+ep:  51 train loss:  0.0610940 train acc:  0.9853750
+ep:  52 train loss:  0.0602475 train acc:  0.9857500
+ep:  53 train loss:  0.0598880 train acc:  0.9848750
+ep:  54 train loss:  0.0579611 train acc:  0.9857500
+ep:  55 train loss:  0.0581421 train acc:  0.9860000
+ep:  56 train loss:  0.0595144 train acc:  0.9858750
+ep:  57 train loss:  0.0586330 train acc:  0.9860000
+ep:  58 train loss:  0.0569137 train acc:  0.9863750
+ep:  59 train loss:  0.0578206 train acc:  0.9863750
+ep:  60 train loss:  0.0567563 train acc:  0.9866250
+ep:  61 train loss:  0.0576161 train acc:  0.9861250
+ep:  62 train loss:  0.0571702 train acc:  0.9860000
+ep:  63 train loss:  0.0573302 train acc:  0.9865000
+ep:  64 train loss:  0.0572511 train acc:  0.9866250
+ep:  65 train loss:  0.0574175 train acc:  0.9863750
+ep:  66 train loss:  0.0571460 train acc:  0.9860000
+ep:  67 train loss:  0.0564127 train acc:  0.9867500
+ep:  68 train loss:  0.0561036 train acc:  0.9861250
+ep:  69 train loss:  0.0568016 train acc:  0.9862500
+ep:  70 train loss:  0.0561476 train acc:  0.9866250
+ep:  71 train loss:  0.0554508 train acc:  0.9865000
+ep:  72 train loss:  0.0573135 train acc:  0.9865000
+ep:  73 train loss:  0.0558983 train acc:  0.9867500
+ep:  74 train loss:  0.0559213 train acc:  0.9865000
+ep:  75 train loss:  0.0565726 train acc:  0.9866250
+ep:  76 train loss:  0.0548382 train acc:  0.9866250
+ep:  77 train loss:  0.0578903 train acc:  0.9860000
+ep:  78 train loss:  0.0540177 train acc:  0.9870000
+ep:  79 train loss:  0.0547300 train acc:  0.9866250
+ep:  80 train loss:  0.0542904 train acc:  0.9870000
+ep:  81 train loss:  0.0544326 train acc:  0.9870000
+ep:  82 train loss:  0.0594345 train acc:  0.9856250
+ep:  83 train loss:  0.0535541 train acc:  0.9872500
+ep:  84 train loss:  0.0545187 train acc:  0.9868750
+ep:  85 train loss:  0.0557648 train acc:  0.9868750
+ep:  86 train loss:  0.0538869 train acc:  0.9868750
+ep:  87 train loss:  0.0542073 train acc:  0.9872500
+ep:  88 train loss:  0.0546163 train acc:  0.9875000
+ep:  89 train loss:  0.0540128 train acc:  0.9872500
+ep:  90 train loss:  0.0540237 train acc:  0.9872500
+ep:  91 train loss:  0.0560929 train acc:  0.9871250
+ep:  92 train loss:  0.0541803 train acc:  0.9867500
+ep:  93 train loss:  0.0533309 train acc:  0.9875000
+ep:  94 train loss:  0.0528729 train acc:  0.9875000
+ep:  95 train loss:  0.0539273 train acc:  0.9873750
+ep:  96 train loss:  0.0539118 train acc:  0.9866250
+ep:  97 train loss:  0.0531447 train acc:  0.9875000
+ep:  98 train loss:  0.0531858 train acc:  0.9877500
+ep:  99 train loss:  0.0548239 train acc:  0.9865000
+ep:  100 train loss:  0.0544346 train acc:  0.9876250
+ep:  101 train loss:  0.0533843 train acc:  0.9875000
+ep:  102 train loss:  0.0536768 train acc:  0.9875000
+ep:  103 train loss:  0.0529849 train acc:  0.9882500
+ep:  104 train loss:  0.0532797 train acc:  0.9875000
+ep:  105 train loss:  0.0533287 train acc:  0.9880000
+ep:  106 train loss:  0.0536909 train acc:  0.9872500
+ep:  107 train loss:  0.0544494 train acc:  0.9867500
+ep:  108 train loss:  0.0523979 train acc:  0.9878750
+ep:  109 train loss:  0.0522241 train acc:  0.9876250
+ep:  110 train loss:  0.0530016 train acc:  0.9875000
+ep:  111 train loss:  0.0583951 train acc:  0.9863750
+ep:  112 train loss:  0.0532412 train acc:  0.9875000
+ep:  113 train loss:  0.0525207 train acc:  0.9880000
+ep:  114 train loss:  0.0519535 train acc:  0.9878750
+ep:  115 train loss:  0.0520328 train acc:  0.9878750
+ep:  116 train loss:  0.0516388 train acc:  0.9881250
+ep:  117 train loss:  0.0533409 train acc:  0.9873750
+ep:  118 train loss:  0.0529635 train acc:  0.9878750
+ep:  119 train loss:  0.0521748 train acc:  0.9880000
+ep:  120 train loss:  0.0520960 train acc:  0.9881250
+ep:  121 train loss:  0.0516482 train acc:  0.9882500
+ep:  122 train loss:  0.0570290 train acc:  0.9863750
+ep:  123 train loss:  0.0528148 train acc:  0.9880000
+ep:  124 train loss:  0.0516346 train acc:  0.9881250
+ep:  125 train loss:  0.0515375 train acc:  0.9881250
+ep:  126 train loss:  0.0519173 train acc:  0.9876250
+ep:  127 train loss:  0.0512566 train acc:  0.9882500
+ep:  128 train loss:  0.0515010 train acc:  0.9877500
+ep:  129 train loss:  0.0513618 train acc:  0.9880000
+ep:  130 train loss:  0.0537080 train acc:  0.9875000
+ep:  131 train loss:  0.0541608 train acc:  0.9865000
+ep:  132 train loss:  0.0510418 train acc:  0.9882500
+ep:  133 train loss:  0.0511772 train acc:  0.9880000
+ep:  134 train loss:  0.0513686 train acc:  0.9880000
+ep:  135 train loss:  0.0511074 train acc:  0.9878750
+ep:  136 train loss:  0.0508660 train acc:  0.9880000
+ep:  137 train loss:  0.0576326 train acc:  0.9873750
+ep:  138 train loss:  0.0518559 train acc:  0.9881250
+ep:  139 train loss:  0.0511398 train acc:  0.9881250
+ep:  140 train loss:  0.0509580 train acc:  0.9880000
+ep:  141 train loss:  0.0508345 train acc:  0.9880000
+ep:  142 train loss:  0.0592389 train acc:  0.9857500
+ep:  143 train loss:  0.0515530 train acc:  0.9878750
+ep:  144 train loss:  0.0510801 train acc:  0.9880000
+ep:  145 train loss:  0.0509879 train acc:  0.9881250
+ep:  146 train loss:  0.0507407 train acc:  0.9882500
+ep:  147 train loss:  0.0509857 train acc:  0.9880000
+ep:  148 train loss:  0.0571411 train acc:  0.9865000
+ep:  149 train loss:  0.0515876 train acc:  0.9878750
+ep:  150 train loss:  0.0509992 train acc:  0.9883750
+ep:  151 train loss:  0.0509609 train acc:  0.9882500
+ep:  152 train loss:  0.0507945 train acc:  0.9878750
+ep:  153 train loss:  0.0505363 train acc:  0.9880000
+ep:  154 train loss:  0.0584321 train acc:  0.9856250
+ep:  155 train loss:  0.0537180 train acc:  0.9868750
+ep:  156 train loss:  0.0517488 train acc:  0.9878750
+ep:  157 train loss:  0.0507524 train acc:  0.9880000
+ep:  158 train loss:  0.0508039 train acc:  0.9878750
+ep:  159 train loss:  0.0515000 train acc:  0.9880000
+ep:  160 train loss:  0.0584793 train acc:  0.9871250
+ep:  161 train loss:  0.0507984 train acc:  0.9878750
+ep:  162 train loss:  0.0508206 train acc:  0.9878750
+ep:  163 train loss:  0.0505962 train acc:  0.9881250
+ep:  164 train loss:  0.0519831 train acc:  0.9877500
+ep:  165 train loss:  0.0515419 train acc:  0.9877500
+ep:  166 train loss:  0.0527860 train acc:  0.9873750
+ep:  167 train loss:  0.0518583 train acc:  0.9881250
+ep:  168 train loss:  0.0508192 train acc:  0.9880000
+ep:  169 train loss:  0.0504977 train acc:  0.9881250
+ep:  170 train loss:  0.0507388 train acc:  0.9878750
+ep:  171 train loss:  0.0512871 train acc:  0.9880000
+ep:  172 train loss:  0.0507590 train acc:  0.9877500
+ep:  173 train loss:  0.0503298 train acc:  0.9880000
+ep:  174 train loss:  0.0520142 train acc:  0.9875000
+ep:  175 train loss:  0.0509741 train acc:  0.9880000
+ep:  176 train loss:  0.0499926 train acc:  0.9882500
+ep:  177 train loss:  0.0506159 train acc:  0.9881250
+ep:  178 train loss:  0.0505943 train acc:  0.9881250
+ep:  179 train loss:  0.0509504 train acc:  0.9880000
+ep:  180 train loss:  0.0530941 train acc:  0.9870000
+ep:  181 train loss:  0.0508545 train acc:  0.9877500
+ep:  182 train loss:  0.0503101 train acc:  0.9877500
+ep:  183 train loss:  0.0555671 train acc:  0.9863750
+ep:  184 train loss:  0.0503299 train acc:  0.9882500
+ep:  185 train loss:  0.0502887 train acc:  0.9881250
+ep:  186 train loss:  0.0501404 train acc:  0.9880000
+ep:  187 train loss:  0.0501411 train acc:  0.9881250
+ep:  188 train loss:  0.0499238 train acc:  0.9883750
+ep:  189 train loss:  0.0501371 train acc:  0.9882500
+ep:  190 train loss:  0.0561681 train acc:  0.9870000
+ep:  191 train loss:  0.0524089 train acc:  0.9877500
+ep:  192 train loss:  0.0503129 train acc:  0.9880000
+ep:  193 train loss:  0.0499760 train acc:  0.9881250
+ep:  194 train loss:  0.0500829 train acc:  0.9882500
+ep:  195 train loss:  0.0499001 train acc:  0.9882500
+ep:  196 train loss:  0.0532822 train acc:  0.9872500
+ep:  197 train loss:  0.0518242 train acc:  0.9877500
+ep:  198 train loss:  0.0502113 train acc:  0.9885000
+ep:  199 train loss:  0.0501800 train acc:  0.9881250
